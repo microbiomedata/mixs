@@ -72,3 +72,11 @@ docserve:
 # exposes at https://GenomicsStandardsConsortium.github.io/mixs/
 gh_docs:
 	poetry run mkdocs gh-deploy
+
+# GSC Googlesheets ID: 1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o
+# NMDC Googlesheets ID: 1-ocpwjx6nkBod6aj4kcYeSB5NRlhXaYCcuk3ooX2OV4
+downloads/mixs6.tsv:
+	curl -L -s 'https://docs.google.com/spreadsheets/d/1-ocpwjx6nkBod6aj4kcYeSB5NRlhXaYCcuk3ooX2OV4/export?format=tsv&gid=750683809' > $@
+
+downloads/mixs6_core.tsv:
+	curl -L -s 'https://docs.google.com/spreadsheets/d/1-ocpwjx6nkBod6aj4kcYeSB5NRlhXaYCcuk3ooX2OV4/export?format=tsv&gid=178015749' > $@
