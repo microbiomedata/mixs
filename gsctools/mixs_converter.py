@@ -218,10 +218,10 @@ class MIxS6Converter:
         # if 'MIGS ID (mapping to GOLD)' in row:
         #    exact_mappings.append(f'MIGS:{row["MIGS ID (mapping to GOLD)"]}')
 
-        section = row['Section'] if 'Section' in row else 'environment'
+        section = row['Section'] if 'Section' in row else 'untriggered environment'
         if section == '':
             # logging.warning(f'No section: {s_id}')
-            section = 'core'
+            section = 'erroneous core'
         is_a = f'{section} field'
         pattern, range = parse_value_syntax(row['Value syntax'], s_name)
         slot = {
