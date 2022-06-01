@@ -19,13 +19,15 @@ clean:
 	rm -rf mkdocs_html/
 	#rm -rf model/schema/*yaml
 
-#model/schema/mixs.yaml: downloads/mixs6.tsv downloads/mixs6_core.tsv
-#	$(RUN) python -m gsctools.mixs_converter  2>&1 | tee -a logs/sheet2linkml.log
-#
-#downloads/mixs6.tsv:
-#	curl -L -s 'https://docs.google.com/spreadsheets/d/1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o/export?format=tsv&gid=750683809' > $@
-#downloads/mixs6_core.tsv:
-#	curl -L -s 'https://docs.google.com/spreadsheets/d/1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o/export?format=tsv&gid=178015749' > $@
+model/schema/mixs.yaml: downloads/mixs6.tsv downloads/mixs6_core.tsv
+	$(RUN) python -m gsctools.mixs_converter  2>&1 | tee -a logs/sheet2linkml.log
+
+# GSC Googlesheets ID: 1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o
+# NMDC Googlesheets ID: 1-ocpwjx6nkBod6aj4kcYeSB5NRlhXaYCcuk3ooX2OV4
+downloads/mixs6.tsv:
+	curl -L -s 'https://docs.google.com/spreadsheets/d/1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o/export?format=tsv&gid=750683809' > $@
+downloads/mixs6_core.tsv:
+	curl -L -s 'https://docs.google.com/spreadsheets/d/1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o/export?format=tsv&gid=178015749' > $@
 
 # todo add owl back in and make it awesome
 # todo derive output path from target file name
@@ -72,11 +74,3 @@ docserve:
 # exposes at https://GenomicsStandardsConsortium.github.io/mixs/
 gh_docs:
 	poetry run mkdocs gh-deploy
-
-# GSC Googlesheets ID: 1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o
-# NMDC Googlesheets ID: 1-ocpwjx6nkBod6aj4kcYeSB5NRlhXaYCcuk3ooX2OV4
-downloads/mixs6.tsv:
-	curl -L -s 'https://docs.google.com/spreadsheets/d/1-ocpwjx6nkBod6aj4kcYeSB5NRlhXaYCcuk3ooX2OV4/export?format=tsv&gid=750683809' > $@
-
-downloads/mixs6_core.tsv:
-	curl -L -s 'https://docs.google.com/spreadsheets/d/1-ocpwjx6nkBod6aj4kcYeSB5NRlhXaYCcuk3ooX2OV4/export?format=tsv&gid=178015749' > $@
