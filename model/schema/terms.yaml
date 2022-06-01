@@ -1238,9 +1238,7 @@ slots:
       compared to a closely related reference genome. High Quality Draft: >90%, Medium
       Quality Draft: >50%, and Low Quality Draft: < 50% should have the indicated
       completeness scores'
-    # range: compl_score_enum
-    range: string
-    pattern: ^(high|med|low);(0|([0-9]{1,2})|100)%$
+    range: compl_score_enum
     multivalued: false
     examples:
     - value: med;60%
@@ -1317,15 +1315,13 @@ slots:
       expected_value: enumeration
     string_serialization: '[reads| contigs]'
     slot_uri: MIXS:0000005
-  # MAM 2022-03-22 range was contam_screen_param_enum
   contam_screen_param:
     is_a: sequencing field
     title: contamination screening parameters
     description: Specific parameters used in the decontamination sofware, such as
       reference database, coverage, and kmers. Combinations of these parameters may
       also be used, i.e. kmer and coverage, or reference database and kmer
-    range: string
-    pattern: ^(ref db|kmer|coverage|combination);.+
+    range: contam_screen_param_enum
     multivalued: false
     examples:
     - value: kmer
@@ -3543,14 +3539,12 @@ slots:
       preferred_unit: gram of air, kilogram of air
       occurrence: '1'
     slot_uri: MIXS:0000188
-  # MAM 2022-03-22 range was pres_animal_insect_enum
   pres_animal_insect:
     is_a: core field
     title: presence of pets, animals, or insects
     description: The type and number of animals or insects present in the sampling
       space.
-    range: string
-    pattern: ^(cat|dog|rodent|snake|other);\d+$
+    range: pres_animal_insect_enum
     multivalued: false
     examples:
     - value: cat;5
@@ -7081,7 +7075,6 @@ slots:
       preferred_unit: percent
       occurrence: '1'
     slot_uri: MIXS:0000455
-  # MAM 2022-03-22 previously range: add_recov_method_enum
   add_recov_method:
     is_a: core field
     title: secondary and tertiary recovery methods and start date
@@ -7089,7 +7082,7 @@ slots:
       for increase of hydrocarbon recovery from resource and start date for each one
       of them. If "other" is specified, please propose entry in "additional info"
       field
-    range: string
+    range: add_recov_method_enum
     multivalued: false
     examples:
     - value: Polymer Addition;2018-06-21T14:30Z
@@ -7100,7 +7093,6 @@ slots:
       expected_value: enumeration;timestamp
       occurrence: '1'
     slot_uri: MIXS:0001009
-    pattern: ^(Water Injection|Dump Flood|Gas Injection|Wag Immiscible Injection|Polymer Addition|Surfactant Addition|Not Applicable|other);([\+-]?\d{4}(?!\d{2}\b))((-?)((0[1-9]|1[0-2])(\3([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6])))([T\s]((([01]\d|2[0-3])((:?)[0-5]\d)?|24\:?00)([\.,]\d+(?!:))?)?(\17[0-5]\d([\.,]\d+)?)?([zZ]|([\+-])([01]\d|2[0-3]):?([0-5]\d)?)?)?)?$
   iw_bt_date_well:
     is_a: core field
     title: injection water breakthrough date of specific well
@@ -8649,7 +8641,6 @@ slots:
       preferred_unit: meter
       occurrence: '1'
     slot_uri: MIXS:0000634
-  #
   cur_land_use:
     is_a: core field
     title: current land use
@@ -11335,7 +11326,6 @@ slots:
       occurrence: '1'
     string_serialization: '{termLabel} {[termID]}'
     slot_uri: MIXS:0001213
-  # MAM 2022-03-22 range was food_quality_date_enum
   food_quality_date:
     is_a: core field
     title: food quality date
@@ -11343,8 +11333,7 @@ slots:
       this date is not a reflection of safety unless used on infant formula this date
       is not a reflection of safety and is typically labeled on a food product as
       "best if used by," best by," "use by," or "freeze by."
-    range: string
-    pattern: ^(best by|best if used by|freeze by||use by);(19|20)\d\d-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$
+    range: food_quality_date_enum
     multivalued: false
     examples:
     - value: best by 2020-05-24
@@ -11895,12 +11884,11 @@ slots:
       occurrence: '1'
     string_serialization: '{float} {unit} {text}'
     slot_uri: MIXS:0001232
-  # MAM 2022-03-22 range was samp_purpose_enum
   samp_purpose:
     is_a: core field
     title: purpose of sampling
     description: The reason that the sample was collected.
-    range: string
+    range: samp_purpose_enum
     multivalued: false
     examples:
     - value: field trial
@@ -12658,6 +12646,7 @@ slots:
       expected_value: text
       occurrence: m
     string_serialization: '{text}'
+    slot_uri: MIXS:0001337
   growth_medium:
     is_a: core field
     title: growth medium
@@ -13609,24 +13598,23 @@ enums:
       Medium-quality draft genome: {}
       Low-quality draft genome: {}
       Genome fragment(s): {}
-  # MAM 2022-03-22 low;{percentage}: {}
   compl_score_enum:
     permissible_values:
       high: {}
       med: {}
-      low: {}
+      low;{percentage}: {}
   compl_appr_enum:
     permissible_values:
       marker gene: {}
       reference based: {}
       other: {}
-  # MAM 2022-03-22 combination;{text integer}: {}
   contam_screen_param_enum:
     permissible_values:
       ref db: {}
       kmer: {}
       coverage: {}
-      combination: {}
+      combination;{text: {}
+      integer}: {}
   decontam_software_enum:
     permissible_values:
       checkm/refinem: {}
@@ -13941,7 +13929,6 @@ enums:
       needs repair: {}
       damaged: {}
       rupture: {}
-  # MAM 2022-03-22 none;specify unfinished: {}
   floor_finish_mat_enum:
     permissible_values:
       tile: {}
@@ -13957,11 +13944,10 @@ enums:
       cork: {}
       terrazo: {}
       concrete: {}
-      none: {}
+      none;specify unfinished: {}
       sealed: {}
       clear finish: {}
       paint: {}
-      none or unfinished: {}
   floor_water_mold_enum:
     permissible_values:
       mold odor: {}
@@ -14059,14 +14045,13 @@ enums:
       southeast: {}
       southwest: {}
       northwest: {}
-  # MAM 2022-03-22 other;{integer}: {}
   pres_animal_insect_enum:
     permissible_values:
       cat: {}
       dog: {}
       rodent: {}
       snake: {}
-      other: {}
+      other;{integer}: {}
   quad_pos_enum:
     permissible_values:
       North side: {}
@@ -14509,7 +14494,6 @@ enums:
       KB: {}
       MSL: {}
       other: {}
-  # MAM 2022-03-22 add LinkML todo regarding previous other;{timestamp}: {}
   add_recov_method_enum:
     permissible_values:
       Water Injection: {}
@@ -14519,7 +14503,7 @@ enums:
       Polymer Addition: {}
       Surfactant Addition: {}
       Not Applicable: {}
-      other: {}
+      other;{timestamp}: {}
   samp_collect_point_enum:
     permissible_values:
       well: {}
@@ -14589,7 +14573,6 @@ enums:
       ebb tide: {}
       flood tide: {}
       high tide: {}
-  # MAM 2022-03-22 was rainforest (evergreen forest receiving >406 cm annual rainfall): {}
   cur_land_use_enum:
     permissible_values:
       cities: {}
@@ -14624,7 +14607,7 @@ enums:
       hardwoods (e.g. oak,hickory,elm,aspen): {}
       intermixed hardwood and conifers: {}
       tropical (e.g. mangrove,palms): {}
-      rainforest (evergreen forest receiving greater than 406 cm annual rainfall): {}
+      rainforest (evergreen forest receiving >406 cm annual rainfall): {}
       swamp (permanent or semi-permanent water body dominated by woody plants): {}
       crop trees (nuts,fruit,christmas trees,nursery trees): {}
   tillage_enum:
@@ -14746,19 +14729,14 @@ enums:
       present: {}
       positive: {}
       'yes': {}
-  # MAM 2022-03-15 GSheet says [best by|best if used by|freeze by||use by]; date
-  # this is a case of enum ; something else
-  # PLUS an empty permissible value!
-  # removed these lines:
-  #       ? ''
-  #    : {}
-  # use by; date: {}
   food_quality_date_enum:
     permissible_values:
       best by: {}
       best if used by: {}
       freeze by: {}
-      use by: {}
+      ? ''
+      : {}
+      use by; date: {}
   food_trace_list_enum:
     permissible_values:
       cheeses-other than hard cheeses: {}
@@ -14792,7 +14770,6 @@ enums:
       ? ''
       : {}
       vendor supplied container: {}
-  # MAM 2022-03-22 was research and development or {text}: {}
   samp_purpose_enum:
     permissible_values:
       active surveillance in response to an outbreak: {}
@@ -14808,7 +14785,7 @@ enums:
       passive surveillance: {}
       population based studies: {}
       research: {}
-      research and development: {}
+      research and development or {text}: {}
   animal_body_cond_enum:
     permissible_values:
       normal: {}
