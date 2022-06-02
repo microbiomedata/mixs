@@ -72,3 +72,7 @@ docserve:
 # exposes at https://GenomicsStandardsConsortium.github.io/mixs/
 gh_docs:
 	poetry run mkdocs gh-deploy
+
+.PHONY: ddtest
+dd_test.txt: data/dd_test_a.tsv data/dd_test_c.tsv
+	poetry run deep diff --ignore-order $^ > $@
