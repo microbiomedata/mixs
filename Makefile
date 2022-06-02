@@ -21,11 +21,52 @@ clean:
 
 #model/schema/mixs.yaml: downloads/mixs6.tsv downloads/mixs6_core.tsv
 #	$(RUN) python -m gsctools.mixs_converter  2>&1 | tee -a logs/sheet2linkml.log
-#
-#downloads/mixs6.tsv:
-#	curl -L -s 'https://docs.google.com/spreadsheets/d/1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o/export?format=tsv&gid=750683809' > $@
-#downloads/mixs6_core.tsv:
-#	curl -L -s 'https://docs.google.com/spreadsheets/d/1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o/export?format=tsv&gid=178015749' > $@
+
+downloads/gsc_mixs6.tsv:
+	curl -L -s 'https://docs.google.com/spreadsheets/d/1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o/export?format=tsv&gid=750683809' > $@
+downloads/gsc_mixs6.csv:
+	curl -L -s 'https://docs.google.com/spreadsheets/d/1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o/export?format=csv&gid=750683809' > $@
+downloads/gsc_mixs6_core.tsv:
+	curl -L -s 'https://docs.google.com/spreadsheets/d/1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o/export?format=tsv&gid=178015749' > $@
+
+# GSC: MIxS 6 term updates:MIxS6 Core- Final_clean
+#   https://docs.google.com/spreadsheets/d/1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o/edit#gid=178015749
+# GSC: MIxS 6 term updates:MIxS6 packages - Final_clean
+#   https://docs.google.com/spreadsheets/d/1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o/edit#gid=750683809
+
+# NMDC: NMDC copy of MIxS 6 term updates:
+#   https://docs.google.com/spreadsheets/d/1-ocpwjx6nkBod6aj4kcYeSB5NRlhXaYCcuk3ooX2OV4/edit#gid=178015749
+# NMDC MIxS 6 term updates:MIxS6 packages - Final_clean
+#   https://docs.google.com/spreadsheets/d/1-ocpwjx6nkBod6aj4kcYeSB5NRlhXaYCcuk3ooX2OV4/edit#gid=750683809
+
+downloads/nmdc_mixs6.tsv:
+	curl -L -s 'https://docs.google.com/spreadsheets/d/1-ocpwjx6nkBod6aj4kcYeSB5NRlhXaYCcuk3ooX2OV4/export?format=tsv&gid=750683809' > $@
+downloads/nmdc_mixs6.csv:
+	curl -L -s 'https://docs.google.com/spreadsheets/d/1-ocpwjx6nkBod6aj4kcYeSB5NRlhXaYCcuk3ooX2OV4/export?format=csv&gid=750683809' > $@
+downloads/nmdc_mixs6_extracol.csv: downloads/nmdc_mixs6.csv
+	# careful with those platform specific line endings!
+	#sed 's/\r/,/g' $< > $@
+	poetry run python util/blank_col_for_csv.py \
+		--csv_in $< \
+		--csv_out $@ \
+		--col_name removed
+downloads/nmdc_mixs6_core.tsv:
+	curl -L -s 'https://docs.google.com/spreadsheets/d/1-ocpwjx6nkBod6aj4kcYeSB5NRlhXaYCcuk3ooX2OV4/export?format=tsv&gid=178015749' > $@
+
+target/packages_diff.txt: downloads/gsc_mixs6.csv downloads/nmdc_mixs6.csv
+	poetry run deep diff --ignore-order $^ > $@
+
+
+
+.PHONY: cd_test
+
+cd_test: downloads/gsc_mixs6.csv downloads/nmdc_mixs6_extracol.csv
+	csvdiff \
+		--primary-key 0,1 \
+		--format word-diff $^
+# csvdiff: command failed - base-file and delta-file columns count do not match
+# --format string         Available (rowmark|json|legacy-json|diff|word-diff|color-words) (default "diff")
+
 
 # todo add owl back in and make it awesome
 # todo derive output path from target file name
@@ -73,6 +114,6 @@ docserve:
 gh_docs:
 	poetry run mkdocs gh-deploy
 
-.PHONY: ddtest
-dd_test.txt: data/dd_test_a.tsv data/dd_test_c.tsv
+
+target/dd_test.txt: data/dd_test_a.tsv data/dd_test_c.tsv
 	poetry run deep diff --ignore-order $^ > $@

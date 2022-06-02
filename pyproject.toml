@@ -12,6 +12,7 @@ pandas = "*"
 mkdocs = "*"
 deepdiff = "^5.8.1"
 clevercsv = "^0.7.4"
+click-log = "^0.4.0"
 
 [tool.poetry.dev-dependencies]
 pipenv-to-requirements = "*"
