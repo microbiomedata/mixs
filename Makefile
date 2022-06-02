@@ -52,9 +52,12 @@ downloads/nmdc_mixs6_extracol.csv: downloads/nmdc_mixs6.csv
 downloads/nmdc_mixs6_core.tsv:
 	curl -L -s 'https://docs.google.com/spreadsheets/d/1-ocpwjx6nkBod6aj4kcYeSB5NRlhXaYCcuk3ooX2OV4/export?format=tsv&gid=178015749' > $@
 
-.PHONY: cd_test
+.PHONY: gsc_vs_nmdc clean_diff_stuff
 
-cd_test: downloads/gsc_mixs6.csv downloads/nmdc_mixs6_extracol.csv
+clean_diff_stuff:
+	rm -rf downloads/*sv
+
+gsc_vs_nmdc: downloads/gsc_mixs6.csv downloads/nmdc_mixs6_extracol.csv
 	csvdiff \
 		--primary-key 0,1 \
 		--format word-diff $^
