@@ -44,8 +44,7 @@ downloads/nmdc_mixs6.tsv:
 downloads/nmdc_mixs6.csv:
 	curl -L -s 'https://docs.google.com/spreadsheets/d/1-ocpwjx6nkBod6aj4kcYeSB5NRlhXaYCcuk3ooX2OV4/export?format=csv&gid=750683809' > $@
 downloads/nmdc_mixs6_extracol.csv: downloads/nmdc_mixs6.csv
-	# careful with those platform specific line endings!
-	#sed 's/\r/,/g' $< > $@
+	# csvdiff: command failed - base-file and delta-file columns count do not match
 	poetry run python util/blank_col_for_csv.py \
 		--csv_in $< \
 		--csv_out $@ \
@@ -53,20 +52,13 @@ downloads/nmdc_mixs6_extracol.csv: downloads/nmdc_mixs6.csv
 downloads/nmdc_mixs6_core.tsv:
 	curl -L -s 'https://docs.google.com/spreadsheets/d/1-ocpwjx6nkBod6aj4kcYeSB5NRlhXaYCcuk3ooX2OV4/export?format=tsv&gid=178015749' > $@
 
-target/packages_diff.txt: downloads/gsc_mixs6.csv downloads/nmdc_mixs6.csv
-	poetry run deep diff --ignore-order $^ > $@
-
-
-
 .PHONY: cd_test
 
 cd_test: downloads/gsc_mixs6.csv downloads/nmdc_mixs6_extracol.csv
 	csvdiff \
 		--primary-key 0,1 \
 		--format word-diff $^
-# csvdiff: command failed - base-file and delta-file columns count do not match
 # --format string         Available (rowmark|json|legacy-json|diff|word-diff|color-words) (default "diff")
-
 
 # todo add owl back in and make it awesome
 # todo derive output path from target file name
@@ -113,7 +105,3 @@ docserve:
 # exposes at https://GenomicsStandardsConsortium.github.io/mixs/
 gh_docs:
 	poetry run mkdocs gh-deploy
-
-
-target/dd_test.txt: data/dd_test_a.tsv data/dd_test_c.tsv
-	poetry run deep diff --ignore-order $^ > $@
