@@ -27,6 +27,8 @@ clean:
 #downloads/mixs6_core.tsv:
 #	curl -L -s 'https://docs.google.com/spreadsheets/d/1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o/export?format=tsv&gid=178015749' > $@
 
+value_syntaxes.tsv: downloads/gsc_mixs6.tsv downloads/gsc_mixs6_core.tsv
+
 # todo add owl back in and make it awesome
 # todo derive output path from target file name
 # 		--exclude owl \
