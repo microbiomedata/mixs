@@ -34,7 +34,7 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href=".." class="nav-link">About</a>
+                                <a href=".." class="nav-link">Reference</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Introduction <b class="caret"></b></a>
@@ -128,1073 +128,939 @@
 <th>Multiplicity</th>
 <th>Description</th>
 <th>Pattern</th>
-<th>Info</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>MIXS:0001107</td>
-<td><a href="../samp_name/">samp_name</a></td>
+<td><a href="../0001107/">0001107</a></td>
+<td>samp_name</td>
 <td>1..1</td>
 <td>A local identifier or name that for the material sample used for extracting nucleic acids, and subsequent sequencing. It can refer either to the original material collected or to any derived sub-samples. It can have any format, but we suggest that you make it concise, unique and consistent within your lab, and as informative as possible. INSDC requires every sample name from a single Submitter to be unique. Use of a globally unique identifier for the field source_mat_id is recommended in addition to sample_name.</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001320</td>
-<td><a href="../samp_taxon_id/">samp_taxon_id</a></td>
+<td><a href="../0001320/">0001320</a></td>
+<td>samp_taxon_id</td>
 <td>1..1</td>
 <td>NCBI taxon id of the sample.  Maybe be a single taxon or mixed taxa sample. Use 'synthetic metagenome’ for mock community/positive controls, or 'blank sample' for negative controls.</td>
 <td>{text} [NCBI:txid]</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000092</td>
-<td><a href="../project_name/">project_name</a></td>
+<td><a href="../0000092/">0000092</a></td>
+<td>project_name</td>
 <td>1..1</td>
 <td>Name of the project within which the sequencing was organized</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000008</td>
-<td><a href="../experimental_factor/">experimental_factor</a></td>
+<td><a href="../0000008/">0000008</a></td>
+<td>experimental_factor</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>Experimental factors are essentially the variable aspects of an experiment design which can be used to describe an experiment, or set of experiments, in an increasingly detailed manner. This field accepts ontology terms from Experimental Factor Ontology (EFO) and/or Ontology for Biomedical Investigations (OBI). For a browser of EFO (v 2.95) terms, please see http://purl.bioontology.org/ontology/EFO; for a browser of OBI (v 2018-02-12) terms please see http://purl.bioontology.org/ontology/OBI</td>
 <td>{termLabel} {[termID]}</td>
-<td>{text}</td>
 </tr>
 <tr>
-<td>MIXS:0000009</td>
-<td><a href="../lat_lon/">lat_lon</a></td>
+<td><a href="../0000009/">0000009</a></td>
+<td>lat_lon</td>
 <td>1..1</td>
 <td>The geographical origin of the sample as defined by latitude and longitude. The values should be reported in decimal degrees and in WGS84 system</td>
 <td>{float} {float}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000010</td>
-<td><a href="../geo_loc_name/">geo_loc_name</a></td>
+<td><a href="../0000010/">0000010</a></td>
+<td>geo_loc_name</td>
 <td>1..1</td>
 <td>The geographical origin of the sample as defined by the country or sea name followed by specific region name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html), or the GAZ ontology (http://purl.bioontology.org/ontology/GAZ)</td>
 <td>{term}: {term}, {text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000011</td>
-<td><a href="../collection_date/">collection_date</a></td>
+<td><a href="../0000011/">0000011</a></td>
+<td>collection_date</td>
 <td>1..1</td>
 <td>The time of sampling, either as an instance (single point in time) or interval. In case no exact time is available, the date/time can be right truncated i.e. all of these are valid times: 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10; 2008-01-23; 2008-01; 2008; Except: 2008-01; 2008 all are ISO8601 compliant</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001321</td>
-<td><a href="../neg_cont_type/">neg_cont_type</a></td>
+<td><a href="../0001321/">0001321</a></td>
+<td>neg_cont_type</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>The substance or equipment used as a negative control in an investigation</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001322</td>
-<td><a href="../pos_cont_type/">pos_cont_type</a></td>
+<td><a href="../0001322/">0001322</a></td>
+<td>pos_cont_type</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>The substance, mixture, product, or apparatus used to verify that a process which is part of an investigation delivers a true positive.</td>
 <td>{term} or {text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000012</td>
-<td><a href="../env_broad_scale/">env_broad_scale</a></td>
+<td><a href="../0000012/">0000012</a></td>
+<td>env_broad_scale</td>
 <td>1..1</td>
 <td>Report the major environmental system the sample or specimen came from. The system(s) identified should have a coarse spatial grain, to provide the general environmental context of where the sampling was done (e.g. in the desert or a rainforest). We recommend using subclasses of EnvO’s biome class:  http://purl.obolibrary.org/obo/ENVO_00000428. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS</td>
 <td>{termLabel} {[termID]}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000013</td>
-<td><a href="../env_local_scale/">env_local_scale</a></td>
+<td><a href="../0000013/">0000013</a></td>
+<td>env_local_scale</td>
 <td>1..1</td>
 <td>Report the entity or entities which are in the sample or specimen’s local vicinity and which you believe have significant causal influences on your sample or specimen. We recommend using EnvO terms which are of smaller spatial grain than your entry for env_broad_scale. Terms, such as anatomical sites, from other OBO Library ontologies which interoperate with EnvO (e.g. UBERON) are accepted in this field. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.</td>
 <td>{termLabel} {[termID]}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000014</td>
-<td><a href="../env_medium/">env_medium</a></td>
+<td><a href="../0000014/">0000014</a></td>
+<td>env_medium</td>
 <td>1..1</td>
 <td>Report the environmental material(s) immediately surrounding the sample or specimen at the time of sampling. We recommend using subclasses of 'environmental material' (http://purl.obolibrary.org/obo/ENVO_00010483). EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS . Terms from other OBO ontologies are permissible as long as they reference mass/volume nouns (e.g. air, water, blood) and not discrete, countable entities (e.g. a tree, a leaf, a table top).</td>
 <td>{termLabel} {[termID]}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000026</td>
-<td><a href="../source_mat_id/">source_mat_id</a></td>
+<td><a href="../0000026/">0000026</a></td>
+<td>source_mat_id</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>A unique identifier assigned to a material sample (as defined by http://rs.tdwg.org/dwc/terms/materialSampleID, and as opposed to a particular digital record of a material sample) used for extracting nucleic acids, and subsequent sequencing. The identifier can refer either to the original material collected or to any derived sub-samples. The INSDC qualifiers /specimen_voucher, /bio_material, or /culture_collection may or may not share the same value as the source_mat_id field. For instance, the /specimen_voucher qualifier and source_mat_id may both contain 'UAM:Herps:14' , referring to both the specimen voucher and sampled tissue with the same identifier. However, the /culture_collection qualifier may refer to a value from an initial culture (e.g. ATCC:11775) while source_mat_id would refer to an identifier from some derived culture from which the nucleic acids were extracted (e.g. xatc123 or ark:/2154/R2).</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000015</td>
-<td><a href="../rel_to_oxygen/">rel_to_oxygen</a></td>
+<td><a href="../0000015/">0000015</a></td>
+<td>rel_to_oxygen</td>
 <td>0..1</td>
 <td>Is this organism an aerobe, anaerobe? Please note that aerobic and anaerobic are valid descriptors for microbial environments</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000002</td>
-<td><a href="../samp_collec_device/">samp_collec_device</a></td>
+<td><a href="../0000002/">0000002</a></td>
+<td>samp_collec_device</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>The device used to collect an environmental sample. This field accepts terms listed under environmental sampling device (http://purl.obolibrary.org/obo/ENVO). This field also accepts terms listed under specimen collection device (http://purl.obolibrary.org/obo/GENEPIO_0002094).</td>
 <td>{termLabel} {[termID]}</td>
-<td>{text}</td>
 </tr>
 <tr>
-<td>MIXS:0001225</td>
-<td><a href="../samp_collec_method/">samp_collec_method</a></td>
+<td><a href="../0001225/">0001225</a></td>
+<td>samp_collec_method</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>The method employed for collecting the sample.</td>
 <td>{PMID}</td>
-<td>{DOI}</td>
 </tr>
 <tr>
-<td>MIXS:0000016</td>
-<td><a href="../samp_mat_process/">samp_mat_process</a></td>
+<td><a href="../0000016/">0000016</a></td>
+<td>samp_mat_process</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>A brief description of any processing applied to the sample during or after retrieving the sample from environment, or a link to the relevant protocol(s) performed.</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000017</td>
-<td><a href="../size_frac/">size_frac</a></td>
+<td><a href="../0000017/">0000017</a></td>
+<td>size_frac</td>
 <td>0..1</td>
 <td>Filtering pore size used in sample preparation</td>
 <td>{float}-{float} {unit}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000001</td>
-<td><a href="../samp_size/">samp_size</a></td>
+<td><a href="../0000001/">0000001</a></td>
+<td>samp_size</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>The total amount or size (volume (ml), mass (g) or area (m2) ) of sample collected.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000111</td>
-<td><a href="../samp_vol_we_dna_ext/">samp_vol_we_dna_ext</a></td>
+<td><a href="../0000111/">0000111</a></td>
+<td>samp_vol_we_dna_ext</td>
 <td>0..1</td>
 <td>Volume (ml) or mass (g) of total collected sample processed for DNA extraction. Note: total sample collected should be entered under the term Sample Size (MIXS:0000001).</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000037</td>
-<td><a href="../nucl_acid_ext/">nucl_acid_ext</a></td>
+<td><a href="../0000037/">0000037</a></td>
+<td>nucl_acid_ext</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>A link to a literature reference, electronic resource or a standard operating procedure (SOP), that describes the material separation to recover the nucleic acid fraction from a sample</td>
 <td>{PMID}</td>
-<td>{DOI}</td>
 </tr>
 <tr>
-<td>MIXS:0000038</td>
-<td><a href="../nucl_acid_amp/">nucl_acid_amp</a></td>
+<td><a href="../0000038/">0000038</a></td>
+<td>nucl_acid_amp</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>A link to a literature reference, electronic resource or a standard operating procedure (SOP), that describes the enzymatic amplification (PCR, TMA, NASBA) of specific nucleic acids</td>
 <td>{PMID}</td>
-<td>{DOI}</td>
 </tr>
 <tr>
-<td>MIXS:0000039</td>
-<td><a href="../lib_size/">lib_size</a></td>
+<td><a href="../0000039/">0000039</a></td>
+<td>lib_size</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>Total number of clones in the library prepared for the project</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000040</td>
-<td><a href="../lib_reads_seqd/">lib_reads_seqd</a></td>
+<td><a href="../0000040/">0000040</a></td>
+<td>lib_reads_seqd</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>Total number of clones sequenced from the library</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000041</td>
-<td><a href="../lib_layout/">lib_layout</a></td>
+<td><a href="../0000041/">0000041</a></td>
+<td>lib_layout</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>Specify whether to expect single, paired, or other configuration of reads</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000042</td>
-<td><a href="../lib_vector/">lib_vector</a></td>
+<td><a href="../0000042/">0000042</a></td>
+<td>lib_vector</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>Cloning vector type(s) used in construction of libraries</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000043</td>
-<td><a href="../lib_screen/">lib_screen</a></td>
+<td><a href="../0000043/">0000043</a></td>
+<td>lib_screen</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>Specific enrichment or screening methods applied before and/or after creating libraries</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000044</td>
-<td><a href="../target_gene/">target_gene</a></td>
+<td><a href="../0000044/">0000044</a></td>
+<td>target_gene</td>
 <td>1..1</td>
 <td>Targeted gene or locus name for marker gene studies</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000045</td>
-<td><a href="../target_subfragment/">target_subfragment</a></td>
+<td><a href="../0000045/">0000045</a></td>
+<td>target_subfragment</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>Name of subfragment of a gene or locus. Important to e.g. identify special regions on marker genes like V6 on 16S rRNA</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000046</td>
-<td><a href="../pcr_primers/">pcr_primers</a></td>
+<td><a href="../0000046/">0000046</a></td>
+<td>pcr_primers</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>PCR primers that were used to amplify the sequence of the targeted gene, locus or subfragment. This field should contain all the primers used for a single PCR reaction if multiple forward or reverse primers are present in a single PCR reaction. The primer sequence should be reported in uppercase letters</td>
 <td>FWD:{dna};REV:{dna}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000047</td>
-<td><a href="../mid/">mid</a></td>
+<td><a href="../0000047/">0000047</a></td>
+<td>mid</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>Molecular barcodes, called Multiplex Identifiers (MIDs), that are used to specifically tag unique samples in a sequencing run. Sequence should be reported in uppercase letters</td>
 <td>{dna}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000048</td>
-<td><a href="../adapters/">adapters</a></td>
+<td><a href="../0000048/">0000048</a></td>
+<td>adapters</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>Adapters provide priming sequences for both amplification and sequencing of the sample-library fragments. Both adapters should be reported; in uppercase letters</td>
 <td>{dna};{dna}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000049</td>
-<td><a href="../pcr_cond/">pcr_cond</a></td>
+<td><a href="../0000049/">0000049</a></td>
+<td>pcr_cond</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>Description of reaction conditions and components of PCR in the form of 'initial denaturation:94degC_1.5min; annealing=...'</td>
 <td>initial denaturation:degrees_minutes;annealing:degrees_minutes;elongation:degrees_minutes;final elongation:degrees_minutes;total cycles</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000050</td>
-<td><a href="../seq_meth/">seq_meth</a></td>
+<td><a href="../0000050/">0000050</a></td>
+<td>seq_meth</td>
 <td>1..1</td>
 <td>Sequencing machine used. Where possible the term should be taken from the OBI list of DNA sequencers (http://purl.obolibrary.org/obo/OBI_0400103).</td>
 <td>{termLabel} {[termID]}</td>
-<td>{text}</td>
 </tr>
 <tr>
-<td>MIXS:0000051</td>
-<td><a href="../seq_quality_check/">seq_quality_check</a></td>
+<td><a href="../0000051/">0000051</a></td>
+<td>seq_quality_check</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>Indicate if the sequence has been called by automatic systems (none) or undergone a manual editing procedure (e.g. by inspecting the raw data or chromatograms). Applied only for sequences that are not submitted to SRA,ENA or DRA</td>
 <td>[none</td>
-<td>manually edited]</td>
 </tr>
 <tr>
-<td>MIXS:0000052</td>
-<td><a href="../chimera_check/">chimera_check</a></td>
+<td><a href="../0000052/">0000052</a></td>
+<td>chimera_check</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>Tool(s) used for chimera checking, including version number and parameters, to discover and remove chimeric sequences. A chimeric sequence is comprised of two or more phylogenetically distinct parent sequences.</td>
 <td>{software};{version};{parameters}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000058</td>
-<td><a href="../assembly_software/">assembly_software</a></td>
+<td><a href="../0000058/">0000058</a></td>
+<td>assembly_software</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>Tool(s) used for assembly, including version number and parameters</td>
 <td>{software};{version};{parameters}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000091</td>
-<td><a href="../associated_resource/">associated_resource</a></td>
+<td><a href="../0000091/">0000091</a></td>
+<td>associated resource</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>A related resource that is referenced, cited, or otherwise associated to the sequence.</td>
 <td>{PMID}</td>
-<td>{DOI}</td>
 </tr>
 <tr>
-<td>MIXS:0000090</td>
-<td><a href="../sop/">sop</a></td>
+<td><a href="../0000090/">0000090</a></td>
+<td>sop</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>Standard operating procedures used in assembly and/or annotation of genomes, metagenomes or environmental sequences</td>
 <td>{PMID}</td>
-<td>{DOI}</td>
 </tr>
 <tr>
-<td>MIXS:0000018</td>
-<td><a href="../depth/">depth</a></td>
+<td><a href="../0000018/">0000018</a></td>
+<td>depth</td>
 <td>0..1</td>
 <td>The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000094</td>
-<td><a href="../alt/">alt</a></td>
+<td><a href="../0000094/">0000094</a></td>
+<td>alt</td>
 <td>0..1</td>
 <td>Altitude is a term used to identify heights of objects such as airplanes, space shuttles, rockets, atmospheric balloons and heights of places such as atmospheric layers and clouds. It is used to measure the height of an object which is above the earth's surface. In this context, the altitude measurement is the vertical distance between the earth's surface above sea level and the sampled position in the air</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000093</td>
-<td><a href="../elev/">elev</a></td>
+<td><a href="../0000093/">0000093</a></td>
+<td>elev</td>
 <td>0..1</td>
 <td>Elevation of the sampling site is its height above a fixed reference point, most commonly the mean sea level. Elevation is mainly used when referring to points on the earth's surface, while altitude is used for points above the surface, such as an aircraft in flight or a spacecraft in orbit.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000113</td>
-<td><a href="../temp/">temp</a></td>
+<td><a href="../0000113/">0000113</a></td>
+<td>temp</td>
 <td>0..1</td>
 <td>Temperature of the sample at the time of sampling.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000002</td>
-<td><a href="../samp_collect_device/">samp_collect_device</a></td>
+<td><a href="../0000002/">0000002</a></td>
+<td>samp_collect_device</td>
 <td>0..1</td>
 <td>The device used to collect an environmental sample. This field accepts terms listed under environmental sampling device (http://purl.obolibrary.org/obo/ENVO). This field also accepts terms listed under specimen collection device (http://purl.obolibrary.org/obo/GENEPIO_0002094).</td>
 <td>{termLabel} {[termID]}</td>
-<td>{text}</td>
 </tr>
 <tr>
-<td>MIXS:0000103</td>
-<td><a href="../organism_count/">organism_count</a></td>
+<td><a href="../0000103/">0000103</a></td>
+<td>organism_count</td>
 <td>0..*</td>
 <td>Total cell count of any organism (or group of organisms) per gram, volume or area of sample, should include name of organism followed by count. The method that was used for the enumeration (e.g. qPCR, atp, mpn, etc.) Should also be provided. (example: total prokaryotes; 3.5e7 cells per ml; qpcr)</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000110</td>
-<td><a href="../samp_stor_temp/">samp_stor_temp</a></td>
+<td><a href="../0000110/">0000110</a></td>
+<td>samp_stor_temp</td>
 <td>0..1</td>
 <td>Temperature at which sample was stored, e.g. -80 degree Celsius.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000116</td>
-<td><a href="../samp_stor_dur/">samp_stor_dur</a></td>
+<td><a href="../0000116/">0000116</a></td>
+<td>samp_stor_dur</td>
 <td>0..1</td>
 <td>Duration for which the sample was stored. Indicate the duration for which the sample was stored written in ISO 8601 format.</td>
 <td>{duration}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000124</td>
-<td><a href="../air_temp/">air_temp</a></td>
+<td><a href="../0000124/">0000124</a></td>
+<td>air_temp</td>
 <td>0..1</td>
 <td>Temperature of the air at the time of sampling</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000192</td>
-<td><a href="../room_dim/">room_dim</a></td>
+<td><a href="../0000192/">0000192</a></td>
+<td>room_dim</td>
 <td>0..1</td>
 <td>The length, width and height of sampling room</td>
 <td>{integer} {unit} x {integer} {unit} x {integer} {unit}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000226</td>
-<td><a href="../freq_clean/">freq_clean</a></td>
+<td><a href="../0000226/">0000226</a></td>
+<td>freq_clean</td>
 <td>0..1</td>
 <td>The number of times the sample location is cleaned. Frequency of cleaning might be on a Daily basis, Weekly, Monthly, Quarterly or Annually.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000244</td>
-<td><a href="../samp_room_id/">samp_room_id</a></td>
+<td><a href="../0000244/">0000244</a></td>
+<td>samp_room_id</td>
 <td>0..1</td>
 <td>Sampling room number. This ID should be consistent with the designations on the building floor plans</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000325</td>
-<td><a href="../pool_dna_extracts/">pool_dna_extracts</a></td>
+<td><a href="../0000325/">0000325</a></td>
+<td>pool_dna_extracts</td>
 <td>0..1</td>
 <td>Indicate whether multiple DNA extractions were mixed. If the answer yes, the number of extracts that were pooled should be given</td>
 <td>{boolean};{integer}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000755</td>
-<td><a href="../samp_stor_loc/">samp_stor_loc</a></td>
+<td><a href="../0000755/">0000755</a></td>
+<td>samp_stor_loc</td>
 <td>0..1</td>
 <td>Location at which sample was stored, usually name of a specific freezer/room. Indicate the location name.</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000758</td>
-<td><a href="../surf_material/">surf_material</a></td>
+<td><a href="../0000758/">0000758</a></td>
+<td>surf_material</td>
 <td>0..1</td>
 <td>Surface materials at the point of sampling</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000764</td>
-<td><a href="../indoor_surf/">indoor_surf</a></td>
+<td><a href="../0000764/">0000764</a></td>
+<td>indoor_surf</td>
 <td>0..1</td>
 <td>Type of indoor surface</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000775</td>
-<td><a href="../avg_occup/">avg_occup</a></td>
+<td><a href="../0000775/">0000775</a></td>
+<td>avg_occup</td>
 <td>0..1</td>
 <td>Daily average occupancy of room. Indicate the number of person(s) daily occupying the sampling room.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000828</td>
-<td><a href="../samp_floor/">samp_floor</a></td>
+<td><a href="../0000828/">0000828</a></td>
+<td>samp_floor</td>
 <td>0..1</td>
 <td>The floor of the building, where the sampling room is located</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000859</td>
-<td><a href="../genetic_mod/">genetic_mod</a></td>
+<td><a href="../0000859/">0000859</a></td>
+<td>genetic_mod</td>
 <td>0..1</td>
 <td>Genetic modifications of the genome of an organism, which may occur naturally by spontaneous mutation, or be introduced by some experimental means, e.g. specification of a transgene or the gene knocked-out or details of transient transfection</td>
 <td>{PMID}</td>
-<td>{DOI}</td>
 </tr>
 <tr>
-<td>MIXS:0001183</td>
-<td><a href="../coll_site_geo_feat/">coll_site_geo_feat</a></td>
+<td><a href="../0001183/">0001183</a></td>
+<td>coll_site_geo_feat</td>
 <td>1..1</td>
 <td>Text or terms that describe the geographic feature where the food sample was obtained by the researcher. This field accepts selected terms listed under the following ontologies: anthropogenic geographic feature (http://purl.obolibrary.org/obo/ENVO_00000002), for example agricultural fairground [ENVO:01000986]; garden [ENVO:00000011} or any of its subclasses; market [ENVO:01000987]; water well [ENVO:01000002]; or human construction (http://purl.obolibrary.org/obo/ENVO_00000070).</td>
 <td>{text}</td>
-<td>{termLabel} {[termID]}</td>
 </tr>
 <tr>
-<td>MIXS:0001154</td>
-<td><a href="../samp_source_mat_cat/">samp_source_mat_cat</a></td>
+<td><a href="../0001154/">0001154</a></td>
+<td>samp_source_mat_cat</td>
 <td>1..1</td>
 <td>This is the scientific role or category that the subject organism or material has with respect to an investigation.  This field accepts terms listed under specimen source material category (http://purl.obolibrary.org/obo/GENEPIO_0001237 or http://purl.obolibrary.org/obo/OBI_0100051).</td>
 <td>{termLabel} {[termID]}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000998</td>
-<td><a href="../samp_type/">samp_type</a></td>
+<td><a href="../0000998/">0000998</a></td>
+<td>samp_type</td>
 <td>1..1</td>
 <td>The type of material from which the sample was obtained. For the Hydrocarbon package, samples include types like core, rock trimmings, drill cuttings, piping section, coupon, pigging debris, solid deposit, produced fluid, produced water, injected water, swabs, etc. For the Food Package, samples are usually categorized as food, body products or tissues, or environmental material. This field accepts terms listed under environmental specimen (http://purl.obolibrary.org/obo/GENEPIO_0001246).</td>
 <td>{termLabel} {[termID]}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001229</td>
-<td><a href="../samp_stor_media/">samp_stor_media</a></td>
+<td><a href="../0001229/">0001229</a></td>
+<td>samp_stor_media</td>
 <td>1..1</td>
 <td>The liquid that is added to the sample collection device prior to sampling. If the sample is pre-hydrated, indicate the liquid media the sample is pre-hydrated with for storage purposes. This field accepts terms listed under microbiological culture medium (http://purl.obolibrary.org/obo/MICRO_0000067). If the proper descriptor is not listed please use text to describe the sample storage media.</td>
 <td>{text}</td>
-<td>{termLabel} {[termID]}</td>
 </tr>
 <tr>
-<td>MIXS:0001228</td>
-<td><a href="../samp_stor_device/">samp_stor_device</a></td>
+<td><a href="../0001228/">0001228</a></td>
+<td>samp_stor_device</td>
 <td>1..1</td>
 <td>The container used to store the  sample. This field accepts terms listed under container (http://purl.obolibrary.org/obo/NCIT_C43186). If the proper descriptor is not listed please use text to describe the storage device.</td>
 <td>{text}</td>
-<td>{termLabel} {[termID]}</td>
 </tr>
 <tr>
-<td>MIXS:0001184</td>
-<td><a href="../food_product_type/">food_product_type</a></td>
+<td><a href="../0001184/">0001184</a></td>
+<td>food_product_type</td>
 <td>1..*</td>
 <td>A food product type is a class of food products that is differentiated by its food composition (e.g., single- or multi-ingredient), processing and/or consumption characteristics. This does not include brand name products but it may include generic food dish categories. This field accepts terms under food product type (http://purl.obolibrary.org/obo/FOODON:03400361). For terms related to food product for an animal, consult food product for animal (http://purl.obolibrary.org/obo/FOODON_03309997). If the proper descriptor is not listed please use text to describe the food type. Multiple terms can be separated by one or more pipes.</td>
 <td>{text}</td>
-<td>{termLabel} {[termID]}</td>
 </tr>
 <tr>
-<td>MIXS:0001179</td>
-<td><a href="../IFSAC_category/">IFSAC_category</a></td>
+<td><a href="../0001179/">0001179</a></td>
+<td>IFSAC_category</td>
 <td>1..*</td>
 <td>The IFSAC food categorization scheme has five distinct levels to which foods can be assigned, depending upon the type of food. First, foods are assigned to one of four food groups (aquatic animals, land animals, plants, and other). Food groups include increasingly specific food categories; dairy, eggs, meat and poultry, and game are in the land animal food group, and the category meat and poultry is further subdivided into more specific categories of meat (beef, pork, other meat) and poultry (chicken, turkey, other poultry). Finally, foods are differentiated by differences in food processing (such as pasteurized fluid dairy products, unpasteurized fluid dairy products, pasteurized solid and semi-solid dairy products, and unpasteurized solid and semi-solid dairy products. An IFSAC food category chart is available from https://www.cdc.gov/foodsafety/ifsac/projects/food-categorization-scheme.html PMID: 28926300.</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001213</td>
-<td><a href="../food_product_qual/">food_product_qual</a></td>
+<td><a href="../0001213/">0001213</a></td>
+<td>food_product_qual</td>
 <td>1..1</td>
 <td>Descriptors for describing food visually or via other senses, which is useful for tasks like food inspection where little prior knowledge of how the food came to be is available. Some terms like "food (frozen)" are both a quality descriptor and the output of a process. This field accepts terms listed under food product by quality (http://purl.obolibrary.org/obo/FOODON_00002454).</td>
 <td>{termLabel} {[termID]}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001131</td>
-<td><a href="../food_contact_surf/">food_contact_surf</a></td>
+<td><a href="../0001131/">0001131</a></td>
+<td>food_contact_surf</td>
 <td>1..*</td>
 <td>The specific container or coating materials in direct contact with the food. Multiple values can be assigned.  This field accepts terms listed under food contact surface (http://purl.obolibrary.org/obo/FOODON_03500010).</td>
 <td>{text}</td>
-<td>{termLabel} {[termID]}</td>
 </tr>
 <tr>
-<td>MIXS:0001252</td>
-<td><a href="../facility_type/">facility_type</a></td>
+<td><a href="../0001252/">0001252</a></td>
+<td>facility_type</td>
 <td>0..*</td>
 <td>Establishment details about the type of facility where the sample was taken. This is independent of the specific product(s) within the facility.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001137</td>
-<td><a href="../food_trav_mode/">food_trav_mode</a></td>
+<td><a href="../0001137/">0001137</a></td>
+<td>food_trav_mode</td>
 <td>0..*</td>
 <td>A descriptor for the method of movement of food commodity along the food distribution system.  This field accepts terms listed under travel mode (http://purl.obolibrary.org/obo/GENEPIO_0001064). If the proper descrptor is not listed please use text to describe the mode of travel. Multiple terms can be separated by one or more pipes.</td>
 <td>{termLabel} {[termID]}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001138</td>
-<td><a href="../food_trav_vehic/">food_trav_vehic</a></td>
+<td><a href="../0001138/">0001138</a></td>
+<td>food_trav_vehic</td>
 <td>0..*</td>
 <td>A descriptor for the mobile machine which is used to transport food commodities along the food distribution system.  This field accepts terms listed under vehicle (http://purl.obolibrary.org/obo/ENVO_01000604). If the proper descrptor is not listed please use text to describe the mode of travel. Multiple terms can be separated by one or more pipes.</td>
 <td>{text}</td>
-<td>{termLabel} {[termID]}</td>
 </tr>
 <tr>
-<td>MIXS:0001231</td>
-<td><a href="../samp_transport_dur/">samp_transport_dur</a></td>
+<td><a href="../0001231/">0001231</a></td>
+<td>samp_transport_dur</td>
 <td>0..1</td>
 <td>The duration of time from when the sample was collected until processed. Indicate the duration for which the sample was stored written in ISO 8601 format.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001232</td>
-<td><a href="../samp_transport_temp/">samp_transport_temp</a></td>
+<td><a href="../0001232/">0001232</a></td>
+<td>samp_transport_temp</td>
 <td>0..1</td>
 <td>Temperature at which sample was transported, e.g. -20 or 4 degree Celsius.</td>
 <td>{float} {unit} {text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001225</td>
-<td><a href="../samp_collect_method/">samp_collect_method</a></td>
+<td><a href="../0001225/">0001225</a></td>
+<td>samp_collect_method</td>
 <td>0..1</td>
 <td>The method employed for collecting the sample.</td>
 <td>{PMID}</td>
-<td>{DOI}</td>
 </tr>
 <tr>
-<td>MIXS:0001224</td>
-<td><a href="../num_samp_collect/">num_samp_collect</a></td>
+<td><a href="../0001224/">0001224</a></td>
+<td>num_samp_collect</td>
 <td>0..1</td>
 <td>The number of samples collected during the current sampling event.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001147</td>
-<td><a href="../lot_number/">lot_number</a></td>
+<td><a href="../0001147/">0001147</a></td>
+<td>lot_number</td>
 <td>0..*</td>
 <td>A distinctive alpha-numeric identification code assigned by the manufacturer or distributor to a specific quantity of manufactured material or product within a batch. Synonym: Batch Number.  The submitter should provide lot number of the item followed by the item name for which the lot number was provided.</td>
 <td>{integer}, {text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001253</td>
-<td><a href="../hygienic_area/">hygienic_area</a></td>
+<td><a href="../0001253/">0001253</a></td>
+<td>hygienic_area</td>
 <td>0..1</td>
 <td>The subdivision of areas within a food production facility according to hygienic requirements. This field accepts terms listed under hygienic food production area (http://purl.obolibrary.org/obo/ENVO). Please add a term that most accurately indicates the hygienic area your sample was taken from according to the definitions provided.</td>
 <td>{termLabel} {[termID]}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001254</td>
-<td><a href="../env_monitoring_zone/">env_monitoring_zone</a></td>
+<td><a href="../0001254/">0001254</a></td>
+<td>env_monitoring_zone</td>
 <td>0..1</td>
 <td>An environmental monitoring zone is a formal designation as part of an environmental monitoring program, in which areas of a food production facility are categorized, commonly as zones 1-4, based on likelihood or risk of foodborne pathogen contamination. This field accepts terms listed under food production environmental monitoring zone (http://purl.obolibrary.org/obo/ENVO). Please add a term to indicate the environmental monitoring zone the sample was taken from.</td>
 <td>{termLabel} {[termID]}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001255</td>
-<td><a href="../area_samp_size/">area_samp_size</a></td>
+<td><a href="../0001255/">0001255</a></td>
+<td>area_samp_size</td>
 <td>0..1</td>
 <td>The total amount or size (volume (ml), mass (g) or area (m2) ) of sample collected.</td>
 <td>{integer} {unit} x {integer} {unit}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001256</td>
-<td><a href="../samp_surf_moisture/">samp_surf_moisture</a></td>
+<td><a href="../0001256/">0001256</a></td>
+<td>samp_surf_moisture</td>
 <td>0..*</td>
 <td>Degree of water held on a sampled surface.  If present, user can state the degree of water held on surface (intermittent moisture, submerged). If no surface moisture is present indicate not present.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001257</td>
-<td><a href="../samp_loc_condition/">samp_loc_condition</a></td>
+<td><a href="../0001257/">0001257</a></td>
+<td>samp_loc_condition</td>
 <td>0..1</td>
 <td>The condition of the sample location at the time of sampling.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001258</td>
-<td><a href="../biocide_used/">biocide_used</a></td>
+<td><a href="../0001258/">0001258</a></td>
+<td>biocide_used</td>
 <td>0..*</td>
 <td>Substance intended for preventing, neutralizing, destroying, repelling, or mitigating the effects of any pest or microorganism; that inhibits the growth, reproduction, and activity of organisms, including fungal cells; decreases the number of fungi or pests present; deters microbial growth and degradation of other ingredients in the formulation. Indicate the biocide used on the location where the sample was taken. Multiple terms can be separated by pipes.</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001259</td>
-<td><a href="../ster_meth_samp_room/">ster_meth_samp_room</a></td>
+<td><a href="../0001259/">0001259</a></td>
+<td>ster_meth_samp_room</td>
 <td>0..*</td>
 <td>The method used to sterilize the sampling room. This field accepts terms listed under electromagnetic radiation (http://purl.obolibrary.org/obo/ENVO_01001026). If the proper descriptor is not listed, please use text to describe the sampling room sterilization method. Multiple terms can be separated by pipes.</td>
 <td>{text}</td>
-<td>{termLabel} {[termID]}</td>
 </tr>
 <tr>
-<td>MIXS:0001177</td>
-<td><a href="../enrichment_protocol/">enrichment_protocol</a></td>
+<td><a href="../0001177/">0001177</a></td>
+<td>enrichment_protocol</td>
 <td>0..1</td>
 <td>The microbiological workflow or protocol followed to test for the presence or enumeration of the target microbial analyte(s). Please provide a PubMed or DOI reference for published protocols.</td>
 <td>{PMID}</td>
-<td>{DOI}</td>
 </tr>
 <tr>
-<td>MIXS:0001119</td>
-<td><a href="../cult_target/">cult_target</a></td>
+<td><a href="../0001119/">0001119</a></td>
+<td>cult_target</td>
 <td>0..*</td>
 <td>The target microbial analyte in terms of investigation scope. This field accepts terms under organism (http://purl.obolibrary.org/obo/NCIT_C14250). This field also accepts identification numbers from NCBI under https://www.ncbi.nlm.nih.gov/taxonomy.</td>
 <td>{termLabel} {[termID]}</td>
-<td>{integer}</td>
 </tr>
 <tr>
-<td>MIXS:0001216</td>
-<td><a href="../microb_cult_med/">microb_cult_med</a></td>
+<td><a href="../0001216/">0001216</a></td>
+<td>microb_cult_med</td>
 <td>0..1</td>
 <td>A culture medium used to select for, grow, and maintain prokaryotic microorganisms. Can be in either liquid (broth) or solidified (e.g. with agar) forms. This field accepts terms listed under microbiological culture medium (http://purl.obolibrary.org/obo/MICRO_0000067). If the proper descriptor is not listed please use text to describe the culture medium.</td>
 <td>{text}</td>
-<td>{termLabel} {[termID]}</td>
 </tr>
 <tr>
-<td>MIXS:0001173</td>
-<td><a href="../timepoint/">timepoint</a></td>
+<td><a href="../0001173/">0001173</a></td>
+<td>timepoint</td>
 <td>0..1</td>
 <td>Time point at which a sample or observation is made or taken from a biomaterial as measured from some reference point. Indicate the timepoint written in ISO 8601 format.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001194</td>
-<td><a href="../bacterial_density/">bacterial_density</a></td>
+<td><a href="../0001194/">0001194</a></td>
+<td>bacterial_density</td>
 <td>0..1</td>
 <td>Number of bacteria in sample, as defined by bacteria density (http://purl.obolibrary.org/obo/GENEPIO_0000043).</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001181</td>
-<td><a href="../cult_isol_date/">cult_isol_date</a></td>
+<td><a href="../0001181/">0001181</a></td>
+<td>cult_isol_date</td>
 <td>0..1</td>
 <td>A culture isolation date is a date-time entity marking the end of a process in which a sample yields a positive result for the target microbial analyte(s) in the form of an isolated colony or colonies.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001117</td>
-<td><a href="../cult_result/">cult_result</a></td>
+<td><a href="../0001117/">0001117</a></td>
+<td>cult_result</td>
 <td>0..1</td>
 <td>Any result of a bacterial culture experiment reported as a binary assessment such as positive/negative, active/inactive.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001118</td>
-<td><a href="../cult_result_org/">cult_result_org</a></td>
+<td><a href="../0001118/">0001118</a></td>
+<td>cult_result_org</td>
 <td>0..*</td>
 <td>Taxonomic information about the cultured organism(s).</td>
 <td>{termLabel} {[termID]}</td>
-<td>{integer}</td>
 </tr>
 <tr>
-<td>MIXS:0001153</td>
-<td><a href="../samp_pooling/">samp_pooling</a></td>
+<td><a href="../0001153/">0001153</a></td>
+<td>samp_pooling</td>
 <td>0..*</td>
 <td>Physical combination of several instances of like material, e.g. RNA extracted from samples or dishes of cell cultures into one big aliquot of cells. Please provide a short description of the samples that were pooled.</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001151</td>
-<td><a href="../samp_purpose/">samp_purpose</a></td>
+<td><a href="../0001151/">0001151</a></td>
+<td>samp_purpose</td>
 <td>0..1</td>
 <td>The reason that the sample was collected.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001227</td>
-<td><a href="../samp_rep_tech/">samp_rep_tech</a></td>
+<td><a href="../0001227/">0001227</a></td>
+<td>samp_rep_tech</td>
 <td>0..1</td>
 <td>Repeated measurements of the same sample that show independent measures of the noise associated with the equipment and the protocols.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001226</td>
-<td><a href="../samp_rep_biol/">samp_rep_biol</a></td>
+<td><a href="../0001226/">0001226</a></td>
+<td>samp_rep_biol</td>
 <td>0..1</td>
 <td>Measurements of biologically distinct samples that show biological variation.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001230</td>
-<td><a href="../samp_transport_cont/">samp_transport_cont</a></td>
+<td><a href="../0001230/">0001230</a></td>
+<td>samp_transport_cont</td>
 <td>0..1</td>
 <td>Conatiner in which the sample was stored during transport. Indicate the location name.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001236</td>
-<td><a href="../study_design/">study_design</a></td>
+<td><a href="../0001236/">0001236</a></td>
+<td>study_design</td>
 <td>0..*</td>
 <td>A plan specification comprised of protocols (which may specify how and what kinds of data will be gathered) that are executed as part of an investigation and is realized during a study design execution. This field accepts terms under study design (http://purl.obolibrary.org/obo/OBI_0500000). If the proper descriptor is not listed please use text to describe the study design. Multiple terms can be separated by pipes.</td>
 <td>{text}</td>
-<td>{termLabel} {[termID]}</td>
 </tr>
 <tr>
-<td>MIXS:0001223</td>
-<td><a href="../nucl_acid_ext_kit/">nucl_acid_ext_kit</a></td>
+<td><a href="../0001223/">0001223</a></td>
+<td>nucl_acid_ext_kit</td>
 <td>0..*</td>
 <td>The name of the extraction kit used to recover the nucleic acid fraction of an input material is performed.</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001145</td>
-<td><a href="../library_prep_kit/">library_prep_kit</a></td>
+<td><a href="../0001145/">0001145</a></td>
+<td>library_prep_kit</td>
 <td>0..1</td>
 <td>Packaged kits (containing adapters, indexes, enzymes, buffers etc.), tailored for specific sequencing workflows, which allow the simplified preparation of sequencing-ready libraries for small genomes, amplicons, and plasmids.</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001155</td>
-<td><a href="../sequencing_kit/">sequencing_kit</a></td>
+<td><a href="../0001155/">0001155</a></td>
+<td>sequencing_kit</td>
 <td>0..1</td>
 <td>Pre-filled, ready-to-use reagent cartridges. Used to produce improved chemistry, cluster density and read length as well as improve quality (Q) scores. Reagent components are encoded to interact with the sequencing system to validate compatibility with user-defined applications. Indicate name of the sequencing kit.</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001156</td>
-<td><a href="../sequencing_location/">sequencing_location</a></td>
+<td><a href="../0001156/">0001156</a></td>
+<td>sequencing_location</td>
 <td>0..1</td>
 <td>The location the sequencing run was performed. Indicate the name of the lab or core facility where samples were sequenced.</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001238</td>
-<td><a href="../study_inc_temp/">study_inc_temp</a></td>
+<td><a href="../0001238/">0001238</a></td>
+<td>study_inc_temp</td>
 <td>0..1</td>
 <td>Sample incubation temperature if unpublished or unvalidated method is used.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001237</td>
-<td><a href="../study_inc_dur/">study_inc_dur</a></td>
+<td><a href="../0001237/">0001237</a></td>
+<td>study_inc_dur</td>
 <td>0..1</td>
 <td>Sample incubation duration if unpublished or unvalidated method is used. Indicate the timepoint written in ISO 8601 format.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001239</td>
-<td><a href="../study_timecourse/">study_timecourse</a></td>
+<td><a href="../0001239/">0001239</a></td>
+<td>study_timecourse</td>
 <td>0..1</td>
 <td>For time-course research studies involving samples of the food commodity, indicate the total duration of the time-course study.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001240</td>
-<td><a href="../study_tmnt/">study_tmnt</a></td>
+<td><a href="../0001240/">0001240</a></td>
+<td>study_tmnt</td>
 <td>0..*</td>
 <td>A process in which the act is intended to modify or alter some other material entity.  From the study design, each treatment is comprised of one level of one or multiple factors. This field accepts terms listed under treatment (http://purl.obolibrary.org/obo/MCO_0000866). If the proper descriptor is not listed please use text to describe the study treatment. Multiple terms can be separated by one or more pipes.</td>
 <td>{text}</td>
-<td>{termLabel} {[termID]}</td>
 </tr>
 <tr>
-<td>MIXS:0001139</td>
-<td><a href="../food_source/">food_source</a></td>
+<td><a href="../0001139/">0001139</a></td>
+<td>food_source</td>
 <td>0..1</td>
 <td>Type of plant or animal from which the food product or its major ingredient is derived or a chemical food source [FDA CFSAN 1995].</td>
 <td>{termLabel} {[termID]}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001203</td>
-<td><a href="../food_dis_point/">food_dis_point</a></td>
+<td><a href="../0001203/">0001203</a></td>
+<td>food_dis_point</td>
 <td>0..*</td>
 <td>A reference to a place on the Earth, by its name or by its geographical location that refers to a distribution point along the food chain. This field accepts terms listed under geographic location (http://purl.obolibrary.org/obo/GAZ_00000448). Reference: Adam Diamond, James Barham. Moving Food Along the Value Chain: Innovations in Regional Food Distribution. U.S. Dept. of Agriculture, Agricultural Marketing Service. Washington, DC. March 2012. http://dx.doi.org/10.9752/MS045.03-2012.</td>
 <td>{term}: {term}, {text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001204</td>
-<td><a href="../food_dis_point_city/">food_dis_point_city</a></td>
+<td><a href="../0001204/">0001204</a></td>
+<td>food_dis_point_city</td>
 <td>0..1</td>
 <td>A reference to a place on the Earth, by its name or by its geographical location that refers to a distribution point along the food chain. This field accepts terms listed under geographic location (http://purl.obolibrary.org/obo/GAZ_00000448). Reference: Adam Diamond, James Barham. Moving Food Along the Value Chain: Innovations in Regional Food Distribution. U.S. Dept. of Agriculture, Agricultural Marketing Service. Washington, DC. March 2012. http://dx.doi.org/10.9752/MS045.03-2012.</td>
 <td>{text}</td>
-<td>{termLabel} {[termID]}</td>
 </tr>
 <tr>
-<td>MIXS:0001207</td>
-<td><a href="../food_origin/">food_origin</a></td>
+<td><a href="../0001207/">0001207</a></td>
+<td>food_origin</td>
 <td>0..1</td>
 <td>A reference to a place on the Earth, by its name or by its geographical location that describes the origin of the food commodity, either in terms of its cultivation or production. This field accepts terms listed under geographic location (http://purl.obolibrary.org/obo/GAZ_00000448).</td>
 <td>{term}: {term}, {text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001212</td>
-<td><a href="../food_prod_synonym/">food_prod_synonym</a></td>
+<td><a href="../0001212/">0001212</a></td>
+<td>food_prod_synonym</td>
 <td>0..*</td>
 <td>Other names by which the food product is known by (e.g., regional or non-English names).</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001200</td>
-<td><a href="../food_additive/">food_additive</a></td>
+<td><a href="../0001200/">0001200</a></td>
+<td>food_additive</td>
 <td>0..*</td>
 <td>A substance or substances added to food to maintain or improve safety and freshness, to improve or maintain nutritional value, or improve taste, texture and appearance.  This field accepts terms listed under food additive (http://purl.obolibrary.org/obo/FOODON_03412972). Multiple terms can be separated by one or more pipes, but please consider limiting this list to the top 5 ingredients listed in order as on the food label.  See also, https://www.fda.gov/food/food-ingredients-packaging/overview-food-ingredients-additives-colors.</td>
 <td>{text}</td>
-<td>{termLabel} {[termID]}</td>
 </tr>
 <tr>
-<td>MIXS:0001214</td>
-<td><a href="../food_trace_list/">food_trace_list</a></td>
+<td><a href="../0001214/">0001214</a></td>
+<td>food_trace_list</td>
 <td>0..1</td>
 <td>The FDA is proposing to establish additional traceability recordkeeping requirements (beyond what is already required in existing regulations) for persons who manufacture, process, pack, or hold foods the Agency has designated for inclusion on the Food Traceability List. The Food Traceability List (FTL) identifies the foods for which the additional traceability records described in the proposed rule would be required. The term “Food Traceability List” (FTL) refers not only to the foods specifically listed (https://www.fda.gov/media/142303/download), but also to any foods that contain listed foods as ingredients.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001149</td>
-<td><a href="../part_plant_animal/">part_plant_animal</a></td>
+<td><a href="../0001149/">0001149</a></td>
+<td>part_plant_animal</td>
 <td>0..*</td>
 <td>The anatomical part of the organism being involved in food production or consumption; e.g., a carrot is the root of the plant (root vegetable). This field accepts terms listed under part of plant or animal (http://purl.obolibrary.org/obo/FOODON_03420116).</td>
 <td>{text}</td>
-<td>{termLabel} {[termID]}</td>
 </tr>
 <tr>
-<td>MIXS:0001205</td>
-<td><a href="../food_ingredient/">food_ingredient</a></td>
+<td><a href="../0001205/">0001205</a></td>
+<td>food_ingredient</td>
 <td>0..*</td>
 <td>In this field, please list individual ingredients for multi-component food [FOODON:00002501] and simple foods that is not captured in food_type.  Please use terms that are present in FoodOn.  Multiple terms can be separated by one or more pipes</td>
 <td>, but please consider limiting this list to the top 5 ingredients listed in order as on the food label.  See also, https://www.fda.gov/food/food-ingredients-packaging/overview-food-ingredients-additives-colors.</td>
-<td>{text}</td>
 </tr>
 <tr>
-<td>MIXS:0001234</td>
-<td><a href="../spec_intended_cons/">spec_intended_cons</a></td>
+<td><a href="../0001234/">0001234</a></td>
+<td>spec_intended_cons</td>
 <td>0..*</td>
 <td>Food consumer type, human or animal, for which the food product is produced and marketed. This field accepts terms listed under food consumer group (http://purl.obolibrary.org/obo/FOODON_03510136).</td>
 <td>{termLabel} {[termID]}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001215</td>
-<td><a href="../HACCP_term/">HACCP_term</a></td>
+<td><a href="../0001215/">0001215</a></td>
+<td>HACCP_term</td>
 <td>0..*</td>
 <td>Hazard Analysis Critical Control Points (HACCP) food safety terms; This field accepts terms listed under HACCP guide food safety term (http://purl.obolibrary.org/obo/FOODON_03530221).</td>
 <td>{termLabel} {[termID]}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001199</td>
-<td><a href="../dietary_claim_use/">dietary_claim_use</a></td>
+<td><a href="../0001199/">0001199</a></td>
+<td>dietary_claim_use</td>
 <td>0..*</td>
 <td>These descriptors are used either for foods intended for special dietary use as defined in 21 CFR 105 or for foods that have special characteristics indicated in the name or labeling. This field accepts terms listed under dietary claim or use (http://purl.obolibrary.org/obo/FOODON_03510023). Multiple terms can be separated by one or more pipes, but please consider limiting this list to the most prominent dietary claim or use.</td>
 <td>{text}</td>
-<td>{termLabel} {[termID]}</td>
 </tr>
 <tr>
-<td>MIXS:0001201</td>
-<td><a href="../food_allergen_label/">food_allergen_label</a></td>
+<td><a href="../0001201/">0001201</a></td>
+<td>food_allergen_label</td>
 <td>0..*</td>
 <td>A label indication that the product contains a recognized allergen. This field accepts terms listed under dietary claim or use (http://purl.obolibrary.org/obo/FOODON_03510213).</td>
 <td>{text}</td>
-<td>{termLabel} {[termID]}</td>
 </tr>
 <tr>
-<td>MIXS:0001136</td>
-<td><a href="../food_prod_char/">food_prod_char</a></td>
+<td><a href="../0001136/">0001136</a></td>
+<td>food_prod_char</td>
 <td>0..*</td>
 <td>Descriptors of the food production system such as wild caught, free-range, organic, free-range, industrial, dairy, beef.</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>None</td>
 <td><a href="../prod_label_claims/">prod_label_claims</a></td>
+<td>prod_label_claims</td>
 <td>0..*</td>
 <td>Labeling claims containing descriptors such as wild caught, free-range, organic, free-range, industrial, hormone-free, antibiotic free, cage free. Can include more than one term, separated by ";"</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001206</td>
-<td><a href="../food_name_status/">food_name_status</a></td>
+<td><a href="../0001206/">0001206</a></td>
+<td>food_name_status</td>
 <td>0..1</td>
 <td>A datum indicating that use of a food product name is regulated in some legal jurisdiction. This field accepts terms listed under food product name legal status (http://purl.obolibrary.org/obo/FOODON_03530087).</td>
 <td>{termLabel} {[termID]}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001135</td>
-<td><a href="../food_preserv_proc/">food_preserv_proc</a></td>
+<td><a href="../0001135/">0001135</a></td>
+<td>food_preserv_proc</td>
 <td>0..*</td>
 <td>The methods contributing to the prevention or retardation of microbial, enzymatic or oxidative spoilage and thus to the extension of shelf life. This field accepts terms listed under food preservation process (http://purl.obolibrary.org/obo/FOODON_03470107).</td>
 <td>{text}</td>
-<td>{termLabel} {[termID]}</td>
 </tr>
 <tr>
-<td>MIXS:0001202</td>
-<td><a href="../food_cooking_proc/">food_cooking_proc</a></td>
+<td><a href="../0001202/">0001202</a></td>
+<td>food_cooking_proc</td>
 <td>0..*</td>
 <td>The transformation of raw food by the application of heat. This field accepts terms listed under food cooking (http://purl.obolibrary.org/obo/FOODON_03450002).</td>
 <td>{text}</td>
-<td>{termLabel} {[termID]}</td>
 </tr>
 <tr>
-<td>MIXS:0001140</td>
-<td><a href="../food_treat_proc/">food_treat_proc</a></td>
+<td><a href="../0001140/">0001140</a></td>
+<td>food_treat_proc</td>
 <td>0..*</td>
 <td>Used to specifically characterize a food product based on the treatment or processes applied to the product or any indexed ingredient. The processes include adding, substituting or removing components or modifying the food or component, e.g., through fermentation. Multiple values can be assigned. This fields accepts terms listed under food treatment process (http://purl.obolibrary.org/obo/FOODON_03460111).</td>
 <td>{text}</td>
-<td>{termLabel} {[termID]}</td>
 </tr>
 <tr>
-<td>MIXS:0001132</td>
-<td><a href="../food_contain_wrap/">food_contain_wrap</a></td>
+<td><a href="../0001132/">0001132</a></td>
+<td>food_contain_wrap</td>
 <td>0..1</td>
 <td>Type of container or wrapping defined by the main container material, the container form, and the material of the liner lids or ends. Also type of container or wrapping by form; prefer description by material first, then by form. This field accepts terms listed under food container or wrapping (http://purl.obolibrary.org/obo/FOODON_03490100).</td>
 <td>{text}</td>
-<td>{termLabel} {[termID]}</td>
 </tr>
 <tr>
-<td>MIXS:0001208</td>
-<td><a href="../food_pack_capacity/">food_pack_capacity</a></td>
+<td><a href="../0001208/">0001208</a></td>
+<td>food_pack_capacity</td>
 <td>0..1</td>
 <td>The maximum number of product units within a package</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001134</td>
-<td><a href="../food_pack_medium/">food_pack_medium</a></td>
+<td><a href="../0001134/">0001134</a></td>
+<td>food_pack_medium</td>
 <td>0..*</td>
 <td>The medium in which the food is packed for preservation and handling or the medium surrounding homemade foods, e.g., peaches cooked in sugar syrup. The packing medium may provide a controlled environment for the food. It may also serve to improve palatability and consumer appeal.  This includes edible packing media (e.g. fruit juice), gas other than air (e.g. carbon dioxide), vacuum packed, or packed with aerosol propellant. This field accepts terms under food packing medium (http://purl.obolibrary.org/obo/FOODON_03480020). Multiple terms may apply and can be separated by pipes.</td>
 <td>{text}</td>
-<td>{termLabel} {[termID]}</td>
 </tr>
 <tr>
-<td>MIXS:0001210</td>
-<td><a href="../food_prior_contact/">food_prior_contact</a></td>
+<td><a href="../0001210/">0001210</a></td>
+<td>food_prior_contact</td>
 <td>0..*</td>
 <td>The material the food contacted (e.g., was processed in) prior to packaging. This field accepts terms listed under material of contact prior to food packaging (http://purl.obolibrary.org/obo/FOODON_03530077). If the proper descriptor is not listed please use text to describe the material of contact prior to food packaging.</td>
 <td>{text}</td>
-<td>{termLabel} {[termID]}</td>
 </tr>
 <tr>
-<td>MIXS:0001211</td>
-<td><a href="../food_prod/">food_prod</a></td>
+<td><a href="../0001211/">0001211</a></td>
+<td>food_prod</td>
 <td>0..*</td>
 <td>Descriptors of the food production system or of the agricultural environment and growing conditions related to the farm production system, such as wild caught, organic, free-range, industrial, dairy, beef,  domestic or cultivated food production. This field accepts terms listed under food production (http://purl.obolibrary.org/obo/FOODON_03530206). Multiple terms may apply and can be separated by pipes.</td>
 <td>{termLabel} {[termID]}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001178</td>
-<td><a href="../food_quality_date/">food_quality_date</a></td>
+<td><a href="../0001178/">0001178</a></td>
+<td>food_quality_date</td>
 <td>0..1</td>
 <td>The date recommended for the use of the product while at peak quality, this date is not a reflection of safety unless used on infant formula this date is not a reflection of safety and is typically labeled on a food product as "best if used by," best by," "use by," or "freeze by."</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001152</td>
-<td><a href="../repository_name/">repository_name</a></td>
+<td><a href="../0001152/">0001152</a></td>
+<td>repository_name</td>
 <td>0..*</td>
 <td>The name of the institution where the sample or DNA extract is held or "sample not available" if the sample was used in its entirety for analysis or otherwise not retained.</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001144</td>
-<td><a href="../intended_consumer/">intended_consumer</a></td>
+<td><a href="../0001144/">0001144</a></td>
+<td>intended_consumer</td>
 <td>0..*</td>
 <td>Food consumer type, human or animal, for which the food product is produced and marketed. This field accepts terms listed under food consumer group (http://purl.obolibrary.org/obo/FOODON_03510136) or NCBI taxid.</td>
 <td>{integer}</td>
-<td>{termLabel} {[termID]}</td>
 </tr>
 <tr>
-<td>MIXS:0001209</td>
-<td><a href="../food_pack_integrity/">food_pack_integrity</a></td>
+<td><a href="../0001209/">0001209</a></td>
+<td>food_pack_integrity</td>
 <td>0..*</td>
 <td>A term label and term id to describe the state of the packing material and text to explain the exact condition.  This field accepts terms listed under food packing medium integrity (http://purl.obolibrary.org/obo/FOODON_03530218).</td>
 <td>{text}</td>
-<td>{termLabel} {[termID]}</td>
 </tr>
 <tr>
-<td>MIXS:0000752</td>
-<td><a href="../misc_param/">misc_param</a></td>
+<td><a href="../0000752/">0000752</a></td>
+<td>misc_param</td>
 <td>0..*</td>
 <td>Any other measurement performed or parameter collected, that is not listed here</td>
 <td>{text};{float} {unit}</td>
-<td>.</td>
 </tr>
 </tbody>
 </table>

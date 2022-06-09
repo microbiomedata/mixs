@@ -34,7 +34,7 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href=".." class="nav-link">About</a>
+                                <a href=".." class="nav-link">Reference</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Introduction <b class="caret"></b></a>
@@ -128,1065 +128,932 @@
 <th>Multiplicity</th>
 <th>Description</th>
 <th>Pattern</th>
-<th>Info</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>MIXS:0001107</td>
-<td><a href="../samp_name/">samp_name</a></td>
+<td><a href="../0001107/">0001107</a></td>
+<td>samp_name</td>
 <td>1..1</td>
 <td>A local identifier or name that for the material sample used for extracting nucleic acids, and subsequent sequencing. It can refer either to the original material collected or to any derived sub-samples. It can have any format, but we suggest that you make it concise, unique and consistent within your lab, and as informative as possible. INSDC requires every sample name from a single Submitter to be unique. Use of a globally unique identifier for the field source_mat_id is recommended in addition to sample_name.</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001320</td>
-<td><a href="../samp_taxon_id/">samp_taxon_id</a></td>
+<td><a href="../0001320/">0001320</a></td>
+<td>samp_taxon_id</td>
 <td>1..1</td>
 <td>NCBI taxon id of the sample.  Maybe be a single taxon or mixed taxa sample. Use 'synthetic metagenome’ for mock community/positive controls, or 'blank sample' for negative controls.</td>
 <td>{text} [NCBI:txid]</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000092</td>
-<td><a href="../project_name/">project_name</a></td>
+<td><a href="../0000092/">0000092</a></td>
+<td>project_name</td>
 <td>1..1</td>
 <td>Name of the project within which the sequencing was organized</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000008</td>
-<td><a href="../experimental_factor/">experimental_factor</a></td>
+<td><a href="../0000008/">0000008</a></td>
+<td>experimental_factor</td>
 <td>0..1</td>
 <td>Experimental factors are essentially the variable aspects of an experiment design which can be used to describe an experiment, or set of experiments, in an increasingly detailed manner. This field accepts ontology terms from Experimental Factor Ontology (EFO) and/or Ontology for Biomedical Investigations (OBI). For a browser of EFO (v 2.95) terms, please see http://purl.bioontology.org/ontology/EFO; for a browser of OBI (v 2018-02-12) terms please see http://purl.bioontology.org/ontology/OBI</td>
 <td>{termLabel} {[termID]}</td>
-<td>{text}</td>
 </tr>
 <tr>
-<td>MIXS:0000009</td>
-<td><a href="../lat_lon/">lat_lon</a></td>
+<td><a href="../0000009/">0000009</a></td>
+<td>lat_lon</td>
 <td>1..1</td>
 <td>The geographical origin of the sample as defined by latitude and longitude. The values should be reported in decimal degrees and in WGS84 system</td>
 <td>{float} {float}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000010</td>
-<td><a href="../geo_loc_name/">geo_loc_name</a></td>
+<td><a href="../0000010/">0000010</a></td>
+<td>geo_loc_name</td>
 <td>1..1</td>
 <td>The geographical origin of the sample as defined by the country or sea name followed by specific region name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html), or the GAZ ontology (http://purl.bioontology.org/ontology/GAZ)</td>
 <td>{term}: {term}, {text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000011</td>
-<td><a href="../collection_date/">collection_date</a></td>
+<td><a href="../0000011/">0000011</a></td>
+<td>collection_date</td>
 <td>1..1</td>
 <td>The time of sampling, either as an instance (single point in time) or interval. In case no exact time is available, the date/time can be right truncated i.e. all of these are valid times: 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10; 2008-01-23; 2008-01; 2008; Except: 2008-01; 2008 all are ISO8601 compliant</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001321</td>
-<td><a href="../neg_cont_type/">neg_cont_type</a></td>
+<td><a href="../0001321/">0001321</a></td>
+<td>neg_cont_type</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>The substance or equipment used as a negative control in an investigation</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001322</td>
-<td><a href="../pos_cont_type/">pos_cont_type</a></td>
+<td><a href="../0001322/">0001322</a></td>
+<td>pos_cont_type</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>The substance, mixture, product, or apparatus used to verify that a process which is part of an investigation delivers a true positive.</td>
 <td>{term} or {text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000012</td>
-<td><a href="../env_broad_scale/">env_broad_scale</a></td>
+<td><a href="../0000012/">0000012</a></td>
+<td>env_broad_scale</td>
 <td>1..1</td>
 <td>Report the major environmental system the sample or specimen came from. The system(s) identified should have a coarse spatial grain, to provide the general environmental context of where the sampling was done (e.g. in the desert or a rainforest). We recommend using subclasses of EnvO’s biome class:  http://purl.obolibrary.org/obo/ENVO_00000428. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS</td>
 <td>{termLabel} {[termID]}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000013</td>
-<td><a href="../env_local_scale/">env_local_scale</a></td>
+<td><a href="../0000013/">0000013</a></td>
+<td>env_local_scale</td>
 <td>1..1</td>
 <td>Report the entity or entities which are in the sample or specimen’s local vicinity and which you believe have significant causal influences on your sample or specimen. We recommend using EnvO terms which are of smaller spatial grain than your entry for env_broad_scale. Terms, such as anatomical sites, from other OBO Library ontologies which interoperate with EnvO (e.g. UBERON) are accepted in this field. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.</td>
 <td>{termLabel} {[termID]}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000014</td>
-<td><a href="../env_medium/">env_medium</a></td>
+<td><a href="../0000014/">0000014</a></td>
+<td>env_medium</td>
 <td>1..1</td>
 <td>Report the environmental material(s) immediately surrounding the sample or specimen at the time of sampling. We recommend using subclasses of 'environmental material' (http://purl.obolibrary.org/obo/ENVO_00010483). EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS . Terms from other OBO ontologies are permissible as long as they reference mass/volume nouns (e.g. air, water, blood) and not discrete, countable entities (e.g. a tree, a leaf, a table top).</td>
 <td>{termLabel} {[termID]}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000020</td>
-<td><a href="../subspecf_gen_lin/">subspecf_gen_lin</a></td>
+<td><a href="../0000020/">0000020</a></td>
+<td>subspecf_gen_lin</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>Information about the genetic distinctness of the sequenced organism below the subspecies level, e.g., serovar, serotype, biotype, ecotype, or any relevant genetic typing schemes like Group I plasmid. Subspecies should not be recorded in this term, but in the NCBI taxonomy. Supply both the lineage name and the lineage rank separated by a colon, e.g., biovar:abc123.</td>
 <td>{rank name}:{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000024</td>
-<td><a href="../estimated_size/">estimated_size</a></td>
+<td><a href="../0000024/">0000024</a></td>
+<td>estimated_size</td>
 <td>0..1</td>
 <td>The estimated size of the genome prior to sequencing. Of particular importance in the sequencing of (eukaryotic) genome which could remain in draft form for a long or unspecified period.</td>
 <td>{integer} bp</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000025</td>
-<td><a href="../ref_biomaterial/">ref_biomaterial</a></td>
+<td><a href="../0000025/">0000025</a></td>
+<td>ref_biomaterial</td>
 <td>0..1</td>
 <td>Primary publication if isolated before genome publication; otherwise, primary genome report.</td>
 <td>{PMID}</td>
-<td>{DOI}</td>
 </tr>
 <tr>
-<td>MIXS:0000026</td>
-<td><a href="../source_mat_id/">source_mat_id</a></td>
+<td><a href="../0000026/">0000026</a></td>
+<td>source_mat_id</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>A unique identifier assigned to a material sample (as defined by http://rs.tdwg.org/dwc/terms/materialSampleID, and as opposed to a particular digital record of a material sample) used for extracting nucleic acids, and subsequent sequencing. The identifier can refer either to the original material collected or to any derived sub-samples. The INSDC qualifiers /specimen_voucher, /bio_material, or /culture_collection may or may not share the same value as the source_mat_id field. For instance, the /specimen_voucher qualifier and source_mat_id may both contain 'UAM:Herps:14' , referring to both the specimen voucher and sampled tissue with the same identifier. However, the /culture_collection qualifier may refer to a value from an initial culture (e.g. ATCC:11775) while source_mat_id would refer to an identifier from some derived culture from which the nucleic acids were extracted (e.g. xatc123 or ark:/2154/R2).</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000029</td>
-<td><a href="../specific_host/">specific_host</a></td>
+<td><a href="../0000029/">0000029</a></td>
+<td>specific_host</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>Report the host's taxonomic name and/or NCBI taxonomy ID.</td>
 <td>{text}</td>
-<td>{NCBI taxid}</td>
 </tr>
 <tr>
-<td>MIXS:0000030</td>
-<td><a href="../host_spec_range/">host_spec_range</a></td>
+<td><a href="../0000030/">0000030</a></td>
+<td>host_spec_range</td>
 <td>0..1</td>
 <td>The range and diversity of host species that an organism is capable of infecting, defined by NCBI taxonomy identifier.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000033</td>
-<td><a href="../propagation/">propagation</a></td>
+<td><a href="../0000033/">0000033</a></td>
+<td>propagation</td>
 <td>1..1</td>
 <td>The type of reproduction from the parent stock. Values for this field is specific to different taxa. For phage or virus: lytic/lysogenic/temperate/obligately lytic. For plasmids: incompatibility group. For eukaryotes: sexual/asexual.</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000034</td>
-<td><a href="../encoded_traits/">encoded_traits</a></td>
+<td><a href="../0000034/">0000034</a></td>
+<td>encoded_traits</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>Should include key traits like antibiotic resistance or xenobiotic degradation phenotypes for plasmids, converting genes for phage</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000003</td>
-<td><a href="../isol_growth_condt/">isol_growth_condt</a></td>
+<td><a href="../0000003/">0000003</a></td>
+<td>isol_growth_condt</td>
 <td>1..1</td>
 <td>Publication reference in the form of pubmed ID (pmid), digital object identifier (doi) or url for isolation and growth condition specifications of the organism/material</td>
 <td>{PMID}</td>
-<td>{DOI}</td>
 </tr>
 <tr>
-<td>MIXS:0000002</td>
-<td><a href="../samp_collec_device/">samp_collec_device</a></td>
+<td><a href="../0000002/">0000002</a></td>
+<td>samp_collec_device</td>
 <td>0..1</td>
 <td>The device used to collect an environmental sample. This field accepts terms listed under environmental sampling device (http://purl.obolibrary.org/obo/ENVO). This field also accepts terms listed under specimen collection device (http://purl.obolibrary.org/obo/GENEPIO_0002094).</td>
 <td>{termLabel} {[termID]}</td>
-<td>{text}</td>
 </tr>
 <tr>
-<td>MIXS:0001225</td>
-<td><a href="../samp_collec_method/">samp_collec_method</a></td>
+<td><a href="../0001225/">0001225</a></td>
+<td>samp_collec_method</td>
 <td>0..1</td>
 <td>The method employed for collecting the sample.</td>
 <td>{PMID}</td>
-<td>{DOI}</td>
 </tr>
 <tr>
-<td>MIXS:0000016</td>
-<td><a href="../samp_mat_process/">samp_mat_process</a></td>
+<td><a href="../0000016/">0000016</a></td>
+<td>samp_mat_process</td>
 <td>0..1</td>
 <td>A brief description of any processing applied to the sample during or after retrieving the sample from environment, or a link to the relevant protocol(s) performed.</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000001</td>
-<td><a href="../samp_size/">samp_size</a></td>
+<td><a href="../0000001/">0000001</a></td>
+<td>samp_size</td>
 <td>0..1</td>
 <td>The total amount or size (volume (ml), mass (g) or area (m2) ) of sample collected.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000111</td>
-<td><a href="../samp_vol_we_dna_ext/">samp_vol_we_dna_ext</a></td>
+<td><a href="../0000111/">0000111</a></td>
+<td>samp_vol_we_dna_ext</td>
 <td>0..1</td>
 <td>Volume (ml) or mass (g) of total collected sample processed for DNA extraction. Note: total sample collected should be entered under the term Sample Size (MIXS:0000001).</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000037</td>
-<td><a href="../nucl_acid_ext/">nucl_acid_ext</a></td>
+<td><a href="../0000037/">0000037</a></td>
+<td>nucl_acid_ext</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>A link to a literature reference, electronic resource or a standard operating procedure (SOP), that describes the material separation to recover the nucleic acid fraction from a sample</td>
 <td>{PMID}</td>
-<td>{DOI}</td>
 </tr>
 <tr>
-<td>MIXS:0000038</td>
-<td><a href="../nucl_acid_amp/">nucl_acid_amp</a></td>
+<td><a href="../0000038/">0000038</a></td>
+<td>nucl_acid_amp</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>A link to a literature reference, electronic resource or a standard operating procedure (SOP), that describes the enzymatic amplification (PCR, TMA, NASBA) of specific nucleic acids</td>
 <td>{PMID}</td>
-<td>{DOI}</td>
 </tr>
 <tr>
-<td>MIXS:0000039</td>
-<td><a href="../lib_size/">lib_size</a></td>
+<td><a href="../0000039/">0000039</a></td>
+<td>lib_size</td>
 <td>0..1</td>
 <td>Total number of clones in the library prepared for the project</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000040</td>
-<td><a href="../lib_reads_seqd/">lib_reads_seqd</a></td>
+<td><a href="../0000040/">0000040</a></td>
+<td>lib_reads_seqd</td>
 <td>0..1</td>
 <td>Total number of clones sequenced from the library</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000041</td>
-<td><a href="../lib_layout/">lib_layout</a></td>
+<td><a href="../0000041/">0000041</a></td>
+<td>lib_layout</td>
 <td>0..1</td>
 <td>Specify whether to expect single, paired, or other configuration of reads</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000042</td>
-<td><a href="../lib_vector/">lib_vector</a></td>
+<td><a href="../0000042/">0000042</a></td>
+<td>lib_vector</td>
 <td>0..1</td>
 <td>Cloning vector type(s) used in construction of libraries</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000043</td>
-<td><a href="../lib_screen/">lib_screen</a></td>
+<td><a href="../0000043/">0000043</a></td>
+<td>lib_screen</td>
 <td>0..1</td>
 <td>Specific enrichment or screening methods applied before and/or after creating libraries</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000048</td>
-<td><a href="../adapters/">adapters</a></td>
+<td><a href="../0000048/">0000048</a></td>
+<td>adapters</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>Adapters provide priming sequences for both amplification and sequencing of the sample-library fragments. Both adapters should be reported; in uppercase letters</td>
 <td>{dna};{dna}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000050</td>
-<td><a href="../seq_meth/">seq_meth</a></td>
+<td><a href="../0000050/">0000050</a></td>
+<td>seq_meth</td>
 <td>1..1</td>
 <td>Sequencing machine used. Where possible the term should be taken from the OBI list of DNA sequencers (http://purl.obolibrary.org/obo/OBI_0400103).</td>
 <td>{termLabel} {[termID]}</td>
-<td>{text}</td>
 </tr>
 <tr>
-<td>MIXS:0000053</td>
-<td><a href="../tax_ident/">tax_ident</a></td>
+<td><a href="../0000053/">0000053</a></td>
+<td>tax_ident</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>The phylogenetic marker(s) used to assign an organism name to the SAG or MAG</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000056</td>
-<td><a href="../assembly_qual/">assembly_qual</a></td>
+<td><a href="../0000056/">0000056</a></td>
+<td>assembly_qual</td>
 <td>0..1</td>
 <td>The assembly quality category is based on sets of criteria outlined for each assembly quality category. For MISAG/MIMAG; Finished: Single, validated, contiguous sequence per replicon without gaps or ambiguities with a consensus error rate equivalent to Q50 or better. High Quality Draft:Multiple fragments where gaps span repetitive regions. Presence of the 23S, 16S and 5S rRNA genes and at least 18 tRNAs. Medium Quality Draft:Many fragments with little to no review of assembly other than reporting of standard assembly statistics. Low Quality Draft:Many fragments with little to no review of assembly other than reporting of standard assembly statistics. Assembly statistics include, but are not limited to total assembly size, number of contigs, contig N50/L50, and maximum contig length. For MIUVIG; Finished: Single, validated, contiguous sequence per replicon without gaps or ambiguities, with extensive manual review and editing to annotate putative gene functions and transcriptional units. High-quality draft genome: One or multiple fragments, totaling ≥ 90% of the expected genome or replicon sequence or predicted complete. Genome fragment(s): One or multiple fragments, totalling &lt; 90% of the expected genome or replicon sequence, or for which no genome size could be estimated</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000057</td>
-<td><a href="../assembly_name/">assembly_name</a></td>
+<td><a href="../0000057/">0000057</a></td>
+<td>assembly_name</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>Name/version of the assembly provided by the submitter that is used in the genome browsers and in the community</td>
 <td>{text} {text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000058</td>
-<td><a href="../assembly_software/">assembly_software</a></td>
+<td><a href="../0000058/">0000058</a></td>
+<td>assembly_software</td>
 <td>1..1</td>
 <td>Tool(s) used for assembly, including version number and parameters</td>
 <td>{software};{version};{parameters}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000059</td>
-<td><a href="../annot/">annot</a></td>
+<td><a href="../0000059/">0000059</a></td>
+<td>annot</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>Tool used for annotation, or for cases where annotation was provided by a community jamboree or model organism database rather than by a specific submitter</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000060</td>
-<td><a href="../number_contig/">number_contig</a></td>
+<td><a href="../0000060/">0000060</a></td>
+<td>number_contig</td>
 <td>0..1</td>
 <td>Total number of contigs in the cleaned/submitted assembly that makes up a given genome, SAG, MAG, or UViG</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000061</td>
-<td><a href="../feat_pred/">feat_pred</a></td>
+<td><a href="../0000061/">0000061</a></td>
+<td>feat_pred</td>
 <td>0..1</td>
 <td>Method used to predict UViGs features such as ORFs, integration site, etc.</td>
 <td>{software};{version};{parameters}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000062</td>
-<td><a href="../ref_db/">ref_db</a></td>
+<td><a href="../0000062/">0000062</a></td>
+<td>ref_db</td>
 <td>0..1</td>
 <td>List of database(s) used for ORF annotation, along with version number and reference to website or publication</td>
 <td>{database};{version};{reference}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000063</td>
-<td><a href="../sim_search_meth/">sim_search_meth</a></td>
+<td><a href="../0000063/">0000063</a></td>
+<td>sim_search_meth</td>
 <td>0..1</td>
 <td>Tool used to compare ORFs with database, along with version and cutoffs used</td>
 <td>{software};{version};{parameters}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000064</td>
-<td><a href="../tax_class/">tax_class</a></td>
+<td><a href="../0000064/">0000064</a></td>
+<td>tax_class</td>
 <td>0..1</td>
 <td>Method used for taxonomic classification, along with reference database used, classification rank, and thresholds used to classify new genomes</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000069</td>
-<td><a href="../compl_score/">compl_score</a></td>
+<td><a href="../0000069/">0000069</a></td>
+<td>compl_score</td>
 <td>0..1</td>
 <td>Completeness score is typically based on either the fraction of markers found as compared to a database or the percent of a genome found as compared to a closely related reference genome. High Quality Draft: &gt;90%, Medium Quality Draft: &gt;50%, and Low Quality Draft: &lt; 50% should have the indicated completeness scores</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000070</td>
-<td><a href="../compl_software/">compl_software</a></td>
+<td><a href="../0000070/">0000070</a></td>
+<td>compl_software</td>
 <td>0..1</td>
 <td>Tools used for completion estimate, i.e. checkm, anvi'o, busco</td>
 <td>{software};{version}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000091</td>
-<td><a href="../associated_resource/">associated_resource</a></td>
+<td><a href="../0000091/">0000091</a></td>
+<td>associated resource</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>A related resource that is referenced, cited, or otherwise associated to the sequence.</td>
 <td>{PMID}</td>
-<td>{DOI}</td>
 </tr>
 <tr>
-<td>MIXS:0000090</td>
-<td><a href="../sop/">sop</a></td>
+<td><a href="../0000090/">0000090</a></td>
+<td>sop</td>
 <td>0..1 <em>recommended</em> RECOMMENDED</td>
 <td>Standard operating procedures used in assembly and/or annotation of genomes, metagenomes or environmental sequences</td>
 <td>{PMID}</td>
-<td>{DOI}</td>
 </tr>
 <tr>
-<td>MIXS:0000018</td>
-<td><a href="../depth/">depth</a></td>
+<td><a href="../0000018/">0000018</a></td>
+<td>depth</td>
 <td>1..1</td>
 <td>The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000094</td>
-<td><a href="../alt/">alt</a></td>
+<td><a href="../0000094/">0000094</a></td>
+<td>alt</td>
 <td>0..1</td>
 <td>Altitude is a term used to identify heights of objects such as airplanes, space shuttles, rockets, atmospheric balloons and heights of places such as atmospheric layers and clouds. It is used to measure the height of an object which is above the earth's surface. In this context, the altitude measurement is the vertical distance between the earth's surface above sea level and the sampled position in the air</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000093</td>
-<td><a href="../elev/">elev</a></td>
+<td><a href="../0000093/">0000093</a></td>
+<td>elev</td>
 <td>0..1</td>
 <td>Elevation of the sampling site is its height above a fixed reference point, most commonly the mean sea level. Elevation is mainly used when referring to points on the earth's surface, while altitude is used for points above the surface, such as an aircraft in flight or a spacecraft in orbit.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000113</td>
-<td><a href="../temp/">temp</a></td>
+<td><a href="../0000113/">0000113</a></td>
+<td>temp</td>
 <td>0..1</td>
 <td>Temperature of the sample at the time of sampling.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000421</td>
-<td><a href="../alkalinity/">alkalinity</a></td>
+<td><a href="../0000421/">0000421</a></td>
+<td>alkalinity</td>
 <td>0..1</td>
 <td>Alkalinity, the ability of a solution to neutralize acids to the equivalence point of carbonate or bicarbonate</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000298</td>
-<td><a href="../alkalinity_method/">alkalinity_method</a></td>
+<td><a href="../0000298/">0000298</a></td>
+<td>alkalinity_method</td>
 <td>0..1</td>
 <td>Method used for alkalinity measurement</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000490</td>
-<td><a href="../alkyl_diethers/">alkyl_diethers</a></td>
+<td><a href="../0000490/">0000490</a></td>
+<td>alkyl_diethers</td>
 <td>0..1</td>
 <td>Concentration of alkyl diethers</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000172</td>
-<td><a href="../aminopept_act/">aminopept_act</a></td>
+<td><a href="../0000172/">0000172</a></td>
+<td>aminopept_act</td>
 <td>0..1</td>
 <td>Measurement of aminopeptidase activity</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000427</td>
-<td><a href="../ammonium/">ammonium</a></td>
+<td><a href="../0000427/">0000427</a></td>
+<td>ammonium</td>
 <td>0..1</td>
 <td>Concentration of ammonium in the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001097</td>
-<td><a href="../atmospheric_data/">atmospheric_data</a></td>
+<td><a href="../0001097/">0001097</a></td>
+<td>atmospheric_data</td>
 <td>0..*</td>
 <td>Measurement of atmospheric data; can include multiple data</td>
 <td>{text};{float} {unit}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000173</td>
-<td><a href="../bacteria_carb_prod/">bacteria_carb_prod</a></td>
+<td><a href="../0000173/">0000173</a></td>
+<td>bacteria_carb_prod</td>
 <td>0..1</td>
 <td>Measurement of bacterial carbon production</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000683</td>
-<td><a href="../bac_prod/">bac_prod</a></td>
+<td><a href="../0000683/">0000683</a></td>
+<td>bac_prod</td>
 <td>0..1</td>
 <td>Bacterial production in the water column measured by isotope uptake</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000684</td>
-<td><a href="../bac_resp/">bac_resp</a></td>
+<td><a href="../0000684/">0000684</a></td>
+<td>bac_resp</td>
 <td>0..1</td>
 <td>Measurement of bacterial respiration in the water column</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000174</td>
-<td><a href="../biomass/">biomass</a></td>
+<td><a href="../0000174/">0000174</a></td>
+<td>biomass</td>
 <td>0..*</td>
 <td>Amount of biomass; should include the name for the part of biomass measured, e.g. Microbial, total. Can include multiple measurements</td>
 <td>{text};{float} {unit}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000175</td>
-<td><a href="../bishomohopanol/">bishomohopanol</a></td>
+<td><a href="../0000175/">0000175</a></td>
+<td>bishomohopanol</td>
 <td>0..1</td>
 <td>Concentration of bishomohopanol</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000176</td>
-<td><a href="../bromide/">bromide</a></td>
+<td><a href="../0000176/">0000176</a></td>
+<td>bromide</td>
 <td>0..1</td>
 <td>Concentration of bromide</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000432</td>
-<td><a href="../calcium/">calcium</a></td>
+<td><a href="../0000432/">0000432</a></td>
+<td>calcium</td>
 <td>0..1</td>
 <td>Concentration of calcium in the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000310</td>
-<td><a href="../carb_nitro_ratio/">carb_nitro_ratio</a></td>
+<td><a href="../0000310/">0000310</a></td>
+<td>carb_nitro_ratio</td>
 <td>0..1</td>
 <td>Ratio of amount or concentrations of carbon to nitrogen</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000751</td>
-<td><a href="../chem_administration/">chem_administration</a></td>
+<td><a href="../0000751/">0000751</a></td>
+<td>chem_administration</td>
 <td>0..*</td>
 <td>List of chemical compounds administered to the host or site where sampling occurred, and when (e.g. Antibiotics, n fertilizer, air filter); can include multiple compounds. For chemical entities of biological interest ontology (chebi) (v 163), http://purl.bioontology.org/ontology/chebi</td>
 <td>{termLabel} {[termID]};{timestamp}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000429</td>
-<td><a href="../chloride/">chloride</a></td>
+<td><a href="../0000429/">0000429</a></td>
+<td>chloride</td>
 <td>0..1</td>
 <td>Concentration of chloride in the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000177</td>
-<td><a href="../chlorophyll/">chlorophyll</a></td>
+<td><a href="../0000177/">0000177</a></td>
+<td>chlorophyll</td>
 <td>0..1</td>
 <td>Concentration of chlorophyll</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000692</td>
-<td><a href="../conduc/">conduc</a></td>
+<td><a href="../0000692/">0000692</a></td>
+<td>conduc</td>
 <td>0..1</td>
 <td>Electrical conductivity of water</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000435</td>
-<td><a href="../density/">density</a></td>
+<td><a href="../0000435/">0000435</a></td>
+<td>density</td>
 <td>0..1</td>
 <td>Density of the sample, which is its mass per unit volume (aka volumetric mass density)</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000178</td>
-<td><a href="../diether_lipids/">diether_lipids</a></td>
+<td><a href="../0000178/">0000178</a></td>
+<td>diether_lipids</td>
 <td>0..*</td>
 <td>Concentration of diether lipids; can include multiple types of diether lipids</td>
 <td>{text};{float} {unit}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000436</td>
-<td><a href="../diss_carb_dioxide/">diss_carb_dioxide</a></td>
+<td><a href="../0000436/">0000436</a></td>
+<td>diss_carb_dioxide</td>
 <td>0..1</td>
 <td>Concentration of dissolved carbon dioxide in the sample or liquid portion of the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000179</td>
-<td><a href="../diss_hydrogen/">diss_hydrogen</a></td>
+<td><a href="../0000179/">0000179</a></td>
+<td>diss_hydrogen</td>
 <td>0..1</td>
 <td>Concentration of dissolved hydrogen</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000434</td>
-<td><a href="../diss_inorg_carb/">diss_inorg_carb</a></td>
+<td><a href="../0000434/">0000434</a></td>
+<td>diss_inorg_carb</td>
 <td>0..1</td>
 <td>Dissolved inorganic carbon concentration in the sample, typically measured after filtering the sample using a 0.45 micrometer filter</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000698</td>
-<td><a href="../diss_inorg_nitro/">diss_inorg_nitro</a></td>
+<td><a href="../0000698/">0000698</a></td>
+<td>diss_inorg_nitro</td>
 <td>0..1</td>
 <td>Concentration of dissolved inorganic nitrogen</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000106</td>
-<td><a href="../diss_inorg_phosp/">diss_inorg_phosp</a></td>
+<td><a href="../0000106/">0000106</a></td>
+<td>diss_inorg_phosp</td>
 <td>0..1</td>
 <td>Concentration of dissolved inorganic phosphorus in the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000433</td>
-<td><a href="../diss_org_carb/">diss_org_carb</a></td>
+<td><a href="../0000433/">0000433</a></td>
+<td>diss_org_carb</td>
 <td>0..1</td>
 <td>Concentration of dissolved organic carbon in the sample, liquid portion of the sample, or aqueous phase of the fluid</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000162</td>
-<td><a href="../diss_org_nitro/">diss_org_nitro</a></td>
+<td><a href="../0000162/">0000162</a></td>
+<td>diss_org_nitro</td>
 <td>0..1</td>
 <td>Dissolved organic nitrogen concentration measured as; total dissolved nitrogen - NH4 - NO3 - NO2</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000119</td>
-<td><a href="../diss_oxygen/">diss_oxygen</a></td>
+<td><a href="../0000119/">0000119</a></td>
+<td>diss_oxygen</td>
 <td>0..1</td>
 <td>Concentration of dissolved oxygen</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000703</td>
-<td><a href="../down_par/">down_par</a></td>
+<td><a href="../0000703/">0000703</a></td>
+<td>down_par</td>
 <td>0..1</td>
 <td>Visible waveband radiance and irradiance measurements in the water column</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000704</td>
-<td><a href="../fluor/">fluor</a></td>
+<td><a href="../0000704/">0000704</a></td>
+<td>fluor</td>
 <td>0..1</td>
 <td>Raw or converted fluorescence of water</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000137</td>
-<td><a href="../glucosidase_act/">glucosidase_act</a></td>
+<td><a href="../0000137/">0000137</a></td>
+<td>glucosidase_act</td>
 <td>0..1</td>
 <td>Measurement of glucosidase activity</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000706</td>
-<td><a href="../light_intensity/">light_intensity</a></td>
+<td><a href="../0000706/">0000706</a></td>
+<td>light_intensity</td>
 <td>0..1</td>
 <td>Measurement of light intensity</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000431</td>
-<td><a href="../magnesium/">magnesium</a></td>
+<td><a href="../0000431/">0000431</a></td>
+<td>magnesium</td>
 <td>0..1</td>
 <td>Concentration of magnesium in the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000498</td>
-<td><a href="../mean_frict_vel/">mean_frict_vel</a></td>
+<td><a href="../0000498/">0000498</a></td>
+<td>mean_frict_vel</td>
 <td>0..1</td>
 <td>Measurement of mean friction velocity</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000502</td>
-<td><a href="../mean_peak_frict_vel/">mean_peak_frict_vel</a></td>
+<td><a href="../0000502/">0000502</a></td>
+<td>mean_peak_frict_vel</td>
 <td>0..1</td>
 <td>Measurement of mean peak friction velocity</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000752</td>
-<td><a href="../misc_param/">misc_param</a></td>
+<td><a href="../0000752/">0000752</a></td>
+<td>misc_param</td>
 <td>0..*</td>
 <td>Any other measurement performed or parameter collected, that is not listed here</td>
 <td>{text};{float} {unit}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000503</td>
-<td><a href="../n_alkanes/">n_alkanes</a></td>
+<td><a href="../0000503/">0000503</a></td>
+<td>n_alkanes</td>
 <td>0..*</td>
 <td>Concentration of n-alkanes; can include multiple n-alkanes</td>
 <td>{text};{float} {unit}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000425</td>
-<td><a href="../nitrate/">nitrate</a></td>
+<td><a href="../0000425/">0000425</a></td>
+<td>nitrate</td>
 <td>0..1</td>
 <td>Concentration of nitrate in the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000426</td>
-<td><a href="../nitrite/">nitrite</a></td>
+<td><a href="../0000426/">0000426</a></td>
+<td>nitrite</td>
 <td>0..1</td>
 <td>Concentration of nitrite in the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000504</td>
-<td><a href="../nitro/">nitro</a></td>
+<td><a href="../0000504/">0000504</a></td>
+<td>nitro</td>
 <td>0..1</td>
 <td>Concentration of nitrogen (total)</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000508</td>
-<td><a href="../org_carb/">org_carb</a></td>
+<td><a href="../0000508/">0000508</a></td>
+<td>org_carb</td>
 <td>0..1</td>
 <td>Concentration of organic carbon</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000204</td>
-<td><a href="../org_matter/">org_matter</a></td>
+<td><a href="../0000204/">0000204</a></td>
+<td>org_matter</td>
 <td>0..1</td>
 <td>Concentration of organic matter</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000205</td>
-<td><a href="../org_nitro/">org_nitro</a></td>
+<td><a href="../0000205/">0000205</a></td>
+<td>org_nitro</td>
 <td>0..1</td>
 <td>Concentration of organic nitrogen</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000103</td>
-<td><a href="../organism_count/">organism_count</a></td>
+<td><a href="../0000103/">0000103</a></td>
+<td>organism_count</td>
 <td>0..*</td>
 <td>Total cell count of any organism (or group of organisms) per gram, volume or area of sample, should include name of organism followed by count. The method that was used for the enumeration (e.g. qPCR, atp, mpn, etc.) Should also be provided. (example: total prokaryotes; 3.5e7 cells per ml; qpcr)</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000753</td>
-<td><a href="../oxy_stat_samp/">oxy_stat_samp</a></td>
+<td><a href="../0000753/">0000753</a></td>
+<td>oxy_stat_samp</td>
 <td>0..1</td>
 <td>Oxygenation status of sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001001</td>
-<td><a href="../ph/">ph</a></td>
+<td><a href="../0001001/">0001001</a></td>
+<td>ph</td>
 <td>0..1</td>
 <td>Ph measurement of the sample, or liquid portion of sample, or aqueous phase of the fluid</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000515</td>
-<td><a href="../part_org_carb/">part_org_carb</a></td>
+<td><a href="../0000515/">0000515</a></td>
+<td>part_org_carb</td>
 <td>0..1</td>
 <td>Concentration of particulate organic carbon</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000719</td>
-<td><a href="../part_org_nitro/">part_org_nitro</a></td>
+<td><a href="../0000719/">0000719</a></td>
+<td>part_org_nitro</td>
 <td>0..1</td>
 <td>Concentration of particulate organic nitrogen</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000754</td>
-<td><a href="../perturbation/">perturbation</a></td>
+<td><a href="../0000754/">0000754</a></td>
+<td>perturbation</td>
 <td>0..*</td>
 <td>Type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with perturbation regimen including how many times the perturbation was repeated, how long each perturbation lasted, and the start and end time of the entire perturbation period; can include multiple perturbation types</td>
 <td>{text};{Rn/start_time/end_time/duration}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000516</td>
-<td><a href="../petroleum_hydrocarb/">petroleum_hydrocarb</a></td>
+<td><a href="../0000516/">0000516</a></td>
+<td>petroleum_hydrocarb</td>
 <td>0..1</td>
 <td>Concentration of petroleum hydrocarbon</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000180</td>
-<td><a href="../phaeopigments/">phaeopigments</a></td>
+<td><a href="../0000180/">0000180</a></td>
+<td>phaeopigments</td>
 <td>0..*</td>
 <td>Concentration of phaeopigments; can include multiple phaeopigments</td>
 <td>{text};{float} {unit}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000505</td>
-<td><a href="../phosphate/">phosphate</a></td>
+<td><a href="../0000505/">0000505</a></td>
+<td>phosphate</td>
 <td>0..1</td>
 <td>Concentration of phosphate</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000181</td>
-<td><a href="../phosplipid_fatt_acid/">phosplipid_fatt_acid</a></td>
+<td><a href="../0000181/">0000181</a></td>
+<td>phosplipid_fatt_acid</td>
 <td>0..*</td>
 <td>Concentration of phospholipid fatty acids; can include multiple values</td>
 <td>{text};{float} {unit}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000725</td>
-<td><a href="../photon_flux/">photon_flux</a></td>
+<td><a href="../0000725/">0000725</a></td>
+<td>photon_flux</td>
 <td>0..1</td>
 <td>Measurement of photon flux</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000430</td>
-<td><a href="../potassium/">potassium</a></td>
+<td><a href="../0000430/">0000430</a></td>
+<td>potassium</td>
 <td>0..1</td>
 <td>Concentration of potassium in the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000412</td>
-<td><a href="../pressure/">pressure</a></td>
+<td><a href="../0000412/">0000412</a></td>
+<td>pressure</td>
 <td>0..1</td>
 <td>Pressure to which the sample is subject to, in atmospheres</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000728</td>
-<td><a href="../primary_prod/">primary_prod</a></td>
+<td><a href="../0000728/">0000728</a></td>
+<td>primary_prod</td>
 <td>0..1</td>
 <td>Measurement of primary production, generally measured as isotope uptake</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000182</td>
-<td><a href="../redox_potential/">redox_potential</a></td>
+<td><a href="../0000182/">0000182</a></td>
+<td>redox_potential</td>
 <td>0..1</td>
 <td>Redox potential, measured relative to a hydrogen cell, indicating oxidation or reduction potential</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000183</td>
-<td><a href="../salinity/">salinity</a></td>
+<td><a href="../0000183/">0000183</a></td>
+<td>salinity</td>
 <td>0..1</td>
 <td>The total concentration of all dissolved salts in a liquid or solid sample. While salinity can be measured by a complete chemical analysis, this method is difficult and time consuming. More often, it is instead derived from the conductivity measurement. This is known as practical salinity. These derivations compare the specific conductance of the sample to a salinity standard such as seawater.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000116</td>
-<td><a href="../samp_store_dur/">samp_store_dur</a></td>
+<td><a href="../0000116/">0000116</a></td>
+<td>samp_store_dur</td>
 <td>0..1</td>
 <td>Duration for which the sample was stored</td>
 <td>{duration}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000755</td>
-<td><a href="../samp_store_loc/">samp_store_loc</a></td>
+<td><a href="../0000755/">0000755</a></td>
+<td>samp_store_loc</td>
 <td>0..1</td>
 <td>Location at which sample was stored, usually name of a specific freezer/room</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000110</td>
-<td><a href="../samp_store_temp/">samp_store_temp</a></td>
+<td><a href="../0000110/">0000110</a></td>
+<td>samp_store_temp</td>
 <td>0..1</td>
 <td>Temperature at which sample was stored, e.g. -80 degree Celsius</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000184</td>
-<td><a href="../silicate/">silicate</a></td>
+<td><a href="../0000184/">0000184</a></td>
+<td>silicate</td>
 <td>0..1</td>
 <td>Concentration of silicate</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000735</td>
-<td><a href="../size_frac_low/">size_frac_low</a></td>
+<td><a href="../0000735/">0000735</a></td>
+<td>size_frac_low</td>
 <td>0..1</td>
 <td>Refers to the mesh/pore size used to pre-filter/pre-sort the sample. Materials larger than the size threshold are excluded from the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000736</td>
-<td><a href="../size_frac_up/">size_frac_up</a></td>
+<td><a href="../0000736/">0000736</a></td>
+<td>size_frac_up</td>
 <td>0..1</td>
 <td>Refers to the mesh/pore size used to retain the sample. Materials smaller than the size threshold are excluded from the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000428</td>
-<td><a href="../sodium/">sodium</a></td>
+<td><a href="../0000428/">0000428</a></td>
+<td>sodium</td>
 <td>0..1</td>
 <td>Sodium concentration in the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000738</td>
-<td><a href="../soluble_react_phosp/">soluble_react_phosp</a></td>
+<td><a href="../0000738/">0000738</a></td>
+<td>soluble_react_phosp</td>
 <td>0..1</td>
 <td>Concentration of soluble reactive phosphorus</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000423</td>
-<td><a href="../sulfate/">sulfate</a></td>
+<td><a href="../0000423/">0000423</a></td>
+<td>sulfate</td>
 <td>0..1</td>
 <td>Concentration of sulfate in the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000424</td>
-<td><a href="../sulfide/">sulfide</a></td>
+<td><a href="../0000424/">0000424</a></td>
+<td>sulfide</td>
 <td>0..1</td>
 <td>Concentration of sulfide in the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000741</td>
-<td><a href="../suspend_part_matter/">suspend_part_matter</a></td>
+<td><a href="../0000741/">0000741</a></td>
+<td>suspend_part_matter</td>
 <td>0..1</td>
 <td>Concentration of suspended particulate matter</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000750</td>
-<td><a href="../tidal_stage/">tidal_stage</a></td>
+<td><a href="../0000750/">0000750</a></td>
+<td>tidal_stage</td>
 <td>0..1</td>
 <td>Stage of tide</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000634</td>
-<td><a href="../tot_depth_water_col/">tot_depth_water_col</a></td>
+<td><a href="../0000634/">0000634</a></td>
+<td>tot_depth_water_col</td>
 <td>0..1</td>
 <td>Measurement of total depth of water column</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000744</td>
-<td><a href="../tot_diss_nitro/">tot_diss_nitro</a></td>
+<td><a href="../0000744/">0000744</a></td>
+<td>tot_diss_nitro</td>
 <td>0..1</td>
 <td>Total dissolved nitrogen concentration, reported as nitrogen, measured by: total dissolved nitrogen = NH4 + NO3NO2 + dissolved organic nitrogen</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000745</td>
-<td><a href="../tot_inorg_nitro/">tot_inorg_nitro</a></td>
+<td><a href="../0000745/">0000745</a></td>
+<td>tot_inorg_nitro</td>
 <td>0..1</td>
 <td>Total inorganic nitrogen content</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000102</td>
-<td><a href="../tot_nitro/">tot_nitro</a></td>
+<td><a href="../0000102/">0000102</a></td>
+<td>tot_nitro</td>
 <td>0..1</td>
 <td>Total nitrogen concentration of water samples, calculated by: total nitrogen = total dissolved nitrogen + particulate nitrogen. Can also be measured without filtering, reported as nitrogen</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000747</td>
-<td><a href="../tot_part_carb/">tot_part_carb</a></td>
+<td><a href="../0000747/">0000747</a></td>
+<td>tot_part_carb</td>
 <td>0..1</td>
 <td>Total particulate carbon content</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000117</td>
-<td><a href="../tot_phosp/">tot_phosp</a></td>
+<td><a href="../0000117/">0000117</a></td>
+<td>tot_phosp</td>
 <td>0..1</td>
 <td>Total phosphorus concentration in the sample, calculated by: total phosphorus = total dissolved phosphorus + particulate phosphorus</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000191</td>
-<td><a href="../turbidity/">turbidity</a></td>
+<td><a href="../0000191/">0000191</a></td>
+<td>turbidity</td>
 <td>0..1</td>
 <td>Measure of the amount of cloudiness or haziness in water caused by individual particles</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000203</td>
-<td><a href="../water_current/">water_current</a></td>
+<td><a href="../0000203/">0000203</a></td>
+<td>water_current</td>
 <td>0..1</td>
 <td>Measurement of magnitude and direction of flow within a fluid</td>
 <td>None</td>
-<td>.</td>
 </tr>
 </tbody>
 </table>

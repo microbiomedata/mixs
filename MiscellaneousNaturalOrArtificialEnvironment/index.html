@@ -34,7 +34,7 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href=".." class="nav-link">About</a>
+                                <a href=".." class="nav-link">Reference</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Introduction <b class="caret"></b></a>
@@ -138,401 +138,351 @@
 <th>Multiplicity</th>
 <th>Description</th>
 <th>Pattern</th>
-<th>Info</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>MIXS:0000009</td>
-<td><a href="../lat_lon/">lat_lon</a></td>
+<td><a href="../0000009/">0000009</a></td>
+<td>lat_lon</td>
 <td>0..1</td>
 <td>The geographical origin of the sample as defined by latitude and longitude. The values should be reported in decimal degrees and in WGS84 system</td>
 <td>{float} {float}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000018</td>
-<td><a href="../depth/">depth</a></td>
+<td><a href="../0000018/">0000018</a></td>
+<td>depth</td>
 <td>0..1</td>
 <td>The vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectively. Depth can be reported as an interval for subsurface samples.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000094</td>
-<td><a href="../alt/">alt</a></td>
+<td><a href="../0000094/">0000094</a></td>
+<td>alt</td>
 <td>0..1</td>
 <td>Altitude is a term used to identify heights of objects such as airplanes, space shuttles, rockets, atmospheric balloons and heights of places such as atmospheric layers and clouds. It is used to measure the height of an object which is above the earth's surface. In this context, the altitude measurement is the vertical distance between the earth's surface above sea level and the sampled position in the air</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000093</td>
-<td><a href="../elev/">elev</a></td>
+<td><a href="../0000093/">0000093</a></td>
+<td>elev</td>
 <td>0..1</td>
 <td>Elevation of the sampling site is its height above a fixed reference point, most commonly the mean sea level. Elevation is mainly used when referring to points on the earth's surface, while altitude is used for points above the surface, such as an aircraft in flight or a spacecraft in orbit.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000113</td>
-<td><a href="../temp/">temp</a></td>
+<td><a href="../0000113/">0000113</a></td>
+<td>temp</td>
 <td>0..1</td>
 <td>Temperature of the sample at the time of sampling.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000010</td>
-<td><a href="../geo_loc_name/">geo_loc_name</a></td>
+<td><a href="../0000010/">0000010</a></td>
+<td>geo_loc_name</td>
 <td>0..1</td>
 <td>The geographical origin of the sample as defined by the country or sea name followed by specific region name. Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html), or the GAZ ontology (http://purl.bioontology.org/ontology/GAZ)</td>
 <td>{term}: {term}, {text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000011</td>
-<td><a href="../collection_date/">collection_date</a></td>
+<td><a href="../0000011/">0000011</a></td>
+<td>collection_date</td>
 <td>0..1</td>
 <td>The time of sampling, either as an instance (single point in time) or interval. In case no exact time is available, the date/time can be right truncated i.e. all of these are valid times: 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10; 2008-01-23; 2008-01; 2008; Except: 2008-01; 2008 all are ISO8601 compliant</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000012</td>
-<td><a href="../env_broad_scale/">env_broad_scale</a></td>
+<td><a href="../0000012/">0000012</a></td>
+<td>env_broad_scale</td>
 <td>0..1</td>
 <td>Report the major environmental system the sample or specimen came from. The system(s) identified should have a coarse spatial grain, to provide the general environmental context of where the sampling was done (e.g. in the desert or a rainforest). We recommend using subclasses of EnvO’s biome class:  http://purl.obolibrary.org/obo/ENVO_00000428. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS</td>
 <td>{termLabel} {[termID]}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000013</td>
-<td><a href="../env_local_scale/">env_local_scale</a></td>
+<td><a href="../0000013/">0000013</a></td>
+<td>env_local_scale</td>
 <td>0..1</td>
 <td>Report the entity or entities which are in the sample or specimen’s local vicinity and which you believe have significant causal influences on your sample or specimen. We recommend using EnvO terms which are of smaller spatial grain than your entry for env_broad_scale. Terms, such as anatomical sites, from other OBO Library ontologies which interoperate with EnvO (e.g. UBERON) are accepted in this field. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS.</td>
 <td>{termLabel} {[termID]}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000014</td>
-<td><a href="../env_medium/">env_medium</a></td>
+<td><a href="../0000014/">0000014</a></td>
+<td>env_medium</td>
 <td>0..1</td>
 <td>Report the environmental material(s) immediately surrounding the sample or specimen at the time of sampling. We recommend using subclasses of 'environmental material' (http://purl.obolibrary.org/obo/ENVO_00010483). EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS . Terms from other OBO ontologies are permissible as long as they reference mass/volume nouns (e.g. air, water, blood) and not discrete, countable entities (e.g. a tree, a leaf, a table top).</td>
 <td>{termLabel} {[termID]}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000421</td>
-<td><a href="../alkalinity/">alkalinity</a></td>
+<td><a href="../0000421/">0000421</a></td>
+<td>alkalinity</td>
 <td>0..1</td>
 <td>Alkalinity, the ability of a solution to neutralize acids to the equivalence point of carbonate or bicarbonate</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000427</td>
-<td><a href="../ammonium/">ammonium</a></td>
+<td><a href="../0000427/">0000427</a></td>
+<td>ammonium</td>
 <td>0..1</td>
 <td>Concentration of ammonium in the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000174</td>
-<td><a href="../biomass/">biomass</a></td>
+<td><a href="../0000174/">0000174</a></td>
+<td>biomass</td>
 <td>0..*</td>
 <td>Amount of biomass; should include the name for the part of biomass measured, e.g. Microbial, total. Can include multiple measurements</td>
 <td>{text};{float} {unit}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000176</td>
-<td><a href="../bromide/">bromide</a></td>
+<td><a href="../0000176/">0000176</a></td>
+<td>bromide</td>
 <td>0..1</td>
 <td>Concentration of bromide</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000432</td>
-<td><a href="../calcium/">calcium</a></td>
+<td><a href="../0000432/">0000432</a></td>
+<td>calcium</td>
 <td>0..1</td>
 <td>Concentration of calcium in the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000751</td>
-<td><a href="../chem_administration/">chem_administration</a></td>
+<td><a href="../0000751/">0000751</a></td>
+<td>chem_administration</td>
 <td>0..*</td>
 <td>List of chemical compounds administered to the host or site where sampling occurred, and when (e.g. Antibiotics, n fertilizer, air filter); can include multiple compounds. For chemical entities of biological interest ontology (chebi) (v 163), http://purl.bioontology.org/ontology/chebi</td>
 <td>{termLabel} {[termID]};{timestamp}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000429</td>
-<td><a href="../chloride/">chloride</a></td>
+<td><a href="../0000429/">0000429</a></td>
+<td>chloride</td>
 <td>0..1</td>
 <td>Concentration of chloride in the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000177</td>
-<td><a href="../chlorophyll/">chlorophyll</a></td>
+<td><a href="../0000177/">0000177</a></td>
+<td>chlorophyll</td>
 <td>0..1</td>
 <td>Concentration of chlorophyll</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000435</td>
-<td><a href="../density/">density</a></td>
+<td><a href="../0000435/">0000435</a></td>
+<td>density</td>
 <td>0..1</td>
 <td>Density of the sample, which is its mass per unit volume (aka volumetric mass density)</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000178</td>
-<td><a href="../diether_lipids/">diether_lipids</a></td>
+<td><a href="../0000178/">0000178</a></td>
+<td>diether_lipids</td>
 <td>0..*</td>
 <td>Concentration of diether lipids; can include multiple types of diether lipids</td>
 <td>{text};{float} {unit}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000436</td>
-<td><a href="../diss_carb_dioxide/">diss_carb_dioxide</a></td>
+<td><a href="../0000436/">0000436</a></td>
+<td>diss_carb_dioxide</td>
 <td>0..1</td>
 <td>Concentration of dissolved carbon dioxide in the sample or liquid portion of the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000179</td>
-<td><a href="../diss_hydrogen/">diss_hydrogen</a></td>
+<td><a href="../0000179/">0000179</a></td>
+<td>diss_hydrogen</td>
 <td>0..1</td>
 <td>Concentration of dissolved hydrogen</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000434</td>
-<td><a href="../diss_inorg_carb/">diss_inorg_carb</a></td>
+<td><a href="../0000434/">0000434</a></td>
+<td>diss_inorg_carb</td>
 <td>0..1</td>
 <td>Dissolved inorganic carbon concentration in the sample, typically measured after filtering the sample using a 0.45 micrometer filter</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000162</td>
-<td><a href="../diss_org_nitro/">diss_org_nitro</a></td>
+<td><a href="../0000162/">0000162</a></td>
+<td>diss_org_nitro</td>
 <td>0..1</td>
 <td>Dissolved organic nitrogen concentration measured as; total dissolved nitrogen - NH4 - NO3 - NO2</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000119</td>
-<td><a href="../diss_oxygen/">diss_oxygen</a></td>
+<td><a href="../0000119/">0000119</a></td>
+<td>diss_oxygen</td>
 <td>0..1</td>
 <td>Concentration of dissolved oxygen</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000752</td>
-<td><a href="../misc_param/">misc_param</a></td>
+<td><a href="../0000752/">0000752</a></td>
+<td>misc_param</td>
 <td>0..*</td>
 <td>Any other measurement performed or parameter collected, that is not listed here</td>
 <td>{text};{float} {unit}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000425</td>
-<td><a href="../nitrate/">nitrate</a></td>
+<td><a href="../0000425/">0000425</a></td>
+<td>nitrate</td>
 <td>0..1</td>
 <td>Concentration of nitrate in the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000426</td>
-<td><a href="../nitrite/">nitrite</a></td>
+<td><a href="../0000426/">0000426</a></td>
+<td>nitrite</td>
 <td>0..1</td>
 <td>Concentration of nitrite in the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000504</td>
-<td><a href="../nitro/">nitro</a></td>
+<td><a href="../0000504/">0000504</a></td>
+<td>nitro</td>
 <td>0..1</td>
 <td>Concentration of nitrogen (total)</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000508</td>
-<td><a href="../org_carb/">org_carb</a></td>
+<td><a href="../0000508/">0000508</a></td>
+<td>org_carb</td>
 <td>0..1</td>
 <td>Concentration of organic carbon</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000204</td>
-<td><a href="../org_matter/">org_matter</a></td>
+<td><a href="../0000204/">0000204</a></td>
+<td>org_matter</td>
 <td>0..1</td>
 <td>Concentration of organic matter</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000205</td>
-<td><a href="../org_nitro/">org_nitro</a></td>
+<td><a href="../0000205/">0000205</a></td>
+<td>org_nitro</td>
 <td>0..1</td>
 <td>Concentration of organic nitrogen</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000103</td>
-<td><a href="../organism_count/">organism_count</a></td>
+<td><a href="../0000103/">0000103</a></td>
+<td>organism_count</td>
 <td>0..*</td>
 <td>Total cell count of any organism (or group of organisms) per gram, volume or area of sample, should include name of organism followed by count. The method that was used for the enumeration (e.g. qPCR, atp, mpn, etc.) Should also be provided. (example: total prokaryotes; 3.5e7 cells per ml; qpcr)</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000753</td>
-<td><a href="../oxy_stat_samp/">oxy_stat_samp</a></td>
+<td><a href="../0000753/">0000753</a></td>
+<td>oxy_stat_samp</td>
 <td>0..1</td>
 <td>Oxygenation status of sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0001001</td>
-<td><a href="../ph/">ph</a></td>
+<td><a href="../0001001/">0001001</a></td>
+<td>ph</td>
 <td>0..1</td>
 <td>Ph measurement of the sample, or liquid portion of sample, or aqueous phase of the fluid</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000754</td>
-<td><a href="../perturbation/">perturbation</a></td>
+<td><a href="../0000754/">0000754</a></td>
+<td>perturbation</td>
 <td>0..*</td>
 <td>Type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with perturbation regimen including how many times the perturbation was repeated, how long each perturbation lasted, and the start and end time of the entire perturbation period; can include multiple perturbation types</td>
 <td>{text};{Rn/start_time/end_time/duration}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000505</td>
-<td><a href="../phosphate/">phosphate</a></td>
+<td><a href="../0000505/">0000505</a></td>
+<td>phosphate</td>
 <td>0..1</td>
 <td>Concentration of phosphate</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000181</td>
-<td><a href="../phosplipid_fatt_acid/">phosplipid_fatt_acid</a></td>
+<td><a href="../0000181/">0000181</a></td>
+<td>phosplipid_fatt_acid</td>
 <td>0..*</td>
 <td>Concentration of phospholipid fatty acids; can include multiple values</td>
 <td>{text};{float} {unit}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000430</td>
-<td><a href="../potassium/">potassium</a></td>
+<td><a href="../0000430/">0000430</a></td>
+<td>potassium</td>
 <td>0..1</td>
 <td>Concentration of potassium in the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000412</td>
-<td><a href="../pressure/">pressure</a></td>
+<td><a href="../0000412/">0000412</a></td>
+<td>pressure</td>
 <td>0..1</td>
 <td>Pressure to which the sample is subject to, in atmospheres</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000183</td>
-<td><a href="../salinity/">salinity</a></td>
+<td><a href="../0000183/">0000183</a></td>
+<td>salinity</td>
 <td>0..1</td>
 <td>The total concentration of all dissolved salts in a liquid or solid sample. While salinity can be measured by a complete chemical analysis, this method is difficult and time consuming. More often, it is instead derived from the conductivity measurement. This is known as practical salinity. These derivations compare the specific conductance of the sample to a salinity standard such as seawater.</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000116</td>
-<td><a href="../samp_store_dur/">samp_store_dur</a></td>
+<td><a href="../0000116/">0000116</a></td>
+<td>samp_store_dur</td>
 <td>0..1</td>
 <td>Duration for which the sample was stored</td>
 <td>{duration}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000755</td>
-<td><a href="../samp_store_loc/">samp_store_loc</a></td>
+<td><a href="../0000755/">0000755</a></td>
+<td>samp_store_loc</td>
 <td>0..1</td>
 <td>Location at which sample was stored, usually name of a specific freezer/room</td>
 <td>{text}</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000110</td>
-<td><a href="../samp_store_temp/">samp_store_temp</a></td>
+<td><a href="../0000110/">0000110</a></td>
+<td>samp_store_temp</td>
 <td>0..1</td>
 <td>Temperature at which sample was stored, e.g. -80 degree Celsius</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000184</td>
-<td><a href="../silicate/">silicate</a></td>
+<td><a href="../0000184/">0000184</a></td>
+<td>silicate</td>
 <td>0..1</td>
 <td>Concentration of silicate</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000428</td>
-<td><a href="../sodium/">sodium</a></td>
+<td><a href="../0000428/">0000428</a></td>
+<td>sodium</td>
 <td>0..1</td>
 <td>Sodium concentration in the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000423</td>
-<td><a href="../sulfate/">sulfate</a></td>
+<td><a href="../0000423/">0000423</a></td>
+<td>sulfate</td>
 <td>0..1</td>
 <td>Concentration of sulfate in the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000424</td>
-<td><a href="../sulfide/">sulfide</a></td>
+<td><a href="../0000424/">0000424</a></td>
+<td>sulfide</td>
 <td>0..1</td>
 <td>Concentration of sulfide in the sample</td>
 <td>None</td>
-<td>.</td>
 </tr>
 <tr>
-<td>MIXS:0000203</td>
-<td><a href="../water_current/">water_current</a></td>
+<td><a href="../0000203/">0000203</a></td>
+<td>water_current</td>
 <td>0..1</td>
 <td>Measurement of magnitude and direction of flow within a fluid</td>
 <td>None</td>
-<td>.</td>
 </tr>
 </tbody>
 </table>
