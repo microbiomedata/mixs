@@ -1,1076 +1,1662 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
-        
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
         <link rel="canonical" href="https://genomicsstandardsconsortium.github.io/mixs/">
-        <link rel="shortcut icon" href="img/favicon.ico">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.7">
+    
+    
+      
         <title>MIxS</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
-
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
-    </head>
-
-    <body class="homepage">
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href=".">MIxS</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="navitem active">
-                                <a href="." class="nav-link">Reference</a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Introduction <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="introduction/background/" class="dropdown-item">Background</a>
-</li>
-                                    
-<li>
-    <a href="introduction/citation/" class="dropdown-item">Cite</a>
-</li>
-                                    
-<li>
-    <a href="introduction/contents/" class="dropdown-item">Contents</a>
-</li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li class="nav-item">
-                                <a rel="prev" class="nav-link disabled">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="introduction/background/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://github.com/GenomicsStandardsConsortium/mixs/edit/master/docs/index.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.4a0965b7.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-level="1"><a href="#mixs" class="nav-link">MIxS</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#checklists" class="nav-link">Checklists</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#packages" class="nav-link">Packages</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#combinations" class="nav-link">Combinations</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mixs" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
-</div></div>
-                    <div class="col-md-9" role="main">
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="MIxS" class="md-header__button md-logo" aria-label="MIxS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MIxS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/GenomicsStandardsConsortium/mixs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="MIxS" class="md-nav__button md-logo" aria-label="MIxS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    MIxS
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/GenomicsStandardsConsortium/mixs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Reference
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#packages" class="md-nav__link">
+    Packages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklists" class="md-nav__link">
+    Checklists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combinations" class="md-nav__link">
+    Combinations
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Introduction" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Introduction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="introduction/background/" class="md-nav__link">
+        Background
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="introduction/citation/" class="md-nav__link">
+        Cite
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="introduction/contents/" class="md-nav__link">
+        Contents
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#packages" class="md-nav__link">
+    Packages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklists" class="md-nav__link">
+    Checklists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combinations" class="md-nav__link">
+    Combinations
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/GenomicsStandardsConsortium/mixs/edit/master/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
 
 <h1 id="mixs">MIxS</h1>
 <p>Minimal Information about any Sequence Standard</p>
-<p>URI: http://w3id.org/mixs</p>
-<h2 id="checklists">Checklists</h2>
-<ul>
-<li>
-<p><a href="MIGSEukaryote/">MIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="MIGSBacteria/">MIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="MIGSPlant/">MIGSPlant</a></p>
-</li>
-<li>
-<p><a href="MIGSVirus/">MIGSVirus</a></p>
-</li>
-<li>
-<p><a href="MIGSOrg/">MIGSOrg</a></p>
-</li>
-<li>
-<p><a href="MIMS/">MIMS</a></p>
-</li>
-<li>
-<p><a href="MIMARKSSpecimen/">MIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="MIMARKSSurvey/">MIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="MISAG/">MISAG</a></p>
-</li>
-<li>
-<p><a href="MIMAG/">MIMAG</a></p>
-</li>
-<li>
-<p><a href="MIUVIG/">MIUVIG</a></p>
-</li>
-</ul>
+<p>URI: <a href=http://w3id.org/mixs>http://w3id.org/mixs</a></p>
 <h2 id="packages">Packages</h2>
-<ul>
-<li>
-<p><a href="Agriculture/">Agriculture</a></p>
-</li>
-<li>
-<p><a href="QuantityValue/">QuantityValue</a></p>
-</li>
-<li>
-<p><a href="Food-farmEnvironment/">Food-farmEnvironment</a></p>
-</li>
-<li>
-<p><a href="Food-foodProductionFacility/">Food-foodProductionFacility</a></p>
-</li>
-<li>
-<p><a href="Food-animalAndAnimalFeed/">Food-animalAndAnimalFeed</a></p>
-</li>
-<li>
-<p><a href="Food-humanFoods/">Food-humanFoods</a></p>
-</li>
-<li>
-<p><a href="Symbiont-associated/">Symbiont-associated</a></p>
-</li>
-<li>
-<p><a href="Water/">Water</a></p>
-</li>
-<li>
-<p><a href="WastewaterSludge/">WastewaterSludge</a></p>
-</li>
-<li>
-<p><a href="Soil/">Soil</a></p>
-</li>
-<li>
-<p><a href="Sediment/">Sediment</a></p>
-</li>
-<li>
-<p><a href="Plant-associated/">Plant-associated</a></p>
-</li>
-<li>
-<p><a href="MiscellaneousNaturalOrArtificialEnvironment/">MiscellaneousNaturalOrArtificialEnvironment</a></p>
-</li>
-<li>
-<p><a href="MicrobialMatBiofilm/">MicrobialMatBiofilm</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-fluidsSwabs/">HydrocarbonResources-fluidsSwabs</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-cores/">HydrocarbonResources-cores</a></p>
-</li>
-<li>
-<p><a href="Human-vaginal/">Human-vaginal</a></p>
-</li>
-<li>
-<p><a href="Human-skin/">Human-skin</a></p>
-</li>
-<li>
-<p><a href="Human-oral/">Human-oral</a></p>
-</li>
-<li>
-<p><a href="Human-gut/">Human-gut</a></p>
-</li>
-<li>
-<p><a href="Human-associated/">Human-associated</a></p>
-</li>
-<li>
-<p><a href="Host-associated/">Host-associated</a></p>
-</li>
-<li>
-<p><a href="BuiltEnvironment/">BuiltEnvironment</a></p>
-</li>
-<li>
-<p><a href="Air/">Air</a></p>
-</li>
-<li>
-<p><a href="Core/">Core</a></p>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Agriculture/">Agriculture</a></td>
+<td>agriculture</td>
+</tr>
+<tr>
+<td><a href="QuantityValue/">QuantityValue</a></td>
+<td>used to record a measurement</td>
+</tr>
+<tr>
+<td><a href="Food-farmEnvironment/">Food-farmEnvironment</a></td>
+<td>food-farm environment</td>
+</tr>
+<tr>
+<td><a href="Food-foodProductionFacility/">Food-foodProductionFacility</a></td>
+<td>food-food production facility</td>
+</tr>
+<tr>
+<td><a href="Food-animalAndAnimalFeed/">Food-animalAndAnimalFeed</a></td>
+<td>food-animal and animal feed</td>
+</tr>
+<tr>
+<td><a href="Food-humanFoods/">Food-humanFoods</a></td>
+<td>food-human foods</td>
+</tr>
+<tr>
+<td><a href="Symbiont-associated/">Symbiont-associated</a></td>
+<td>symbiont-associated</td>
+</tr>
+<tr>
+<td><a href="Water/">Water</a></td>
+<td>water</td>
+</tr>
+<tr>
+<td><a href="WastewaterSludge/">WastewaterSludge</a></td>
+<td>wastewater/sludge</td>
+</tr>
+<tr>
+<td><a href="Soil/">Soil</a></td>
+<td>soil</td>
+</tr>
+<tr>
+<td><a href="Sediment/">Sediment</a></td>
+<td>sediment</td>
+</tr>
+<tr>
+<td><a href="Plant-associated/">Plant-associated</a></td>
+<td>plant-associated</td>
+</tr>
+<tr>
+<td><a href="MiscellaneousNaturalOrArtificialEnvironment/">MiscellaneousNaturalOrArtificialEnvironment</a></td>
+<td>miscellaneous natural or artificial environment</td>
+</tr>
+<tr>
+<td><a href="MicrobialMatBiofilm/">MicrobialMatBiofilm</a></td>
+<td>microbial mat/biofilm</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-fluidsSwabs/">HydrocarbonResources-fluidsSwabs</a></td>
+<td>hydrocarbon resources-fluids/swabs</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-cores/">HydrocarbonResources-cores</a></td>
+<td>hydrocarbon resources-cores</td>
+</tr>
+<tr>
+<td><a href="Human-vaginal/">Human-vaginal</a></td>
+<td>human-vaginal</td>
+</tr>
+<tr>
+<td><a href="Human-skin/">Human-skin</a></td>
+<td>human-skin</td>
+</tr>
+<tr>
+<td><a href="Human-oral/">Human-oral</a></td>
+<td>human-oral</td>
+</tr>
+<tr>
+<td><a href="Human-gut/">Human-gut</a></td>
+<td>human-gut</td>
+</tr>
+<tr>
+<td><a href="Human-associated/">Human-associated</a></td>
+<td>human-associated</td>
+</tr>
+<tr>
+<td><a href="Host-associated/">Host-associated</a></td>
+<td>host-associated</td>
+</tr>
+<tr>
+<td><a href="BuiltEnvironment/">BuiltEnvironment</a></td>
+<td>built environment</td>
+</tr>
+<tr>
+<td><a href="Air/">Air</a></td>
+<td>air</td>
+</tr>
+<tr>
+<td><a href="Core/">Core</a></td>
+<td>Core package. Do not use this directly, this is used to build other packages</td>
+</tr>
+</tbody>
+</table>
+<h2 id="checklists">Checklists</h2>
+<table>
+<thead>
+<tr>
+<th>Checklist</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="MIGSEukaryote/">MIGSEukaryote</a></td>
+<td>Minimal Information about a Genome Sequence: eukaryote</td>
+</tr>
+<tr>
+<td><a href="MIGSBacteria/">MIGSBacteria</a></td>
+<td>Minimal Information about a Genome Sequence: cultured bacteria/archaea</td>
+</tr>
+<tr>
+<td><a href="MIGSPlant/">MIGSPlant</a></td>
+<td>Minimal Information about a Genome Sequence: plant</td>
+</tr>
+<tr>
+<td><a href="MIGSVirus/">MIGSVirus</a></td>
+<td>Minimal Information about a Genome Sequence: cultured bacteria/archaea</td>
+</tr>
+<tr>
+<td><a href="MIGSOrg/">MIGSOrg</a></td>
+<td>Minimal Information about a Genome Sequence: org</td>
+</tr>
+<tr>
+<td><a href="MIMS/">MIMS</a></td>
+<td>Metagenome or Environmental</td>
+</tr>
+<tr>
+<td><a href="MIMARKSSpecimen/">MIMARKSSpecimen</a></td>
+<td>Minimal Information about a Marker Specimen: specimen</td>
+</tr>
+<tr>
+<td><a href="MIMARKSSurvey/">MIMARKSSurvey</a></td>
+<td>Minimal Information about a Marker Specimen: survey</td>
+</tr>
+<tr>
+<td><a href="MISAG/">MISAG</a></td>
+<td>Minimum Information About a Single Amplified Genome</td>
+</tr>
+<tr>
+<td><a href="MIMAG/">MIMAG</a></td>
+<td>Minimum Information About a Metagenome-Assembled Genome</td>
+</tr>
+<tr>
+<td><a href="MIUVIG/">MIUVIG</a></td>
+<td>Minimum Information About an Uncultivated Virus Genome</td>
+</tr>
+</tbody>
+</table>
 <h2 id="combinations">Combinations</h2>
-<ul>
-<li>
-<p><a href="AirMIGSEukaryote/">AirMIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="AirMIGSBacteria/">AirMIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="AirMIGSPlant/">AirMIGSPlant</a></p>
-</li>
-<li>
-<p><a href="AirMIGSVirus/">AirMIGSVirus</a></p>
-</li>
-<li>
-<p><a href="AirMIGSOrg/">AirMIGSOrg</a></p>
-</li>
-<li>
-<p><a href="AirMIMS/">AirMIMS</a></p>
-</li>
-<li>
-<p><a href="AirMIMARKSSpecimen/">AirMIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="AirMIMARKSSurvey/">AirMIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="AirMISAG/">AirMISAG</a></p>
-</li>
-<li>
-<p><a href="AirMIMAG/">AirMIMAG</a></p>
-</li>
-<li>
-<p><a href="AirMIUVIG/">AirMIUVIG</a></p>
-</li>
-<li>
-<p><a href="BuiltEnvironmentMIGSEukaryote/">BuiltEnvironmentMIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="BuiltEnvironmentMIGSBacteria/">BuiltEnvironmentMIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="BuiltEnvironmentMIGSPlant/">BuiltEnvironmentMIGSPlant</a></p>
-</li>
-<li>
-<p><a href="BuiltEnvironmentMIGSVirus/">BuiltEnvironmentMIGSVirus</a></p>
-</li>
-<li>
-<p><a href="BuiltEnvironmentMIGSOrg/">BuiltEnvironmentMIGSOrg</a></p>
-</li>
-<li>
-<p><a href="BuiltEnvironmentMIMS/">BuiltEnvironmentMIMS</a></p>
-</li>
-<li>
-<p><a href="BuiltEnvironmentMIMARKSSpecimen/">BuiltEnvironmentMIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="BuiltEnvironmentMIMARKSSurvey/">BuiltEnvironmentMIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="BuiltEnvironmentMISAG/">BuiltEnvironmentMISAG</a></p>
-</li>
-<li>
-<p><a href="BuiltEnvironmentMIMAG/">BuiltEnvironmentMIMAG</a></p>
-</li>
-<li>
-<p><a href="BuiltEnvironmentMIUVIG/">BuiltEnvironmentMIUVIG</a></p>
-</li>
-<li>
-<p><a href="Host-associatedMIGSEukaryote/">Host-associatedMIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="Host-associatedMIGSBacteria/">Host-associatedMIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="Host-associatedMIGSPlant/">Host-associatedMIGSPlant</a></p>
-</li>
-<li>
-<p><a href="Host-associatedMIGSVirus/">Host-associatedMIGSVirus</a></p>
-</li>
-<li>
-<p><a href="Host-associatedMIGSOrg/">Host-associatedMIGSOrg</a></p>
-</li>
-<li>
-<p><a href="Host-associatedMIMS/">Host-associatedMIMS</a></p>
-</li>
-<li>
-<p><a href="Host-associatedMIMARKSSpecimen/">Host-associatedMIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="Host-associatedMIMARKSSurvey/">Host-associatedMIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="Host-associatedMISAG/">Host-associatedMISAG</a></p>
-</li>
-<li>
-<p><a href="Host-associatedMIMAG/">Host-associatedMIMAG</a></p>
-</li>
-<li>
-<p><a href="Host-associatedMIUVIG/">Host-associatedMIUVIG</a></p>
-</li>
-<li>
-<p><a href="Human-associatedMIGSEukaryote/">Human-associatedMIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="Human-associatedMIGSBacteria/">Human-associatedMIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="Human-associatedMIGSPlant/">Human-associatedMIGSPlant</a></p>
-</li>
-<li>
-<p><a href="Human-associatedMIGSVirus/">Human-associatedMIGSVirus</a></p>
-</li>
-<li>
-<p><a href="Human-associatedMIGSOrg/">Human-associatedMIGSOrg</a></p>
-</li>
-<li>
-<p><a href="Human-associatedMIMS/">Human-associatedMIMS</a></p>
-</li>
-<li>
-<p><a href="Human-associatedMIMARKSSpecimen/">Human-associatedMIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="Human-associatedMIMARKSSurvey/">Human-associatedMIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="Human-associatedMISAG/">Human-associatedMISAG</a></p>
-</li>
-<li>
-<p><a href="Human-associatedMIMAG/">Human-associatedMIMAG</a></p>
-</li>
-<li>
-<p><a href="Human-associatedMIUVIG/">Human-associatedMIUVIG</a></p>
-</li>
-<li>
-<p><a href="Human-gutMIGSEukaryote/">Human-gutMIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="Human-gutMIGSBacteria/">Human-gutMIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="Human-gutMIGSPlant/">Human-gutMIGSPlant</a></p>
-</li>
-<li>
-<p><a href="Human-gutMIGSVirus/">Human-gutMIGSVirus</a></p>
-</li>
-<li>
-<p><a href="Human-gutMIGSOrg/">Human-gutMIGSOrg</a></p>
-</li>
-<li>
-<p><a href="Human-gutMIMS/">Human-gutMIMS</a></p>
-</li>
-<li>
-<p><a href="Human-gutMIMARKSSpecimen/">Human-gutMIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="Human-gutMIMARKSSurvey/">Human-gutMIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="Human-gutMISAG/">Human-gutMISAG</a></p>
-</li>
-<li>
-<p><a href="Human-gutMIMAG/">Human-gutMIMAG</a></p>
-</li>
-<li>
-<p><a href="Human-gutMIUVIG/">Human-gutMIUVIG</a></p>
-</li>
-<li>
-<p><a href="Human-oralMIGSEukaryote/">Human-oralMIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="Human-oralMIGSBacteria/">Human-oralMIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="Human-oralMIGSPlant/">Human-oralMIGSPlant</a></p>
-</li>
-<li>
-<p><a href="Human-oralMIGSVirus/">Human-oralMIGSVirus</a></p>
-</li>
-<li>
-<p><a href="Human-oralMIGSOrg/">Human-oralMIGSOrg</a></p>
-</li>
-<li>
-<p><a href="Human-oralMIMS/">Human-oralMIMS</a></p>
-</li>
-<li>
-<p><a href="Human-oralMIMARKSSpecimen/">Human-oralMIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="Human-oralMIMARKSSurvey/">Human-oralMIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="Human-oralMISAG/">Human-oralMISAG</a></p>
-</li>
-<li>
-<p><a href="Human-oralMIMAG/">Human-oralMIMAG</a></p>
-</li>
-<li>
-<p><a href="Human-oralMIUVIG/">Human-oralMIUVIG</a></p>
-</li>
-<li>
-<p><a href="Human-skinMIGSEukaryote/">Human-skinMIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="Human-skinMIGSBacteria/">Human-skinMIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="Human-skinMIGSPlant/">Human-skinMIGSPlant</a></p>
-</li>
-<li>
-<p><a href="Human-skinMIGSVirus/">Human-skinMIGSVirus</a></p>
-</li>
-<li>
-<p><a href="Human-skinMIGSOrg/">Human-skinMIGSOrg</a></p>
-</li>
-<li>
-<p><a href="Human-skinMIMS/">Human-skinMIMS</a></p>
-</li>
-<li>
-<p><a href="Human-skinMIMARKSSpecimen/">Human-skinMIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="Human-skinMIMARKSSurvey/">Human-skinMIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="Human-skinMISAG/">Human-skinMISAG</a></p>
-</li>
-<li>
-<p><a href="Human-skinMIMAG/">Human-skinMIMAG</a></p>
-</li>
-<li>
-<p><a href="Human-skinMIUVIG/">Human-skinMIUVIG</a></p>
-</li>
-<li>
-<p><a href="Human-vaginalMIGSEukaryote/">Human-vaginalMIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="Human-vaginalMIGSBacteria/">Human-vaginalMIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="Human-vaginalMIGSPlant/">Human-vaginalMIGSPlant</a></p>
-</li>
-<li>
-<p><a href="Human-vaginalMIGSVirus/">Human-vaginalMIGSVirus</a></p>
-</li>
-<li>
-<p><a href="Human-vaginalMIGSOrg/">Human-vaginalMIGSOrg</a></p>
-</li>
-<li>
-<p><a href="Human-vaginalMIMS/">Human-vaginalMIMS</a></p>
-</li>
-<li>
-<p><a href="Human-vaginalMIMARKSSpecimen/">Human-vaginalMIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="Human-vaginalMIMARKSSurvey/">Human-vaginalMIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="Human-vaginalMISAG/">Human-vaginalMISAG</a></p>
-</li>
-<li>
-<p><a href="Human-vaginalMIMAG/">Human-vaginalMIMAG</a></p>
-</li>
-<li>
-<p><a href="Human-vaginalMIUVIG/">Human-vaginalMIUVIG</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-coresMIGSEukaryote/">HydrocarbonResources-coresMIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-coresMIGSBacteria/">HydrocarbonResources-coresMIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-coresMIGSPlant/">HydrocarbonResources-coresMIGSPlant</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-coresMIGSVirus/">HydrocarbonResources-coresMIGSVirus</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-coresMIGSOrg/">HydrocarbonResources-coresMIGSOrg</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-coresMIMS/">HydrocarbonResources-coresMIMS</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-coresMIMARKSSpecimen/">HydrocarbonResources-coresMIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-coresMIMARKSSurvey/">HydrocarbonResources-coresMIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-coresMISAG/">HydrocarbonResources-coresMISAG</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-coresMIMAG/">HydrocarbonResources-coresMIMAG</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-coresMIUVIG/">HydrocarbonResources-coresMIUVIG</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-fluidsSwabsMIGSEukaryote/">HydrocarbonResources-fluidsSwabsMIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-fluidsSwabsMIGSBacteria/">HydrocarbonResources-fluidsSwabsMIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-fluidsSwabsMIGSPlant/">HydrocarbonResources-fluidsSwabsMIGSPlant</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-fluidsSwabsMIGSVirus/">HydrocarbonResources-fluidsSwabsMIGSVirus</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-fluidsSwabsMIGSOrg/">HydrocarbonResources-fluidsSwabsMIGSOrg</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-fluidsSwabsMIMS/">HydrocarbonResources-fluidsSwabsMIMS</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-fluidsSwabsMIMARKSSpecimen/">HydrocarbonResources-fluidsSwabsMIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-fluidsSwabsMIMARKSSurvey/">HydrocarbonResources-fluidsSwabsMIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-fluidsSwabsMISAG/">HydrocarbonResources-fluidsSwabsMISAG</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-fluidsSwabsMIMAG/">HydrocarbonResources-fluidsSwabsMIMAG</a></p>
-</li>
-<li>
-<p><a href="HydrocarbonResources-fluidsSwabsMIUVIG/">HydrocarbonResources-fluidsSwabsMIUVIG</a></p>
-</li>
-<li>
-<p><a href="MicrobialMatBiofilmMIGSEukaryote/">MicrobialMatBiofilmMIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="MicrobialMatBiofilmMIGSBacteria/">MicrobialMatBiofilmMIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="MicrobialMatBiofilmMIGSPlant/">MicrobialMatBiofilmMIGSPlant</a></p>
-</li>
-<li>
-<p><a href="MicrobialMatBiofilmMIGSVirus/">MicrobialMatBiofilmMIGSVirus</a></p>
-</li>
-<li>
-<p><a href="MicrobialMatBiofilmMIGSOrg/">MicrobialMatBiofilmMIGSOrg</a></p>
-</li>
-<li>
-<p><a href="MicrobialMatBiofilmMIMS/">MicrobialMatBiofilmMIMS</a></p>
-</li>
-<li>
-<p><a href="MicrobialMatBiofilmMIMARKSSpecimen/">MicrobialMatBiofilmMIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="MicrobialMatBiofilmMIMARKSSurvey/">MicrobialMatBiofilmMIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="MicrobialMatBiofilmMISAG/">MicrobialMatBiofilmMISAG</a></p>
-</li>
-<li>
-<p><a href="MicrobialMatBiofilmMIMAG/">MicrobialMatBiofilmMIMAG</a></p>
-</li>
-<li>
-<p><a href="MicrobialMatBiofilmMIUVIG/">MicrobialMatBiofilmMIUVIG</a></p>
-</li>
-<li>
-<p><a href="MiscellaneousNaturalOrArtificialEnvironmentMIGSEukaryote/">MiscellaneousNaturalOrArtificialEnvironmentMIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="MiscellaneousNaturalOrArtificialEnvironmentMIGSBacteria/">MiscellaneousNaturalOrArtificialEnvironmentMIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="MiscellaneousNaturalOrArtificialEnvironmentMIGSPlant/">MiscellaneousNaturalOrArtificialEnvironmentMIGSPlant</a></p>
-</li>
-<li>
-<p><a href="MiscellaneousNaturalOrArtificialEnvironmentMIGSVirus/">MiscellaneousNaturalOrArtificialEnvironmentMIGSVirus</a></p>
-</li>
-<li>
-<p><a href="MiscellaneousNaturalOrArtificialEnvironmentMIGSOrg/">MiscellaneousNaturalOrArtificialEnvironmentMIGSOrg</a></p>
-</li>
-<li>
-<p><a href="MiscellaneousNaturalOrArtificialEnvironmentMIMS/">MiscellaneousNaturalOrArtificialEnvironmentMIMS</a></p>
-</li>
-<li>
-<p><a href="MiscellaneousNaturalOrArtificialEnvironmentMIMARKSSpecimen/">MiscellaneousNaturalOrArtificialEnvironmentMIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="MiscellaneousNaturalOrArtificialEnvironmentMIMARKSSurvey/">MiscellaneousNaturalOrArtificialEnvironmentMIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="MiscellaneousNaturalOrArtificialEnvironmentMISAG/">MiscellaneousNaturalOrArtificialEnvironmentMISAG</a></p>
-</li>
-<li>
-<p><a href="MiscellaneousNaturalOrArtificialEnvironmentMIMAG/">MiscellaneousNaturalOrArtificialEnvironmentMIMAG</a></p>
-</li>
-<li>
-<p><a href="MiscellaneousNaturalOrArtificialEnvironmentMIUVIG/">MiscellaneousNaturalOrArtificialEnvironmentMIUVIG</a></p>
-</li>
-<li>
-<p><a href="Plant-associatedMIGSEukaryote/">Plant-associatedMIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="Plant-associatedMIGSBacteria/">Plant-associatedMIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="Plant-associatedMIGSPlant/">Plant-associatedMIGSPlant</a></p>
-</li>
-<li>
-<p><a href="Plant-associatedMIGSVirus/">Plant-associatedMIGSVirus</a></p>
-</li>
-<li>
-<p><a href="Plant-associatedMIGSOrg/">Plant-associatedMIGSOrg</a></p>
-</li>
-<li>
-<p><a href="Plant-associatedMIMS/">Plant-associatedMIMS</a></p>
-</li>
-<li>
-<p><a href="Plant-associatedMIMARKSSpecimen/">Plant-associatedMIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="Plant-associatedMIMARKSSurvey/">Plant-associatedMIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="Plant-associatedMISAG/">Plant-associatedMISAG</a></p>
-</li>
-<li>
-<p><a href="Plant-associatedMIMAG/">Plant-associatedMIMAG</a></p>
-</li>
-<li>
-<p><a href="Plant-associatedMIUVIG/">Plant-associatedMIUVIG</a></p>
-</li>
-<li>
-<p><a href="SedimentMIGSEukaryote/">SedimentMIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="SedimentMIGSBacteria/">SedimentMIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="SedimentMIGSPlant/">SedimentMIGSPlant</a></p>
-</li>
-<li>
-<p><a href="SedimentMIGSVirus/">SedimentMIGSVirus</a></p>
-</li>
-<li>
-<p><a href="SedimentMIGSOrg/">SedimentMIGSOrg</a></p>
-</li>
-<li>
-<p><a href="SedimentMIMS/">SedimentMIMS</a></p>
-</li>
-<li>
-<p><a href="SedimentMIMARKSSpecimen/">SedimentMIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="SedimentMIMARKSSurvey/">SedimentMIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="SedimentMISAG/">SedimentMISAG</a></p>
-</li>
-<li>
-<p><a href="SedimentMIMAG/">SedimentMIMAG</a></p>
-</li>
-<li>
-<p><a href="SedimentMIUVIG/">SedimentMIUVIG</a></p>
-</li>
-<li>
-<p><a href="SoilMIGSEukaryote/">SoilMIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="SoilMIGSBacteria/">SoilMIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="SoilMIGSPlant/">SoilMIGSPlant</a></p>
-</li>
-<li>
-<p><a href="SoilMIGSVirus/">SoilMIGSVirus</a></p>
-</li>
-<li>
-<p><a href="SoilMIGSOrg/">SoilMIGSOrg</a></p>
-</li>
-<li>
-<p><a href="SoilMIMS/">SoilMIMS</a></p>
-</li>
-<li>
-<p><a href="SoilMIMARKSSpecimen/">SoilMIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="SoilMIMARKSSurvey/">SoilMIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="SoilMISAG/">SoilMISAG</a></p>
-</li>
-<li>
-<p><a href="SoilMIMAG/">SoilMIMAG</a></p>
-</li>
-<li>
-<p><a href="SoilMIUVIG/">SoilMIUVIG</a></p>
-</li>
-<li>
-<p><a href="WastewaterSludgeMIGSEukaryote/">WastewaterSludgeMIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="WastewaterSludgeMIGSBacteria/">WastewaterSludgeMIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="WastewaterSludgeMIGSPlant/">WastewaterSludgeMIGSPlant</a></p>
-</li>
-<li>
-<p><a href="WastewaterSludgeMIGSVirus/">WastewaterSludgeMIGSVirus</a></p>
-</li>
-<li>
-<p><a href="WastewaterSludgeMIGSOrg/">WastewaterSludgeMIGSOrg</a></p>
-</li>
-<li>
-<p><a href="WastewaterSludgeMIMS/">WastewaterSludgeMIMS</a></p>
-</li>
-<li>
-<p><a href="WastewaterSludgeMIMARKSSpecimen/">WastewaterSludgeMIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="WastewaterSludgeMIMARKSSurvey/">WastewaterSludgeMIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="WastewaterSludgeMISAG/">WastewaterSludgeMISAG</a></p>
-</li>
-<li>
-<p><a href="WastewaterSludgeMIMAG/">WastewaterSludgeMIMAG</a></p>
-</li>
-<li>
-<p><a href="WastewaterSludgeMIUVIG/">WastewaterSludgeMIUVIG</a></p>
-</li>
-<li>
-<p><a href="WaterMIGSEukaryote/">WaterMIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="WaterMIGSBacteria/">WaterMIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="WaterMIGSPlant/">WaterMIGSPlant</a></p>
-</li>
-<li>
-<p><a href="WaterMIGSVirus/">WaterMIGSVirus</a></p>
-</li>
-<li>
-<p><a href="WaterMIGSOrg/">WaterMIGSOrg</a></p>
-</li>
-<li>
-<p><a href="WaterMIMS/">WaterMIMS</a></p>
-</li>
-<li>
-<p><a href="WaterMIMARKSSpecimen/">WaterMIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="WaterMIMARKSSurvey/">WaterMIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="WaterMISAG/">WaterMISAG</a></p>
-</li>
-<li>
-<p><a href="WaterMIMAG/">WaterMIMAG</a></p>
-</li>
-<li>
-<p><a href="WaterMIUVIG/">WaterMIUVIG</a></p>
-</li>
-<li>
-<p><a href="Symbiont-associatedMIGSEukaryote/">Symbiont-associatedMIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="Symbiont-associatedMIGSBacteria/">Symbiont-associatedMIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="Symbiont-associatedMIGSPlant/">Symbiont-associatedMIGSPlant</a></p>
-</li>
-<li>
-<p><a href="Symbiont-associatedMIGSVirus/">Symbiont-associatedMIGSVirus</a></p>
-</li>
-<li>
-<p><a href="Symbiont-associatedMIGSOrg/">Symbiont-associatedMIGSOrg</a></p>
-</li>
-<li>
-<p><a href="Symbiont-associatedMIMS/">Symbiont-associatedMIMS</a></p>
-</li>
-<li>
-<p><a href="Symbiont-associatedMIMARKSSpecimen/">Symbiont-associatedMIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="Symbiont-associatedMIMARKSSurvey/">Symbiont-associatedMIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="Symbiont-associatedMISAG/">Symbiont-associatedMISAG</a></p>
-</li>
-<li>
-<p><a href="Symbiont-associatedMIMAG/">Symbiont-associatedMIMAG</a></p>
-</li>
-<li>
-<p><a href="Symbiont-associatedMIUVIG/">Symbiont-associatedMIUVIG</a></p>
-</li>
-<li>
-<p><a href="Food-humanFoodsMIGSEukaryote/">Food-humanFoodsMIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="Food-humanFoodsMIGSBacteria/">Food-humanFoodsMIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="Food-humanFoodsMIGSPlant/">Food-humanFoodsMIGSPlant</a></p>
-</li>
-<li>
-<p><a href="Food-humanFoodsMIGSVirus/">Food-humanFoodsMIGSVirus</a></p>
-</li>
-<li>
-<p><a href="Food-humanFoodsMIGSOrg/">Food-humanFoodsMIGSOrg</a></p>
-</li>
-<li>
-<p><a href="Food-humanFoodsMIMS/">Food-humanFoodsMIMS</a></p>
-</li>
-<li>
-<p><a href="Food-humanFoodsMIMARKSSpecimen/">Food-humanFoodsMIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="Food-humanFoodsMIMARKSSurvey/">Food-humanFoodsMIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="Food-humanFoodsMISAG/">Food-humanFoodsMISAG</a></p>
-</li>
-<li>
-<p><a href="Food-humanFoodsMIMAG/">Food-humanFoodsMIMAG</a></p>
-</li>
-<li>
-<p><a href="Food-humanFoodsMIUVIG/">Food-humanFoodsMIUVIG</a></p>
-</li>
-<li>
-<p><a href="Food-animalAndAnimalFeedMIGSEukaryote/">Food-animalAndAnimalFeedMIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="Food-animalAndAnimalFeedMIGSBacteria/">Food-animalAndAnimalFeedMIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="Food-animalAndAnimalFeedMIGSPlant/">Food-animalAndAnimalFeedMIGSPlant</a></p>
-</li>
-<li>
-<p><a href="Food-animalAndAnimalFeedMIGSVirus/">Food-animalAndAnimalFeedMIGSVirus</a></p>
-</li>
-<li>
-<p><a href="Food-animalAndAnimalFeedMIGSOrg/">Food-animalAndAnimalFeedMIGSOrg</a></p>
-</li>
-<li>
-<p><a href="Food-animalAndAnimalFeedMIMS/">Food-animalAndAnimalFeedMIMS</a></p>
-</li>
-<li>
-<p><a href="Food-animalAndAnimalFeedMIMARKSSpecimen/">Food-animalAndAnimalFeedMIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="Food-animalAndAnimalFeedMIMARKSSurvey/">Food-animalAndAnimalFeedMIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="Food-animalAndAnimalFeedMISAG/">Food-animalAndAnimalFeedMISAG</a></p>
-</li>
-<li>
-<p><a href="Food-animalAndAnimalFeedMIMAG/">Food-animalAndAnimalFeedMIMAG</a></p>
-</li>
-<li>
-<p><a href="Food-animalAndAnimalFeedMIUVIG/">Food-animalAndAnimalFeedMIUVIG</a></p>
-</li>
-<li>
-<p><a href="Food-foodProductionFacilityMIGSEukaryote/">Food-foodProductionFacilityMIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="Food-foodProductionFacilityMIGSBacteria/">Food-foodProductionFacilityMIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="Food-foodProductionFacilityMIGSPlant/">Food-foodProductionFacilityMIGSPlant</a></p>
-</li>
-<li>
-<p><a href="Food-foodProductionFacilityMIGSVirus/">Food-foodProductionFacilityMIGSVirus</a></p>
-</li>
-<li>
-<p><a href="Food-foodProductionFacilityMIGSOrg/">Food-foodProductionFacilityMIGSOrg</a></p>
-</li>
-<li>
-<p><a href="Food-foodProductionFacilityMIMS/">Food-foodProductionFacilityMIMS</a></p>
-</li>
-<li>
-<p><a href="Food-foodProductionFacilityMIMARKSSpecimen/">Food-foodProductionFacilityMIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="Food-foodProductionFacilityMIMARKSSurvey/">Food-foodProductionFacilityMIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="Food-foodProductionFacilityMISAG/">Food-foodProductionFacilityMISAG</a></p>
-</li>
-<li>
-<p><a href="Food-foodProductionFacilityMIMAG/">Food-foodProductionFacilityMIMAG</a></p>
-</li>
-<li>
-<p><a href="Food-foodProductionFacilityMIUVIG/">Food-foodProductionFacilityMIUVIG</a></p>
-</li>
-<li>
-<p><a href="Food-farmEnvironmentMIGSEukaryote/">Food-farmEnvironmentMIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="Food-farmEnvironmentMIGSBacteria/">Food-farmEnvironmentMIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="Food-farmEnvironmentMIGSPlant/">Food-farmEnvironmentMIGSPlant</a></p>
-</li>
-<li>
-<p><a href="Food-farmEnvironmentMIGSVirus/">Food-farmEnvironmentMIGSVirus</a></p>
-</li>
-<li>
-<p><a href="Food-farmEnvironmentMIGSOrg/">Food-farmEnvironmentMIGSOrg</a></p>
-</li>
-<li>
-<p><a href="Food-farmEnvironmentMIMS/">Food-farmEnvironmentMIMS</a></p>
-</li>
-<li>
-<p><a href="Food-farmEnvironmentMIMARKSSpecimen/">Food-farmEnvironmentMIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="Food-farmEnvironmentMIMARKSSurvey/">Food-farmEnvironmentMIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="Food-farmEnvironmentMISAG/">Food-farmEnvironmentMISAG</a></p>
-</li>
-<li>
-<p><a href="Food-farmEnvironmentMIMAG/">Food-farmEnvironmentMIMAG</a></p>
-</li>
-<li>
-<p><a href="Food-farmEnvironmentMIUVIG/">Food-farmEnvironmentMIUVIG</a></p>
-</li>
-<li>
-<p><a href="AgricultureMIGSEukaryote/">AgricultureMIGSEukaryote</a></p>
-</li>
-<li>
-<p><a href="AgricultureMIGSBacteria/">AgricultureMIGSBacteria</a></p>
-</li>
-<li>
-<p><a href="AgricultureMIGSPlant/">AgricultureMIGSPlant</a></p>
-</li>
-<li>
-<p><a href="AgricultureMIGSVirus/">AgricultureMIGSVirus</a></p>
-</li>
-<li>
-<p><a href="AgricultureMIGSOrg/">AgricultureMIGSOrg</a></p>
-</li>
-<li>
-<p><a href="AgricultureMIMS/">AgricultureMIMS</a></p>
-</li>
-<li>
-<p><a href="AgricultureMIMARKSSpecimen/">AgricultureMIMARKSSpecimen</a></p>
-</li>
-<li>
-<p><a href="AgricultureMIMARKSSurvey/">AgricultureMIMARKSSurvey</a></p>
-</li>
-<li>
-<p><a href="AgricultureMISAG/">AgricultureMISAG</a></p>
-</li>
-<li>
-<p><a href="AgricultureMIMAG/">AgricultureMIMAG</a></p>
-</li>
-<li>
-<p><a href="AgricultureMIUVIG/">AgricultureMIUVIG</a></p>
-</li>
-</ul></div>
-            </div>
-        </div>
+<table>
+<thead>
+<tr>
+<th>Combination</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="AirMIGSEukaryote/">AirMIGSEukaryote</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: eukaryote with environmental package air</td>
+</tr>
+<tr>
+<td><a href="AirMIGSBacteria/">AirMIGSBacteria</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package air</td>
+</tr>
+<tr>
+<td><a href="AirMIGSPlant/">AirMIGSPlant</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: plant with environmental package air</td>
+</tr>
+<tr>
+<td><a href="AirMIGSVirus/">AirMIGSVirus</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package air</td>
+</tr>
+<tr>
+<td><a href="AirMIGSOrg/">AirMIGSOrg</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: org with environmental package air</td>
+</tr>
+<tr>
+<td><a href="AirMIMS/">AirMIMS</a></td>
+<td>Combinatorial checklist Metagenome or Environmental with environmental package air</td>
+</tr>
+<tr>
+<td><a href="AirMIMARKSSpecimen/">AirMIMARKSSpecimen</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: specimen with environmental package air</td>
+</tr>
+<tr>
+<td><a href="AirMIMARKSSurvey/">AirMIMARKSSurvey</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: survey with environmental package air</td>
+</tr>
+<tr>
+<td><a href="AirMISAG/">AirMISAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Single Amplified Genome with environmental package air</td>
+</tr>
+<tr>
+<td><a href="AirMIMAG/">AirMIMAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Metagenome-Assembled Genome with environmental package air</td>
+</tr>
+<tr>
+<td><a href="AirMIUVIG/">AirMIUVIG</a></td>
+<td>Combinatorial checklist Minimum Information About an Uncultivated Virus Genome with environmental package air</td>
+</tr>
+<tr>
+<td><a href="BuiltEnvironmentMIGSEukaryote/">BuiltEnvironmentMIGSEukaryote</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: eukaryote with environmental package built environment</td>
+</tr>
+<tr>
+<td><a href="BuiltEnvironmentMIGSBacteria/">BuiltEnvironmentMIGSBacteria</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package built environment</td>
+</tr>
+<tr>
+<td><a href="BuiltEnvironmentMIGSPlant/">BuiltEnvironmentMIGSPlant</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: plant with environmental package built environment</td>
+</tr>
+<tr>
+<td><a href="BuiltEnvironmentMIGSVirus/">BuiltEnvironmentMIGSVirus</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package built environment</td>
+</tr>
+<tr>
+<td><a href="BuiltEnvironmentMIGSOrg/">BuiltEnvironmentMIGSOrg</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: org with environmental package built environment</td>
+</tr>
+<tr>
+<td><a href="BuiltEnvironmentMIMS/">BuiltEnvironmentMIMS</a></td>
+<td>Combinatorial checklist Metagenome or Environmental with environmental package built environment</td>
+</tr>
+<tr>
+<td><a href="BuiltEnvironmentMIMARKSSpecimen/">BuiltEnvironmentMIMARKSSpecimen</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: specimen with environmental package built environment</td>
+</tr>
+<tr>
+<td><a href="BuiltEnvironmentMIMARKSSurvey/">BuiltEnvironmentMIMARKSSurvey</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: survey with environmental package built environment</td>
+</tr>
+<tr>
+<td><a href="BuiltEnvironmentMISAG/">BuiltEnvironmentMISAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Single Amplified Genome with environmental package built environment</td>
+</tr>
+<tr>
+<td><a href="BuiltEnvironmentMIMAG/">BuiltEnvironmentMIMAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Metagenome-Assembled Genome with environmental package built environment</td>
+</tr>
+<tr>
+<td><a href="BuiltEnvironmentMIUVIG/">BuiltEnvironmentMIUVIG</a></td>
+<td>Combinatorial checklist Minimum Information About an Uncultivated Virus Genome with environmental package built environment</td>
+</tr>
+<tr>
+<td><a href="Host-associatedMIGSEukaryote/">Host-associatedMIGSEukaryote</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: eukaryote with environmental package host-associated</td>
+</tr>
+<tr>
+<td><a href="Host-associatedMIGSBacteria/">Host-associatedMIGSBacteria</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package host-associated</td>
+</tr>
+<tr>
+<td><a href="Host-associatedMIGSPlant/">Host-associatedMIGSPlant</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: plant with environmental package host-associated</td>
+</tr>
+<tr>
+<td><a href="Host-associatedMIGSVirus/">Host-associatedMIGSVirus</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package host-associated</td>
+</tr>
+<tr>
+<td><a href="Host-associatedMIGSOrg/">Host-associatedMIGSOrg</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: org with environmental package host-associated</td>
+</tr>
+<tr>
+<td><a href="Host-associatedMIMS/">Host-associatedMIMS</a></td>
+<td>Combinatorial checklist Metagenome or Environmental with environmental package host-associated</td>
+</tr>
+<tr>
+<td><a href="Host-associatedMIMARKSSpecimen/">Host-associatedMIMARKSSpecimen</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: specimen with environmental package host-associated</td>
+</tr>
+<tr>
+<td><a href="Host-associatedMIMARKSSurvey/">Host-associatedMIMARKSSurvey</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: survey with environmental package host-associated</td>
+</tr>
+<tr>
+<td><a href="Host-associatedMISAG/">Host-associatedMISAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Single Amplified Genome with environmental package host-associated</td>
+</tr>
+<tr>
+<td><a href="Host-associatedMIMAG/">Host-associatedMIMAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Metagenome-Assembled Genome with environmental package host-associated</td>
+</tr>
+<tr>
+<td><a href="Host-associatedMIUVIG/">Host-associatedMIUVIG</a></td>
+<td>Combinatorial checklist Minimum Information About an Uncultivated Virus Genome with environmental package host-associated</td>
+</tr>
+<tr>
+<td><a href="Human-associatedMIGSEukaryote/">Human-associatedMIGSEukaryote</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: eukaryote with environmental package human-associated</td>
+</tr>
+<tr>
+<td><a href="Human-associatedMIGSBacteria/">Human-associatedMIGSBacteria</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package human-associated</td>
+</tr>
+<tr>
+<td><a href="Human-associatedMIGSPlant/">Human-associatedMIGSPlant</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: plant with environmental package human-associated</td>
+</tr>
+<tr>
+<td><a href="Human-associatedMIGSVirus/">Human-associatedMIGSVirus</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package human-associated</td>
+</tr>
+<tr>
+<td><a href="Human-associatedMIGSOrg/">Human-associatedMIGSOrg</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: org with environmental package human-associated</td>
+</tr>
+<tr>
+<td><a href="Human-associatedMIMS/">Human-associatedMIMS</a></td>
+<td>Combinatorial checklist Metagenome or Environmental with environmental package human-associated</td>
+</tr>
+<tr>
+<td><a href="Human-associatedMIMARKSSpecimen/">Human-associatedMIMARKSSpecimen</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: specimen with environmental package human-associated</td>
+</tr>
+<tr>
+<td><a href="Human-associatedMIMARKSSurvey/">Human-associatedMIMARKSSurvey</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: survey with environmental package human-associated</td>
+</tr>
+<tr>
+<td><a href="Human-associatedMISAG/">Human-associatedMISAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Single Amplified Genome with environmental package human-associated</td>
+</tr>
+<tr>
+<td><a href="Human-associatedMIMAG/">Human-associatedMIMAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Metagenome-Assembled Genome with environmental package human-associated</td>
+</tr>
+<tr>
+<td><a href="Human-associatedMIUVIG/">Human-associatedMIUVIG</a></td>
+<td>Combinatorial checklist Minimum Information About an Uncultivated Virus Genome with environmental package human-associated</td>
+</tr>
+<tr>
+<td><a href="Human-gutMIGSEukaryote/">Human-gutMIGSEukaryote</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: eukaryote with environmental package human-gut</td>
+</tr>
+<tr>
+<td><a href="Human-gutMIGSBacteria/">Human-gutMIGSBacteria</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package human-gut</td>
+</tr>
+<tr>
+<td><a href="Human-gutMIGSPlant/">Human-gutMIGSPlant</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: plant with environmental package human-gut</td>
+</tr>
+<tr>
+<td><a href="Human-gutMIGSVirus/">Human-gutMIGSVirus</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package human-gut</td>
+</tr>
+<tr>
+<td><a href="Human-gutMIGSOrg/">Human-gutMIGSOrg</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: org with environmental package human-gut</td>
+</tr>
+<tr>
+<td><a href="Human-gutMIMS/">Human-gutMIMS</a></td>
+<td>Combinatorial checklist Metagenome or Environmental with environmental package human-gut</td>
+</tr>
+<tr>
+<td><a href="Human-gutMIMARKSSpecimen/">Human-gutMIMARKSSpecimen</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: specimen with environmental package human-gut</td>
+</tr>
+<tr>
+<td><a href="Human-gutMIMARKSSurvey/">Human-gutMIMARKSSurvey</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: survey with environmental package human-gut</td>
+</tr>
+<tr>
+<td><a href="Human-gutMISAG/">Human-gutMISAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Single Amplified Genome with environmental package human-gut</td>
+</tr>
+<tr>
+<td><a href="Human-gutMIMAG/">Human-gutMIMAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Metagenome-Assembled Genome with environmental package human-gut</td>
+</tr>
+<tr>
+<td><a href="Human-gutMIUVIG/">Human-gutMIUVIG</a></td>
+<td>Combinatorial checklist Minimum Information About an Uncultivated Virus Genome with environmental package human-gut</td>
+</tr>
+<tr>
+<td><a href="Human-oralMIGSEukaryote/">Human-oralMIGSEukaryote</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: eukaryote with environmental package human-oral</td>
+</tr>
+<tr>
+<td><a href="Human-oralMIGSBacteria/">Human-oralMIGSBacteria</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package human-oral</td>
+</tr>
+<tr>
+<td><a href="Human-oralMIGSPlant/">Human-oralMIGSPlant</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: plant with environmental package human-oral</td>
+</tr>
+<tr>
+<td><a href="Human-oralMIGSVirus/">Human-oralMIGSVirus</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package human-oral</td>
+</tr>
+<tr>
+<td><a href="Human-oralMIGSOrg/">Human-oralMIGSOrg</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: org with environmental package human-oral</td>
+</tr>
+<tr>
+<td><a href="Human-oralMIMS/">Human-oralMIMS</a></td>
+<td>Combinatorial checklist Metagenome or Environmental with environmental package human-oral</td>
+</tr>
+<tr>
+<td><a href="Human-oralMIMARKSSpecimen/">Human-oralMIMARKSSpecimen</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: specimen with environmental package human-oral</td>
+</tr>
+<tr>
+<td><a href="Human-oralMIMARKSSurvey/">Human-oralMIMARKSSurvey</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: survey with environmental package human-oral</td>
+</tr>
+<tr>
+<td><a href="Human-oralMISAG/">Human-oralMISAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Single Amplified Genome with environmental package human-oral</td>
+</tr>
+<tr>
+<td><a href="Human-oralMIMAG/">Human-oralMIMAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Metagenome-Assembled Genome with environmental package human-oral</td>
+</tr>
+<tr>
+<td><a href="Human-oralMIUVIG/">Human-oralMIUVIG</a></td>
+<td>Combinatorial checklist Minimum Information About an Uncultivated Virus Genome with environmental package human-oral</td>
+</tr>
+<tr>
+<td><a href="Human-skinMIGSEukaryote/">Human-skinMIGSEukaryote</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: eukaryote with environmental package human-skin</td>
+</tr>
+<tr>
+<td><a href="Human-skinMIGSBacteria/">Human-skinMIGSBacteria</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package human-skin</td>
+</tr>
+<tr>
+<td><a href="Human-skinMIGSPlant/">Human-skinMIGSPlant</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: plant with environmental package human-skin</td>
+</tr>
+<tr>
+<td><a href="Human-skinMIGSVirus/">Human-skinMIGSVirus</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package human-skin</td>
+</tr>
+<tr>
+<td><a href="Human-skinMIGSOrg/">Human-skinMIGSOrg</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: org with environmental package human-skin</td>
+</tr>
+<tr>
+<td><a href="Human-skinMIMS/">Human-skinMIMS</a></td>
+<td>Combinatorial checklist Metagenome or Environmental with environmental package human-skin</td>
+</tr>
+<tr>
+<td><a href="Human-skinMIMARKSSpecimen/">Human-skinMIMARKSSpecimen</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: specimen with environmental package human-skin</td>
+</tr>
+<tr>
+<td><a href="Human-skinMIMARKSSurvey/">Human-skinMIMARKSSurvey</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: survey with environmental package human-skin</td>
+</tr>
+<tr>
+<td><a href="Human-skinMISAG/">Human-skinMISAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Single Amplified Genome with environmental package human-skin</td>
+</tr>
+<tr>
+<td><a href="Human-skinMIMAG/">Human-skinMIMAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Metagenome-Assembled Genome with environmental package human-skin</td>
+</tr>
+<tr>
+<td><a href="Human-skinMIUVIG/">Human-skinMIUVIG</a></td>
+<td>Combinatorial checklist Minimum Information About an Uncultivated Virus Genome with environmental package human-skin</td>
+</tr>
+<tr>
+<td><a href="Human-vaginalMIGSEukaryote/">Human-vaginalMIGSEukaryote</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: eukaryote with environmental package human-vaginal</td>
+</tr>
+<tr>
+<td><a href="Human-vaginalMIGSBacteria/">Human-vaginalMIGSBacteria</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package human-vaginal</td>
+</tr>
+<tr>
+<td><a href="Human-vaginalMIGSPlant/">Human-vaginalMIGSPlant</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: plant with environmental package human-vaginal</td>
+</tr>
+<tr>
+<td><a href="Human-vaginalMIGSVirus/">Human-vaginalMIGSVirus</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package human-vaginal</td>
+</tr>
+<tr>
+<td><a href="Human-vaginalMIGSOrg/">Human-vaginalMIGSOrg</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: org with environmental package human-vaginal</td>
+</tr>
+<tr>
+<td><a href="Human-vaginalMIMS/">Human-vaginalMIMS</a></td>
+<td>Combinatorial checklist Metagenome or Environmental with environmental package human-vaginal</td>
+</tr>
+<tr>
+<td><a href="Human-vaginalMIMARKSSpecimen/">Human-vaginalMIMARKSSpecimen</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: specimen with environmental package human-vaginal</td>
+</tr>
+<tr>
+<td><a href="Human-vaginalMIMARKSSurvey/">Human-vaginalMIMARKSSurvey</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: survey with environmental package human-vaginal</td>
+</tr>
+<tr>
+<td><a href="Human-vaginalMISAG/">Human-vaginalMISAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Single Amplified Genome with environmental package human-vaginal</td>
+</tr>
+<tr>
+<td><a href="Human-vaginalMIMAG/">Human-vaginalMIMAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Metagenome-Assembled Genome with environmental package human-vaginal</td>
+</tr>
+<tr>
+<td><a href="Human-vaginalMIUVIG/">Human-vaginalMIUVIG</a></td>
+<td>Combinatorial checklist Minimum Information About an Uncultivated Virus Genome with environmental package human-vaginal</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-coresMIGSEukaryote/">HydrocarbonResources-coresMIGSEukaryote</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: eukaryote with environmental package hydrocarbon resources-cores</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-coresMIGSBacteria/">HydrocarbonResources-coresMIGSBacteria</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package hydrocarbon resources-cores</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-coresMIGSPlant/">HydrocarbonResources-coresMIGSPlant</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: plant with environmental package hydrocarbon resources-cores</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-coresMIGSVirus/">HydrocarbonResources-coresMIGSVirus</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package hydrocarbon resources-cores</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-coresMIGSOrg/">HydrocarbonResources-coresMIGSOrg</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: org with environmental package hydrocarbon resources-cores</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-coresMIMS/">HydrocarbonResources-coresMIMS</a></td>
+<td>Combinatorial checklist Metagenome or Environmental with environmental package hydrocarbon resources-cores</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-coresMIMARKSSpecimen/">HydrocarbonResources-coresMIMARKSSpecimen</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: specimen with environmental package hydrocarbon resources-cores</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-coresMIMARKSSurvey/">HydrocarbonResources-coresMIMARKSSurvey</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: survey with environmental package hydrocarbon resources-cores</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-coresMISAG/">HydrocarbonResources-coresMISAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Single Amplified Genome with environmental package hydrocarbon resources-cores</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-coresMIMAG/">HydrocarbonResources-coresMIMAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Metagenome-Assembled Genome with environmental package hydrocarbon resources-cores</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-coresMIUVIG/">HydrocarbonResources-coresMIUVIG</a></td>
+<td>Combinatorial checklist Minimum Information About an Uncultivated Virus Genome with environmental package hydrocarbon resources-cores</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-fluidsSwabsMIGSEukaryote/">HydrocarbonResources-fluidsSwabsMIGSEukaryote</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: eukaryote with environmental package hydrocarbon resources-fluids_swabs</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-fluidsSwabsMIGSBacteria/">HydrocarbonResources-fluidsSwabsMIGSBacteria</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package hydrocarbon resources-fluids_swabs</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-fluidsSwabsMIGSPlant/">HydrocarbonResources-fluidsSwabsMIGSPlant</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: plant with environmental package hydrocarbon resources-fluids_swabs</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-fluidsSwabsMIGSVirus/">HydrocarbonResources-fluidsSwabsMIGSVirus</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package hydrocarbon resources-fluids_swabs</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-fluidsSwabsMIGSOrg/">HydrocarbonResources-fluidsSwabsMIGSOrg</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: org with environmental package hydrocarbon resources-fluids_swabs</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-fluidsSwabsMIMS/">HydrocarbonResources-fluidsSwabsMIMS</a></td>
+<td>Combinatorial checklist Metagenome or Environmental with environmental package hydrocarbon resources-fluids_swabs</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-fluidsSwabsMIMARKSSpecimen/">HydrocarbonResources-fluidsSwabsMIMARKSSpecimen</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: specimen with environmental package hydrocarbon resources-fluids_swabs</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-fluidsSwabsMIMARKSSurvey/">HydrocarbonResources-fluidsSwabsMIMARKSSurvey</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: survey with environmental package hydrocarbon resources-fluids_swabs</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-fluidsSwabsMISAG/">HydrocarbonResources-fluidsSwabsMISAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Single Amplified Genome with environmental package hydrocarbon resources-fluids_swabs</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-fluidsSwabsMIMAG/">HydrocarbonResources-fluidsSwabsMIMAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Metagenome-Assembled Genome with environmental package hydrocarbon resources-fluids_swabs</td>
+</tr>
+<tr>
+<td><a href="HydrocarbonResources-fluidsSwabsMIUVIG/">HydrocarbonResources-fluidsSwabsMIUVIG</a></td>
+<td>Combinatorial checklist Minimum Information About an Uncultivated Virus Genome with environmental package hydrocarbon resources-fluids_swabs</td>
+</tr>
+<tr>
+<td><a href="MicrobialMatBiofilmMIGSEukaryote/">MicrobialMatBiofilmMIGSEukaryote</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: eukaryote with environmental package microbial mat_biofilm</td>
+</tr>
+<tr>
+<td><a href="MicrobialMatBiofilmMIGSBacteria/">MicrobialMatBiofilmMIGSBacteria</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package microbial mat_biofilm</td>
+</tr>
+<tr>
+<td><a href="MicrobialMatBiofilmMIGSPlant/">MicrobialMatBiofilmMIGSPlant</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: plant with environmental package microbial mat_biofilm</td>
+</tr>
+<tr>
+<td><a href="MicrobialMatBiofilmMIGSVirus/">MicrobialMatBiofilmMIGSVirus</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package microbial mat_biofilm</td>
+</tr>
+<tr>
+<td><a href="MicrobialMatBiofilmMIGSOrg/">MicrobialMatBiofilmMIGSOrg</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: org with environmental package microbial mat_biofilm</td>
+</tr>
+<tr>
+<td><a href="MicrobialMatBiofilmMIMS/">MicrobialMatBiofilmMIMS</a></td>
+<td>Combinatorial checklist Metagenome or Environmental with environmental package microbial mat_biofilm</td>
+</tr>
+<tr>
+<td><a href="MicrobialMatBiofilmMIMARKSSpecimen/">MicrobialMatBiofilmMIMARKSSpecimen</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: specimen with environmental package microbial mat_biofilm</td>
+</tr>
+<tr>
+<td><a href="MicrobialMatBiofilmMIMARKSSurvey/">MicrobialMatBiofilmMIMARKSSurvey</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: survey with environmental package microbial mat_biofilm</td>
+</tr>
+<tr>
+<td><a href="MicrobialMatBiofilmMISAG/">MicrobialMatBiofilmMISAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Single Amplified Genome with environmental package microbial mat_biofilm</td>
+</tr>
+<tr>
+<td><a href="MicrobialMatBiofilmMIMAG/">MicrobialMatBiofilmMIMAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Metagenome-Assembled Genome with environmental package microbial mat_biofilm</td>
+</tr>
+<tr>
+<td><a href="MicrobialMatBiofilmMIUVIG/">MicrobialMatBiofilmMIUVIG</a></td>
+<td>Combinatorial checklist Minimum Information About an Uncultivated Virus Genome with environmental package microbial mat_biofilm</td>
+</tr>
+<tr>
+<td><a href="MiscellaneousNaturalOrArtificialEnvironmentMIGSEukaryote/">MiscellaneousNaturalOrArtificialEnvironmentMIGSEukaryote</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: eukaryote with environmental package miscellaneous natural or artificial environment</td>
+</tr>
+<tr>
+<td><a href="MiscellaneousNaturalOrArtificialEnvironmentMIGSBacteria/">MiscellaneousNaturalOrArtificialEnvironmentMIGSBacteria</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package miscellaneous natural or artificial environment</td>
+</tr>
+<tr>
+<td><a href="MiscellaneousNaturalOrArtificialEnvironmentMIGSPlant/">MiscellaneousNaturalOrArtificialEnvironmentMIGSPlant</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: plant with environmental package miscellaneous natural or artificial environment</td>
+</tr>
+<tr>
+<td><a href="MiscellaneousNaturalOrArtificialEnvironmentMIGSVirus/">MiscellaneousNaturalOrArtificialEnvironmentMIGSVirus</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package miscellaneous natural or artificial environment</td>
+</tr>
+<tr>
+<td><a href="MiscellaneousNaturalOrArtificialEnvironmentMIGSOrg/">MiscellaneousNaturalOrArtificialEnvironmentMIGSOrg</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: org with environmental package miscellaneous natural or artificial environment</td>
+</tr>
+<tr>
+<td><a href="MiscellaneousNaturalOrArtificialEnvironmentMIMS/">MiscellaneousNaturalOrArtificialEnvironmentMIMS</a></td>
+<td>Combinatorial checklist Metagenome or Environmental with environmental package miscellaneous natural or artificial environment</td>
+</tr>
+<tr>
+<td><a href="MiscellaneousNaturalOrArtificialEnvironmentMIMARKSSpecimen/">MiscellaneousNaturalOrArtificialEnvironmentMIMARKSSpecimen</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: specimen with environmental package miscellaneous natural or artificial environment</td>
+</tr>
+<tr>
+<td><a href="MiscellaneousNaturalOrArtificialEnvironmentMIMARKSSurvey/">MiscellaneousNaturalOrArtificialEnvironmentMIMARKSSurvey</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: survey with environmental package miscellaneous natural or artificial environment</td>
+</tr>
+<tr>
+<td><a href="MiscellaneousNaturalOrArtificialEnvironmentMISAG/">MiscellaneousNaturalOrArtificialEnvironmentMISAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Single Amplified Genome with environmental package miscellaneous natural or artificial environment</td>
+</tr>
+<tr>
+<td><a href="MiscellaneousNaturalOrArtificialEnvironmentMIMAG/">MiscellaneousNaturalOrArtificialEnvironmentMIMAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Metagenome-Assembled Genome with environmental package miscellaneous natural or artificial environment</td>
+</tr>
+<tr>
+<td><a href="MiscellaneousNaturalOrArtificialEnvironmentMIUVIG/">MiscellaneousNaturalOrArtificialEnvironmentMIUVIG</a></td>
+<td>Combinatorial checklist Minimum Information About an Uncultivated Virus Genome with environmental package miscellaneous natural or artificial environment</td>
+</tr>
+<tr>
+<td><a href="Plant-associatedMIGSEukaryote/">Plant-associatedMIGSEukaryote</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: eukaryote with environmental package plant-associated</td>
+</tr>
+<tr>
+<td><a href="Plant-associatedMIGSBacteria/">Plant-associatedMIGSBacteria</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package plant-associated</td>
+</tr>
+<tr>
+<td><a href="Plant-associatedMIGSPlant/">Plant-associatedMIGSPlant</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: plant with environmental package plant-associated</td>
+</tr>
+<tr>
+<td><a href="Plant-associatedMIGSVirus/">Plant-associatedMIGSVirus</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package plant-associated</td>
+</tr>
+<tr>
+<td><a href="Plant-associatedMIGSOrg/">Plant-associatedMIGSOrg</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: org with environmental package plant-associated</td>
+</tr>
+<tr>
+<td><a href="Plant-associatedMIMS/">Plant-associatedMIMS</a></td>
+<td>Combinatorial checklist Metagenome or Environmental with environmental package plant-associated</td>
+</tr>
+<tr>
+<td><a href="Plant-associatedMIMARKSSpecimen/">Plant-associatedMIMARKSSpecimen</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: specimen with environmental package plant-associated</td>
+</tr>
+<tr>
+<td><a href="Plant-associatedMIMARKSSurvey/">Plant-associatedMIMARKSSurvey</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: survey with environmental package plant-associated</td>
+</tr>
+<tr>
+<td><a href="Plant-associatedMISAG/">Plant-associatedMISAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Single Amplified Genome with environmental package plant-associated</td>
+</tr>
+<tr>
+<td><a href="Plant-associatedMIMAG/">Plant-associatedMIMAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Metagenome-Assembled Genome with environmental package plant-associated</td>
+</tr>
+<tr>
+<td><a href="Plant-associatedMIUVIG/">Plant-associatedMIUVIG</a></td>
+<td>Combinatorial checklist Minimum Information About an Uncultivated Virus Genome with environmental package plant-associated</td>
+</tr>
+<tr>
+<td><a href="SedimentMIGSEukaryote/">SedimentMIGSEukaryote</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: eukaryote with environmental package sediment</td>
+</tr>
+<tr>
+<td><a href="SedimentMIGSBacteria/">SedimentMIGSBacteria</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package sediment</td>
+</tr>
+<tr>
+<td><a href="SedimentMIGSPlant/">SedimentMIGSPlant</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: plant with environmental package sediment</td>
+</tr>
+<tr>
+<td><a href="SedimentMIGSVirus/">SedimentMIGSVirus</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package sediment</td>
+</tr>
+<tr>
+<td><a href="SedimentMIGSOrg/">SedimentMIGSOrg</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: org with environmental package sediment</td>
+</tr>
+<tr>
+<td><a href="SedimentMIMS/">SedimentMIMS</a></td>
+<td>Combinatorial checklist Metagenome or Environmental with environmental package sediment</td>
+</tr>
+<tr>
+<td><a href="SedimentMIMARKSSpecimen/">SedimentMIMARKSSpecimen</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: specimen with environmental package sediment</td>
+</tr>
+<tr>
+<td><a href="SedimentMIMARKSSurvey/">SedimentMIMARKSSurvey</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: survey with environmental package sediment</td>
+</tr>
+<tr>
+<td><a href="SedimentMISAG/">SedimentMISAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Single Amplified Genome with environmental package sediment</td>
+</tr>
+<tr>
+<td><a href="SedimentMIMAG/">SedimentMIMAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Metagenome-Assembled Genome with environmental package sediment</td>
+</tr>
+<tr>
+<td><a href="SedimentMIUVIG/">SedimentMIUVIG</a></td>
+<td>Combinatorial checklist Minimum Information About an Uncultivated Virus Genome with environmental package sediment</td>
+</tr>
+<tr>
+<td><a href="SoilMIGSEukaryote/">SoilMIGSEukaryote</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: eukaryote with environmental package soil</td>
+</tr>
+<tr>
+<td><a href="SoilMIGSBacteria/">SoilMIGSBacteria</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package soil</td>
+</tr>
+<tr>
+<td><a href="SoilMIGSPlant/">SoilMIGSPlant</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: plant with environmental package soil</td>
+</tr>
+<tr>
+<td><a href="SoilMIGSVirus/">SoilMIGSVirus</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package soil</td>
+</tr>
+<tr>
+<td><a href="SoilMIGSOrg/">SoilMIGSOrg</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: org with environmental package soil</td>
+</tr>
+<tr>
+<td><a href="SoilMIMS/">SoilMIMS</a></td>
+<td>Combinatorial checklist Metagenome or Environmental with environmental package soil</td>
+</tr>
+<tr>
+<td><a href="SoilMIMARKSSpecimen/">SoilMIMARKSSpecimen</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: specimen with environmental package soil</td>
+</tr>
+<tr>
+<td><a href="SoilMIMARKSSurvey/">SoilMIMARKSSurvey</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: survey with environmental package soil</td>
+</tr>
+<tr>
+<td><a href="SoilMISAG/">SoilMISAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Single Amplified Genome with environmental package soil</td>
+</tr>
+<tr>
+<td><a href="SoilMIMAG/">SoilMIMAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Metagenome-Assembled Genome with environmental package soil</td>
+</tr>
+<tr>
+<td><a href="SoilMIUVIG/">SoilMIUVIG</a></td>
+<td>Combinatorial checklist Minimum Information About an Uncultivated Virus Genome with environmental package soil</td>
+</tr>
+<tr>
+<td><a href="WastewaterSludgeMIGSEukaryote/">WastewaterSludgeMIGSEukaryote</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: eukaryote with environmental package wastewater_sludge</td>
+</tr>
+<tr>
+<td><a href="WastewaterSludgeMIGSBacteria/">WastewaterSludgeMIGSBacteria</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package wastewater_sludge</td>
+</tr>
+<tr>
+<td><a href="WastewaterSludgeMIGSPlant/">WastewaterSludgeMIGSPlant</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: plant with environmental package wastewater_sludge</td>
+</tr>
+<tr>
+<td><a href="WastewaterSludgeMIGSVirus/">WastewaterSludgeMIGSVirus</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package wastewater_sludge</td>
+</tr>
+<tr>
+<td><a href="WastewaterSludgeMIGSOrg/">WastewaterSludgeMIGSOrg</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: org with environmental package wastewater_sludge</td>
+</tr>
+<tr>
+<td><a href="WastewaterSludgeMIMS/">WastewaterSludgeMIMS</a></td>
+<td>Combinatorial checklist Metagenome or Environmental with environmental package wastewater_sludge</td>
+</tr>
+<tr>
+<td><a href="WastewaterSludgeMIMARKSSpecimen/">WastewaterSludgeMIMARKSSpecimen</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: specimen with environmental package wastewater_sludge</td>
+</tr>
+<tr>
+<td><a href="WastewaterSludgeMIMARKSSurvey/">WastewaterSludgeMIMARKSSurvey</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: survey with environmental package wastewater_sludge</td>
+</tr>
+<tr>
+<td><a href="WastewaterSludgeMISAG/">WastewaterSludgeMISAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Single Amplified Genome with environmental package wastewater_sludge</td>
+</tr>
+<tr>
+<td><a href="WastewaterSludgeMIMAG/">WastewaterSludgeMIMAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Metagenome-Assembled Genome with environmental package wastewater_sludge</td>
+</tr>
+<tr>
+<td><a href="WastewaterSludgeMIUVIG/">WastewaterSludgeMIUVIG</a></td>
+<td>Combinatorial checklist Minimum Information About an Uncultivated Virus Genome with environmental package wastewater_sludge</td>
+</tr>
+<tr>
+<td><a href="WaterMIGSEukaryote/">WaterMIGSEukaryote</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: eukaryote with environmental package water</td>
+</tr>
+<tr>
+<td><a href="WaterMIGSBacteria/">WaterMIGSBacteria</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package water</td>
+</tr>
+<tr>
+<td><a href="WaterMIGSPlant/">WaterMIGSPlant</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: plant with environmental package water</td>
+</tr>
+<tr>
+<td><a href="WaterMIGSVirus/">WaterMIGSVirus</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package water</td>
+</tr>
+<tr>
+<td><a href="WaterMIGSOrg/">WaterMIGSOrg</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: org with environmental package water</td>
+</tr>
+<tr>
+<td><a href="WaterMIMS/">WaterMIMS</a></td>
+<td>Combinatorial checklist Metagenome or Environmental with environmental package water</td>
+</tr>
+<tr>
+<td><a href="WaterMIMARKSSpecimen/">WaterMIMARKSSpecimen</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: specimen with environmental package water</td>
+</tr>
+<tr>
+<td><a href="WaterMIMARKSSurvey/">WaterMIMARKSSurvey</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: survey with environmental package water</td>
+</tr>
+<tr>
+<td><a href="WaterMISAG/">WaterMISAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Single Amplified Genome with environmental package water</td>
+</tr>
+<tr>
+<td><a href="WaterMIMAG/">WaterMIMAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Metagenome-Assembled Genome with environmental package water</td>
+</tr>
+<tr>
+<td><a href="WaterMIUVIG/">WaterMIUVIG</a></td>
+<td>Combinatorial checklist Minimum Information About an Uncultivated Virus Genome with environmental package water</td>
+</tr>
+<tr>
+<td><a href="Symbiont-associatedMIGSEukaryote/">Symbiont-associatedMIGSEukaryote</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: eukaryote with environmental package symbiont-associated</td>
+</tr>
+<tr>
+<td><a href="Symbiont-associatedMIGSBacteria/">Symbiont-associatedMIGSBacteria</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package symbiont-associated</td>
+</tr>
+<tr>
+<td><a href="Symbiont-associatedMIGSPlant/">Symbiont-associatedMIGSPlant</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: plant with environmental package symbiont-associated</td>
+</tr>
+<tr>
+<td><a href="Symbiont-associatedMIGSVirus/">Symbiont-associatedMIGSVirus</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package symbiont-associated</td>
+</tr>
+<tr>
+<td><a href="Symbiont-associatedMIGSOrg/">Symbiont-associatedMIGSOrg</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: org with environmental package symbiont-associated</td>
+</tr>
+<tr>
+<td><a href="Symbiont-associatedMIMS/">Symbiont-associatedMIMS</a></td>
+<td>Combinatorial checklist Metagenome or Environmental with environmental package symbiont-associated</td>
+</tr>
+<tr>
+<td><a href="Symbiont-associatedMIMARKSSpecimen/">Symbiont-associatedMIMARKSSpecimen</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: specimen with environmental package symbiont-associated</td>
+</tr>
+<tr>
+<td><a href="Symbiont-associatedMIMARKSSurvey/">Symbiont-associatedMIMARKSSurvey</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: survey with environmental package symbiont-associated</td>
+</tr>
+<tr>
+<td><a href="Symbiont-associatedMISAG/">Symbiont-associatedMISAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Single Amplified Genome with environmental package symbiont-associated</td>
+</tr>
+<tr>
+<td><a href="Symbiont-associatedMIMAG/">Symbiont-associatedMIMAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Metagenome-Assembled Genome with environmental package symbiont-associated</td>
+</tr>
+<tr>
+<td><a href="Symbiont-associatedMIUVIG/">Symbiont-associatedMIUVIG</a></td>
+<td>Combinatorial checklist Minimum Information About an Uncultivated Virus Genome with environmental package symbiont-associated</td>
+</tr>
+<tr>
+<td><a href="Food-humanFoodsMIGSEukaryote/">Food-humanFoodsMIGSEukaryote</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: eukaryote with environmental package food-human foods</td>
+</tr>
+<tr>
+<td><a href="Food-humanFoodsMIGSBacteria/">Food-humanFoodsMIGSBacteria</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package food-human foods</td>
+</tr>
+<tr>
+<td><a href="Food-humanFoodsMIGSPlant/">Food-humanFoodsMIGSPlant</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: plant with environmental package food-human foods</td>
+</tr>
+<tr>
+<td><a href="Food-humanFoodsMIGSVirus/">Food-humanFoodsMIGSVirus</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package food-human foods</td>
+</tr>
+<tr>
+<td><a href="Food-humanFoodsMIGSOrg/">Food-humanFoodsMIGSOrg</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: org with environmental package food-human foods</td>
+</tr>
+<tr>
+<td><a href="Food-humanFoodsMIMS/">Food-humanFoodsMIMS</a></td>
+<td>Combinatorial checklist Metagenome or Environmental with environmental package food-human foods</td>
+</tr>
+<tr>
+<td><a href="Food-humanFoodsMIMARKSSpecimen/">Food-humanFoodsMIMARKSSpecimen</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: specimen with environmental package food-human foods</td>
+</tr>
+<tr>
+<td><a href="Food-humanFoodsMIMARKSSurvey/">Food-humanFoodsMIMARKSSurvey</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: survey with environmental package food-human foods</td>
+</tr>
+<tr>
+<td><a href="Food-humanFoodsMISAG/">Food-humanFoodsMISAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Single Amplified Genome with environmental package food-human foods</td>
+</tr>
+<tr>
+<td><a href="Food-humanFoodsMIMAG/">Food-humanFoodsMIMAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Metagenome-Assembled Genome with environmental package food-human foods</td>
+</tr>
+<tr>
+<td><a href="Food-humanFoodsMIUVIG/">Food-humanFoodsMIUVIG</a></td>
+<td>Combinatorial checklist Minimum Information About an Uncultivated Virus Genome with environmental package food-human foods</td>
+</tr>
+<tr>
+<td><a href="Food-animalAndAnimalFeedMIGSEukaryote/">Food-animalAndAnimalFeedMIGSEukaryote</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: eukaryote with environmental package food-animal and animal feed</td>
+</tr>
+<tr>
+<td><a href="Food-animalAndAnimalFeedMIGSBacteria/">Food-animalAndAnimalFeedMIGSBacteria</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package food-animal and animal feed</td>
+</tr>
+<tr>
+<td><a href="Food-animalAndAnimalFeedMIGSPlant/">Food-animalAndAnimalFeedMIGSPlant</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: plant with environmental package food-animal and animal feed</td>
+</tr>
+<tr>
+<td><a href="Food-animalAndAnimalFeedMIGSVirus/">Food-animalAndAnimalFeedMIGSVirus</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package food-animal and animal feed</td>
+</tr>
+<tr>
+<td><a href="Food-animalAndAnimalFeedMIGSOrg/">Food-animalAndAnimalFeedMIGSOrg</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: org with environmental package food-animal and animal feed</td>
+</tr>
+<tr>
+<td><a href="Food-animalAndAnimalFeedMIMS/">Food-animalAndAnimalFeedMIMS</a></td>
+<td>Combinatorial checklist Metagenome or Environmental with environmental package food-animal and animal feed</td>
+</tr>
+<tr>
+<td><a href="Food-animalAndAnimalFeedMIMARKSSpecimen/">Food-animalAndAnimalFeedMIMARKSSpecimen</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: specimen with environmental package food-animal and animal feed</td>
+</tr>
+<tr>
+<td><a href="Food-animalAndAnimalFeedMIMARKSSurvey/">Food-animalAndAnimalFeedMIMARKSSurvey</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: survey with environmental package food-animal and animal feed</td>
+</tr>
+<tr>
+<td><a href="Food-animalAndAnimalFeedMISAG/">Food-animalAndAnimalFeedMISAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Single Amplified Genome with environmental package food-animal and animal feed</td>
+</tr>
+<tr>
+<td><a href="Food-animalAndAnimalFeedMIMAG/">Food-animalAndAnimalFeedMIMAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Metagenome-Assembled Genome with environmental package food-animal and animal feed</td>
+</tr>
+<tr>
+<td><a href="Food-animalAndAnimalFeedMIUVIG/">Food-animalAndAnimalFeedMIUVIG</a></td>
+<td>Combinatorial checklist Minimum Information About an Uncultivated Virus Genome with environmental package food-animal and animal feed</td>
+</tr>
+<tr>
+<td><a href="Food-foodProductionFacilityMIGSEukaryote/">Food-foodProductionFacilityMIGSEukaryote</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: eukaryote with environmental package food-food production facility</td>
+</tr>
+<tr>
+<td><a href="Food-foodProductionFacilityMIGSBacteria/">Food-foodProductionFacilityMIGSBacteria</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package food-food production facility</td>
+</tr>
+<tr>
+<td><a href="Food-foodProductionFacilityMIGSPlant/">Food-foodProductionFacilityMIGSPlant</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: plant with environmental package food-food production facility</td>
+</tr>
+<tr>
+<td><a href="Food-foodProductionFacilityMIGSVirus/">Food-foodProductionFacilityMIGSVirus</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package food-food production facility</td>
+</tr>
+<tr>
+<td><a href="Food-foodProductionFacilityMIGSOrg/">Food-foodProductionFacilityMIGSOrg</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: org with environmental package food-food production facility</td>
+</tr>
+<tr>
+<td><a href="Food-foodProductionFacilityMIMS/">Food-foodProductionFacilityMIMS</a></td>
+<td>Combinatorial checklist Metagenome or Environmental with environmental package food-food production facility</td>
+</tr>
+<tr>
+<td><a href="Food-foodProductionFacilityMIMARKSSpecimen/">Food-foodProductionFacilityMIMARKSSpecimen</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: specimen with environmental package food-food production facility</td>
+</tr>
+<tr>
+<td><a href="Food-foodProductionFacilityMIMARKSSurvey/">Food-foodProductionFacilityMIMARKSSurvey</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: survey with environmental package food-food production facility</td>
+</tr>
+<tr>
+<td><a href="Food-foodProductionFacilityMISAG/">Food-foodProductionFacilityMISAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Single Amplified Genome with environmental package food-food production facility</td>
+</tr>
+<tr>
+<td><a href="Food-foodProductionFacilityMIMAG/">Food-foodProductionFacilityMIMAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Metagenome-Assembled Genome with environmental package food-food production facility</td>
+</tr>
+<tr>
+<td><a href="Food-foodProductionFacilityMIUVIG/">Food-foodProductionFacilityMIUVIG</a></td>
+<td>Combinatorial checklist Minimum Information About an Uncultivated Virus Genome with environmental package food-food production facility</td>
+</tr>
+<tr>
+<td><a href="Food-farmEnvironmentMIGSEukaryote/">Food-farmEnvironmentMIGSEukaryote</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: eukaryote with environmental package food-farm environment</td>
+</tr>
+<tr>
+<td><a href="Food-farmEnvironmentMIGSBacteria/">Food-farmEnvironmentMIGSBacteria</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package food-farm environment</td>
+</tr>
+<tr>
+<td><a href="Food-farmEnvironmentMIGSPlant/">Food-farmEnvironmentMIGSPlant</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: plant with environmental package food-farm environment</td>
+</tr>
+<tr>
+<td><a href="Food-farmEnvironmentMIGSVirus/">Food-farmEnvironmentMIGSVirus</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package food-farm environment</td>
+</tr>
+<tr>
+<td><a href="Food-farmEnvironmentMIGSOrg/">Food-farmEnvironmentMIGSOrg</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: org with environmental package food-farm environment</td>
+</tr>
+<tr>
+<td><a href="Food-farmEnvironmentMIMS/">Food-farmEnvironmentMIMS</a></td>
+<td>Combinatorial checklist Metagenome or Environmental with environmental package food-farm environment</td>
+</tr>
+<tr>
+<td><a href="Food-farmEnvironmentMIMARKSSpecimen/">Food-farmEnvironmentMIMARKSSpecimen</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: specimen with environmental package food-farm environment</td>
+</tr>
+<tr>
+<td><a href="Food-farmEnvironmentMIMARKSSurvey/">Food-farmEnvironmentMIMARKSSurvey</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: survey with environmental package food-farm environment</td>
+</tr>
+<tr>
+<td><a href="Food-farmEnvironmentMISAG/">Food-farmEnvironmentMISAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Single Amplified Genome with environmental package food-farm environment</td>
+</tr>
+<tr>
+<td><a href="Food-farmEnvironmentMIMAG/">Food-farmEnvironmentMIMAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Metagenome-Assembled Genome with environmental package food-farm environment</td>
+</tr>
+<tr>
+<td><a href="Food-farmEnvironmentMIUVIG/">Food-farmEnvironmentMIUVIG</a></td>
+<td>Combinatorial checklist Minimum Information About an Uncultivated Virus Genome with environmental package food-farm environment</td>
+</tr>
+<tr>
+<td><a href="AgricultureMIGSEukaryote/">AgricultureMIGSEukaryote</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: eukaryote with environmental package agriculture</td>
+</tr>
+<tr>
+<td><a href="AgricultureMIGSBacteria/">AgricultureMIGSBacteria</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package agriculture</td>
+</tr>
+<tr>
+<td><a href="AgricultureMIGSPlant/">AgricultureMIGSPlant</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: plant with environmental package agriculture</td>
+</tr>
+<tr>
+<td><a href="AgricultureMIGSVirus/">AgricultureMIGSVirus</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: cultured bacteria/archaea with environmental package agriculture</td>
+</tr>
+<tr>
+<td><a href="AgricultureMIGSOrg/">AgricultureMIGSOrg</a></td>
+<td>Combinatorial checklist Minimal Information about a Genome Sequence: org with environmental package agriculture</td>
+</tr>
+<tr>
+<td><a href="AgricultureMIMS/">AgricultureMIMS</a></td>
+<td>Combinatorial checklist Metagenome or Environmental with environmental package agriculture</td>
+</tr>
+<tr>
+<td><a href="AgricultureMIMARKSSpecimen/">AgricultureMIMARKSSpecimen</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: specimen with environmental package agriculture</td>
+</tr>
+<tr>
+<td><a href="AgricultureMIMARKSSurvey/">AgricultureMIMARKSSurvey</a></td>
+<td>Combinatorial checklist Minimal Information about a Marker Specimen: survey with environmental package agriculture</td>
+</tr>
+<tr>
+<td><a href="AgricultureMISAG/">AgricultureMISAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Single Amplified Genome with environmental package agriculture</td>
+</tr>
+<tr>
+<td><a href="AgricultureMIMAG/">AgricultureMIMAG</a></td>
+<td>Combinatorial checklist Minimum Information About a Metagenome-Assembled Genome with environmental package agriculture</td>
+</tr>
+<tr>
+<td><a href="AgricultureMIUVIG/">AgricultureMIUVIG</a></td>
+<td>Combinatorial checklist Minimum Information About an Uncultivated Virus Genome with environmental package agriculture</td>
+</tr>
+</tbody>
+</table>
 
-        <footer class="col-md-12">
-            <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>
-            var base_url = ".",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
+              
+            </article>
+            
+          </div>
         </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+      
+        
+        <a href="introduction/background/" class="md-footer__link md-footer__link--next" aria-label="Next: Background" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Background
             </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
 </div>
-
-    </body>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.0238f547.min.js"></script>
+      
+    
+  </body>
 </html>
-
-<!--
-MkDocs version : 1.3.0
-Build Date UTC : 2022-06-09 19:42:54.330079+00:00
--->
