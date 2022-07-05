@@ -5,7 +5,7 @@ RUN=poetry run
 .PHONY: all clean gh_docs docserve
 
 # html_docs
-all: clean clean_diff_stuff gsc_vs_nmdc
+all: clean clean_diff_stuff gsc_vs_nmdc_packages gsc_vs_nmdc_core
 
 # ---------------------------------------
 # TSVs from google drive
@@ -28,6 +28,8 @@ downloads/gsc_mixs6.csv:
 	curl -L -s 'https://docs.google.com/spreadsheets/d/1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o/export?format=csv&gid=750683809' > $@
 downloads/gsc_mixs6_core.tsv:
 	curl -L -s 'https://docs.google.com/spreadsheets/d/1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o/export?format=tsv&gid=178015749' > $@
+downloads/gsc_mixs6_core.csv:
+	curl -L -s 'https://docs.google.com/spreadsheets/d/1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o/export?format=csv&gid=178015749' > $@
 
 # GSC: MIxS 6 term updates:MIxS6 Core- Final_clean
 #   https://docs.google.com/spreadsheets/d/1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o/edit#gid=178015749
@@ -51,13 +53,15 @@ downloads/nmdc_mixs6_extracol.csv: downloads/nmdc_mixs6.csv
 		--col_name removed
 downloads/nmdc_mixs6_core.tsv:
 	curl -L -s 'https://docs.google.com/spreadsheets/d/1-ocpwjx6nkBod6aj4kcYeSB5NRlhXaYCcuk3ooX2OV4/export?format=tsv&gid=178015749' > $@
+downloads/nmdc_mixs6_core.csv:
+	curl -L -s 'https://docs.google.com/spreadsheets/d/1-ocpwjx6nkBod6aj4kcYeSB5NRlhXaYCcuk3ooX2OV4/export?format=csv&gid=178015749' > $@
 
 .PHONY: gsc_vs_nmdc clean_diff_stuff
 
 clean_diff_stuff:
 	rm -rf downloads/*sv
 
-gsc_vs_nmdc: downloads/gsc_mixs6.csv downloads/nmdc_mixs6_extracol.csv
+gsc_vs_nmdc_packages: downloads/gsc_mixs6.csv downloads/nmdc_mixs6.csv
 	# colored display
 	csvdiff \
 		--primary-key 0,1 \
@@ -65,7 +69,17 @@ gsc_vs_nmdc: downloads/gsc_mixs6.csv downloads/nmdc_mixs6_extracol.csv
 	# to file
 	csvdiff \
 		--primary-key 0,1 \
-		--format word-diff $^ > generated/gsc_vs_nmdc.txt
+		--format word-diff $^ > generated/gsc_vs_nmdc_packages.txt
+
+gsc_vs_nmdc_core: downloads/gsc_mixs6_core.csv downloads/nmdc_mixs6_core.csv
+	# colored display
+	csvdiff \
+		--primary-key 0,1 \
+		--format word-diff $^
+	# to file
+	csvdiff \
+		--primary-key 0,1 \
+		--format word-diff $^ > generated/gsc_vs_nmdc_core.txt
 # --format string         Available (rowmark|json|legacy-json|diff|word-diff|color-words) (default "diff")
 
 # todo add owl back in and make it awesome
