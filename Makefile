@@ -5,7 +5,7 @@ RUN=poetry run
 .PHONY: all clean gh_docs docserve
 
 # html_docs
-all: clean generated/mixs.py mkdocs_html/index.html
+all: clean clean_diff_stuff gsc_vs_nmdc
 
 # ---------------------------------------
 # TSVs from google drive
@@ -58,9 +58,14 @@ clean_diff_stuff:
 	rm -rf downloads/*sv
 
 gsc_vs_nmdc: downloads/gsc_mixs6.csv downloads/nmdc_mixs6_extracol.csv
+	# colored display
 	csvdiff \
 		--primary-key 0,1 \
 		--format word-diff $^
+	# to file
+	csvdiff \
+		--primary-key 0,1 \
+		--format word-diff $^ > generated/gsc_vs_nmdc.txt
 # --format string         Available (rowmark|json|legacy-json|diff|word-diff|color-words) (default "diff")
 
 # todo add owl back in and make it awesome
