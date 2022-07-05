@@ -2,10 +2,11 @@
 
 RUN=poetry run
 
-.PHONY: all clean gh_docs docserve
+.PHONY: all clean gh_docs docserve value_syntax_research
 
 # html_docs
-all: clean generated/mixs.py mkdocs_html/index.html
+all: clean value_syntax_research
+# generated/mixs.py mkdocs_html/index.html
 
 # ---------------------------------------
 # TSVs from google drive
@@ -14,20 +15,24 @@ all: clean generated/mixs.py mkdocs_html/index.html
 
 clean:
 	#rm -rf downloads/*tsv
+	rm -rf downloads/*.tsv
 	rm -rf generated/*
 	rm -rf logs/*
 	rm -rf mkdocs_html/
 	#rm -rf model/schema/*yaml
 
-#model/schema/mixs.yaml: downloads/mixs6.tsv downloads/mixs6_core.tsv
-#	$(RUN) python -m gsctools.mixs_converter  2>&1 | tee -a logs/sheet2linkml.log
-#
-#downloads/mixs6.tsv:
-#	curl -L -s 'https://docs.google.com/spreadsheets/d/1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o/export?format=tsv&gid=750683809' > $@
-#downloads/mixs6_core.tsv:
-#	curl -L -s 'https://docs.google.com/spreadsheets/d/1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o/export?format=tsv&gid=178015749' > $@
+model/schema/mixs.yaml: downloads/mixs6.tsv downloads/mixs6_core.tsv
+	$(RUN) python -m gsctools.mixs_converter  2>&1 | tee -a logs/sheet2linkml.log
 
-value_syntaxes.tsv: downloads/gsc_mixs6.tsv downloads/gsc_mixs6_core.tsv
+# GSC Googlesheets ID: 1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o
+# NMDC Googlesheets ID: 1-ocpwjx6nkBod6aj4kcYeSB5NRlhXaYCcuk3ooX2OV4
+downloads/mixs6.tsv:
+	curl -L -s 'https://docs.google.com/spreadsheets/d/1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o/export?format=tsv&gid=750683809' > $@
+downloads/mixs6_core.tsv:
+	curl -L -s 'https://docs.google.com/spreadsheets/d/1QDeeUcDqXes69Y2RjU2aWgOpCVWo5OVsBX9MKmMqi_o/export?format=tsv&gid=178015749' > $@
+
+value_syntax_research: downloads/mixs6.tsv downloads/mixs6_core.tsv
+	poetry run python util/value_syntaxes.py
 
 # todo add owl back in and make it awesome
 # todo derive output path from target file name
