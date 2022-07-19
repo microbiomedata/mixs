@@ -1,5 +1,8 @@
 # MIxS terms (aka LinkML slots)
 
+## from schema:
+- [terms](../model/schema/terms.yaml)
+
 _This should be a table, or a hierarchy_
 
 - abs_air_humidity

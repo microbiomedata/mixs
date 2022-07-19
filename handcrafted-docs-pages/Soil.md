@@ -2,10 +2,29 @@ _mermaid diagram_
 
 _MIxS Google Sheet doesn't provide annotations for environment classes like soil_
 
+## from schema:
+- [soil](../model/schema/soil.yaml)
+
+## is a
+
+- [environment](Environments.md) [class](Classes.md)
+
 # checklist combinations:
 
+* soil MIGS bacteria
+* soil MIGS eukaryote
+* soil MIGS org
+* soil MIGS plant
+* soil MIGS virus
+* soil MIMAG
+* soil MIMARKS specimen
+* soil MIMARKS survey
+* [soil MIMS](Soil-MIMS.md)
+* soil MISAG
+* soil MIUVIG
 
 ## Slots
+
 * agrochem_addition
 * al_sat
 * al_sat_meth

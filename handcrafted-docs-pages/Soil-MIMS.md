@@ -1,7 +1,12 @@
 _mermaid diagram_
 
+_MIxS Google Sheet doesn't provide annotations for environment/checklist combination classes like soil MIMS_
+
+## is a
+- [environment](Environments.md)/[checkist](Checklists.md) [combination](Combinations.md) [class](Classes.md)
+
 ## parent environment:
-- [soil](soil.md)
+- [soil](Soil.md)
 
 ## parent checklist:
 - [MIMS](MIMS.md)

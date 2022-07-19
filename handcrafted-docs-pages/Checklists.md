@@ -1,5 +1,8 @@
 _what makes these different from other classes?_
 
+## from schema:
+- - [checklists](../model/schema/checklists.yaml)
+
 _always a mixin?_
 
 * MIGS bacteria

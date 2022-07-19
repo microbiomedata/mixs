@@ -1,5 +1,8 @@
 # environment field
 
+## is_a:
+- [section field](core_slot_sections.md)
+
 ## Definition:
 
 - field describing environmental aspect of a sample

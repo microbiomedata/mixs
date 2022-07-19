@@ -59,7 +59,8 @@ def all_classes_all_slots(schema_view: SchemaView):
     classes_to_mixins = {}
     checklists = []
     combinations = []
-    environments = []
+    environments = set()
+    environments_to_combos = {}
     for current_class in classes:
         induced = schema_view.induced_class(current_class)
         if schema_view.is_mixin(current_class):
@@ -70,12 +71,20 @@ def all_classes_all_slots(schema_view: SchemaView):
         if induced.mixins:
             classes_to_mixins[current_class] = induced.mixins
             for i in induced.mixins:
+                # it's an environment
                 print(f"    {current_class} uses mixin: {i}")
+                environment = induced.is_a
+                environments.add(environment)
                 combinations.append(current_class)
                 if i not in mixin_to_classes:
                     mixin_to_classes[i] = [current_class]
                 else:
                     mixin_to_classes[i].append(current_class)
+                slot_to_classes[slot].append(current_class)
+                if environment not in environments_to_combos:
+                    environments_to_combos[environment] = [current_class]
+                else:
+                    environments_to_combos[environment].append(current_class)
                 slot_to_classes[slot].append(current_class)
         else:
             print(f"    {current_class} does not use mixins")
@@ -89,18 +98,52 @@ def all_classes_all_slots(schema_view: SchemaView):
             else:
                 slot_to_classes[slot].append(current_class)
             slot_to_classes[slot].append(current_class)
-    return class_to_slots, slot_to_classes, mixin_to_classes, classes_to_mixins, checklists, combinations, environments
+    return class_to_slots, slot_to_classes, mixin_to_classes, classes_to_mixins, checklists, combinations, environments, environments_to_combos, abstract_slots
 
 
-mixs_class_to_slots, mixs_slot_to_classes, mixs_mixin_to_classes, mixs_classes_to_mixins, mixs_checklists, mixs_combinations, mixs_environments = all_classes_all_slots(
+abstract_slots = []
+for k, v in mixs_view.all_slots().items():
+    if v.abstract:
+        abstract_slots.append(k)
+
+mixs_class_to_slots, mixs_slot_to_classes, \
+mixs_mixin_to_classes, mixs_classes_to_mixins, \
+mixs_checklists, mixs_combinations, mixs_environments, \
+mixs_environments_to_combos, mixs_abstracts = all_classes_all_slots(
     mixs_view)
 
-# pprint.pprint(mixs_mixin_to_classes)
-#
-# pprint.pprint(mixs_classes_to_mixins)
+print("mixs_class_to_slots")
+pprint.pprint(mixs_class_to_slots)
 
+# todo soil_depth but no soil!
+print("mixs_slot_to_classes")
+pprint.pprint(mixs_slot_to_classes)
+
+print("mixs_mixin_to_classes")
+pprint.pprint(mixs_mixin_to_classes)
+
+print("mixs_classes_to_mixins")
+pprint.pprint(mixs_classes_to_mixins)
+
+print("mixs_checklists")
 pprint.pprint(mixs_checklists)
 
+print("mixs_combinations")
 pprint.pprint(mixs_combinations)
 
+print("mixs_environments")
 pprint.pprint(mixs_environments)
+
+print("mixs_environments_to_combos")
+pprint.pprint(mixs_environments_to_combos)
+
+non_utility = mixs_checklists + mixs_combinations + list(mixs_environments)
+pprint.pprint(non_utility)
+
+all_classes = list(mixs_class_to_slots.keys())
+
+utility = list(set(all_classes) - set(non_utility))
+utility.sort()
+pprint.pprint(utility)
+
+print(abstract_slots)
