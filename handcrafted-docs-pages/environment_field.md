@@ -1,7 +1,10 @@
 # environment field
 
+## from_schema: 
+- http://w3id.org/mixs/terms
+
 ## is_a:
-- [section field](core_slot_sections.md)
+- [MIXS section](core_slot_sections.md)
 
 ## Definition:
 
