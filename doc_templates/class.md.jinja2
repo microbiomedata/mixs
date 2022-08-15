@@ -34,3 +34,36 @@ URI: {{ gen.uri_link(element) }}
 {% endfor %}
 
 {% include "common_metadata.md.jinja2" %}
+
+
+{% if schemaview.get_mappings(element.name).items() -%}
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+{% for m, mt in schemaview.get_mappings(element.name).items() -%}
+{% if mt|length > 0 -%}
+| {{ m }} | {{ mt }} |
+{% endif -%}
+{% endfor %}
+
+{% endif -%}
+
+
+## LinkML Specification
+
+### Direct
+
+<details>
+```yaml
+{{gen.yaml(element)}}
+```
+</details>
+
+### Induced
+
+<details>
+```yaml
+{{gen.yaml(element, inferred=True)}}
+```
+</details>

@@ -1,12 +1,16 @@
 # {{ element.name }}
 
 {% if element.title is not none %}
-Name: {{ element.title }}
+Title: {{ element.title }}
 {% endif %}
 
 MIxS ID: ```{{ gen.name(element) }}```
 
-{{ element.description }}
+{% if element.description %}
+_{{ element.description }}_
+{% endif %}
+
+URI: [{{ gen.uri(element) }}]({{ gen.uri(element) }})
 
 {% if schemaview.slot_parents(element.name) or schemaview.slot_children(element.name, mixins=False) %}
 
@@ -19,7 +23,29 @@ MIxS ID: ```{{ gen.name(element) }}```
 
 ## Properties
 
- * Range: {{element.range}}
+* Range: {{gen.link(element.range)}}
+{% if element.multivalued %}
+* Multivalued: {{ element.multivalued }}
+{% endif %}
+{% if element.aliases %}
+* Aliases:
+    {% for alias in element.aliases -%}
+        * {{ alias }}
+    {% endfor %}
+{% endif %}
+
+{% if element.required %}
+* Required: {{ element.required }}
+{% elif element.recommended %}
+* Recommended: {{ element.recommended }}
+{% endif %}
 
 {% include "common_metadata.md.jinja2" %}
 
+## LinkML Source
+
+<details>
+```yaml
+{{ gen.yaml(element) }}
+```
+</details>
