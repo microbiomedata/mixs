@@ -7,7 +7,7 @@ license = "CC0"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-linkml = ">=1.2.12"
+linkml = "*"
 pandas = "*"
 
 [tool.poetry.dev-dependencies]
