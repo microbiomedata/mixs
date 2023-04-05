@@ -34,6 +34,7 @@ clean:
 # 		--exclude owl \
 #		--exclude excel \
 
+# excel completes now but takes ~ 1.5 hours!
 generated/mixs.py: model/schema/mixs.yaml
 	$(RUN) gen-project \
 		--exclude java \
@@ -51,8 +52,10 @@ generated/mixs.py: model/schema/mixs.yaml
 ## ---------------------------------------
 ## For help with mkdocs see https://www.mkdocs.org/.
 
+# see https://github.com/microbiomedata/mixs/issues/57
+# --use-slot-uris
 generated/docs/index.md: model/schema/mixs.yaml
-	$(RUN) gen-doc $< --directory $(dir $@) --template-directory doc_templates --use-slot-uris
+	$(RUN) gen-doc $< --directory $(dir $@) --template-directory doc_templates
 
 generated/docs/introduction/%.md: generated/docs/index.md
 	cp -R static_md/* $(dir $@)
