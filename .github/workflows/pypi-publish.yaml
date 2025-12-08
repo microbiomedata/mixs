@@ -1,0 +1,41 @@
+---
+name: Publish Python Package
+
+on:
+  release:
+    types: [created]
+  workflow_dispatch:
+
+jobs:
+  build-n-publish:
+    name: Build and publish Python 🐍 distributions 📦 to PyPI
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+      
+      - name: Add poetry-dynamic-versioning plugin
+        run: poetry self add "poetry-dynamic-versioning[plugin]"
+
+      # - name: Install dependencies
+      #   run: poetry install --no-interaction
+
+      - name: Build source and wheel archives
+        run: poetry build
+
+      - name: Publish distribution 📦 to PyPI
+        uses: pypa/gh-action-pypi-publish@v1.13.0
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_PASSWORD }}

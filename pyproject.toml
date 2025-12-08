@@ -1,49 +1,57 @@
 [tool.poetry]
-name = "mixs-linkml"
-version = "0.1.3"
-description = "A LinkML model for the MIxS standard"
-authors = ["GSC"]
-license = "CC0"
-
+name = "mixs"
+version = "6.2.0"
+description = "MIxS: the Minimum Information about any (X) Sequence standard"
+authors = [
+    "Mark Andrew Miller <MAM@lbl.gov>",
+    "Sujay Patil <spatil@lbl.gov>"
+]
+license = "CC0-1.0 license"
 readme = "README.md"
+include = ["README.md", "project", "src/mixs", "src/scripts"]
 
-homepage = "https://gensc.org/mixs/"
-repository = "https://github.com/GenomicsStandardsConsortium/mixs"
-documentation = "https://genomicsstandardsconsortium.github.io/mixs/"
-
-keywords = ["MIxS", "linkml", "schema", "data model"]
-
-classifiers = [
-    "Development Status :: 4 - Beta",
-    "Programming Language :: Python :: 3 :: Only",
-    "Intended Audience :: Developers",
-    "Intended Audience :: Science/Research",
-    "License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
-]
-
-packages = [
-    { include = "mixs" }
-]
+#[tool.poetry-dynamic-versioning]
+#enable = true
+#vcs = "git"
+#style = "pep440"
 
 [tool.poetry.dependencies]
-python = "^3.9"
-linkml = "^1.4.3"
-pandas = "*"
+python = "^3.10"
+linkml-runtime = "^1.9"
+jsonasobj2 = "^1.0" # used transitively in src/scripts/mixs/datamodel/mixs.py
 
-[tool.poetry.dev-dependencies]
-pipenv-to-requirements = "*"
-tox = "*"
-tox-pipenv = "*"
-unittest2 = "*"
-nbconvert = "*"
-nbformat = "*"
-ipykernel = "*"
-mkdocs = "*"
-mkdocs-material = "^8.3.5"
+[tool.poetry.group.dev.dependencies]
+black = "^25.1"
+deptry = "^0.23"
+linkml = "^1.9"
+matplotlib = "^3.10"
+mkdocs-material = "^9.6"
+mkdocs-mermaid2-plugin = "^1.2"
+pandas = "^2.3"
+pyarrow = "^21.0"
+rdflib = "^7.1"
+schemasheets = "^0.4"
+scipy = "^1.15"
+yamllint = "^1.37"
+click = "^8.1"
+pyyaml = "^6.0"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
+build-backend = "poetry_dynamic_versioning.backend"
 
 [tool.poetry.extras]
 docs = ["linkml", "mkdocs-material"]
+
+[tool.poetry.scripts]
+extension-distances = 'scripts.extension_distances:generate_dendrogram'
+extension-differences = 'scripts.extension_slot_differences:set_arithmetic'
+linkml2class-tsvs = 'scripts.linkml2class_tsvs:process_schema_classes'
+generate-combinations = 'scripts.combinations_list_generator:generate_combinations'
+generate-enumerations = 'scripts.enumerations_list_generator:generate_enumerations'
+generate-term-list = 'scripts.term_list_generator:generate_term_list'
+organize-files = 'scripts.organize_files:main'
+required-supersedes-recommended = 'scripts.required_supersedes_recommended:find_required_and_recommended_usages'
+describe-enums = 'scripts.describe_enums_by_slots_using:update_enum_descriptions'
+isolate-global-slots = 'scripts.isolate_slots:isolate_global_slots'
+
